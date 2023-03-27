@@ -1,0 +1,4 @@
+# for n in detailsList:
+#     url.append(n.find("a").attrs['href'])
+#     name.append(n.find("a").get_text())
+#     status.append(n.find("div", {"class": "status_vote"}).get_text())

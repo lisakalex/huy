@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Classic HYIP monitor payment status listed on one page</title>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="en-us" />
+<meta name="robots" content="noodp,noydir" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+<meta property="og:site_name" content="hyipnews" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Classic HYIP monitor payment status listed on one page" />
+<meta property="og:url" content="https://www.hyipnews.com/" />
+<meta property="og:description" name="description" content="HYIP Investments monitor and HYIP monitoring service current online on one page, archive monitoring data, rating of HYIP and their payment status." />
+<meta property="fb:admins" content="100001143875785100001143875785" />
+<meta property="og:image" content="https://www.hyipnews.com%RES_IMG%" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@hyipnewscom" />
+<meta name="twitter:creator" content="@hyipnewscom" />
+<meta name="twitter:url" content="https://www.hyipnews.com/" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="GOOGLEBOT" content="INDEX, FOLLOW" />
+<meta name="ROBOTS" content="INDEX, FOLLOW" />
+<meta name="google-translate-customization" content="e3322d76292577df-1130518fada3459c-g9b5e0af6a14de382-10" />
+
+<link rel="prefetch" rel="stylesheet" href="/css/fonts.min.css" type="text/css" as="style" />
+<link rel="prefetch" rel="stylesheet" href="/css/jquery-ui-smooth.min.css" type="text/css" as="style" />
+<!--[if gte IE 6]>
+	<link rel="stylesheet" href="/css/iespecific.min.css"  type="text/css" />
+	<![endif]-->
+<link rel="stylesheet" href="/css/main_css.min.css" type="text/css" />
+
+<script type="604d09836e0fe286161a7491-text/javascript" src="/jscript/common.min.js"></script>
+<script type="604d09836e0fe286161a7491-text/javascript" src="/jscript/hnlib.min.js"></script>
+
+<link rel="stylesheet" href="/css/font-awesome.custom.min.css" type="text/css" />
+<link rel="stylesheet" href="/css/hbmenu.min.css" type="text/css" />
+<link rel="stylesheet" href="/css/color_green.min.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="Stay tuned on hottest Crypto HYIP news" href="https://www.hyipnews.com/feed" />
+<link rel="icon" href="/favicon.ico" type="image/ico">
+
+<script type="604d09836e0fe286161a7491-text/javascript" src="/jscript/jquery.min.js"></script>
+<script defer type="604d09836e0fe286161a7491-text/javascript" src="/jscript/jquery-ui.min.js"></script>
+<script defer type="604d09836e0fe286161a7491-text/javascript" src="/jscript/jquery.zclip.min.js"></script>
+<script defer type="604d09836e0fe286161a7491-text/javascript" src="/jscript/jquery-base64.min.js"></script>
+
+<script type="604d09836e0fe286161a7491-text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-W25PC8R');</script>
+
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W25PC8R"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<link rel="canonical" href="https://www.hyipnews.com/" />
+
+<meta name="author" content="Charles Morris">
+<script language="JavaScript" type="604d09836e0fe286161a7491-text/javascript">
+			function retPage(){
+				
+			}
+			
+			function payeer_payment_script(key) {
+				var commis = 1;
+				var pay_form = document.payeer_form;
+
+				var ts = Math.round((new Date()).getTime() / 1000);
+				//alert(ts);
+				var form = key.form;
+				var bill = 0.0, number = 0, descr = "", email = form.email.value, itemdb = "";
+				
+				if (!isValidEmail(email, 'A valid e-mail address is required.\nPlease amend and retry')) {
+					return false;
+				}
+				//alert(email);
+				
+				var itemName = form.elements["jcartItemName[]"];
+				var itemPrice = form.elements["jcartItemPrice[]"];
+				var itemQty = form.elements["jcartItemQty[]"];
+				var number = itemPrice.length;
+				//alert(number);
+				if (number > 1) {
+					for(i=0;i<itemPrice.length;i++)
+					{
+						var price = itemPrice[i].value - 0;
+						var qty = itemQty[i].value;
+						//alert(price);
+ 						bill = 0.0 + (1.0 * price * qty) + bill;
+ 						itemdb = itemdb + itemQty[i].value + '^' + itemName[i].value + '^' + price + ',';
+					}
+					descr = "Order id: " + ts + " " + email;
+				} else {
+					//alert(itemPrice.value);
+					var price = itemPrice.value - 0;
+					var qty = itemQty.value;
+					//alert(price);
+					bill = 0.0 + (1.0 * price * qty) + bill;
+					itemdb = itemdb + itemQty.value + '^' + itemName.value + '^' + price + ',';
+					descr = "Order id: " + ts + " " + email;
+				}
+				//descr = descr + email;
+				//alert(bill);
+				
+				var from = 0;
+				var to = 99;
+				descr = descr.substring(from,to);
+				
+				//alert(descr);
+
+				
+				if (commis > 0) {
+					bill += bill * commis / 100.0;
+				}
+   	     		jQuery.ajax({
+		    		url: '/payment_save.php',
+		    		data: 'payment=payeer&amount=' + bill.toFixed(2) + '&memo=' + itemdb + '&email=' + email + '&items=' + number + '&type=' + ts,
+    				type: 'post',
+    				async: false,
+    				success:function(response) {
+        				console.log(response) // Your response
+    				},
+    				error:function(error) {
+        				console.log(error) // No successful request
+    				}			
+   	     		});
+   	     		jQuery.ajax({
+		    		url: '/payment_store.php',
+		    		data: 'payment=payeer&amount=' + bill.toFixed(2) + '&memo=' + number + ',' + descr + ',' + email + '&email=' + email + '&items=' + number +'&type=' + ts,
+    				type: 'post',
+    				async: false,
+    				success:function(response) {
+        				console.log(response) // Your response
+    				},
+    				error:function(error) {
+        				console.log(error) // No successful request
+    				}			
+   	     		});
+				
+							var hash;
+			var b64desc = jQuery.base64.encode(descr);
+ 			jQuery.ajax({
+	    		url: '/payeer_hash.php',
+	    		data: 'shop=' + 8173893 + '&orderid=' + ts + '&amount=' + bill.toFixed(2) + '&memo=' + descr + '&email=' + email + '&items=' + number + '&type=' + ts,
+    			type: 'post',
+    			async: false,
+    			success:function(response) {
+    				hash = response;
+    				//alert(hash);
+       				console.log(response) // Your response
+    			},
+    			error:function(error) {
+    				alert("!!!!");
+       				console.log(error) // No successful request
+    			}
+			});
+
+			pay_form.m_amount.value = bill.toFixed(2);
+			pay_form.m_orderid.value = ts;
+			pay_form.m_desc.value = b64desc;
+			pay_form.m_sign.value = hash;
+//			pay_form.cf_1.value = email;
+//			pay_form.cf_2.value = number;
+//			pay_form.cf_3.value = ts;
+			//alert(hash);
+			pay_form.submit();
+				return false;
+			}
+		</script>
+</head>
+<body>
+<form name="payeer_form" action="https://payeer.com/api/merchant/m.php" method="get">
+<input type="hidden" name="m_shop" value="8173893">
+<input type="hidden" name="m_orderid" value="">
+<input type="hidden" name="m_amount" value="">
+<input type="hidden" name="m_curr" value="USD">
+<input type="hidden" name="m_desc" value="">
+<input type="hidden" name="m_sign" value="">
+</form>
+<div class="wrap">
+
+<nav id="mobile-menu"></nav>
+<nav id="hybridmenu">
+<ul class="main-menu">
+<li class="mobile-menu-item"><i class="fa fa-bars"></i></li>
+<li class="logo">
+<a href="/" title="HYIP News Blog Monitor since 2003">
+<img src="/img/logo.png" alt="logo">
+</a>
+</li>
+<li class="parent">
+<a href="#" title="Read all news published on HyipNews.com"><i class="fa fa-newspaper-o"></i><span class="top-menu">News</span></a>
+<ul class="sub-menu">
+<li><a href="/news/" title="News - Tap to read the latest news published at HyipNews.com">Latest news</a></li>
+<li><a href="/news/hyip/" title="Hyip - Tap to read the HYIP sites news">Hyip</a></li>
+<li><a href="/news/warnings/" title="Warnings - See the warnings, learn about the alerts raised by the customers of HyipNews.com">Warnings</a></li>
+<li><a href="/news/investing/" title="Investing - Read all the news about investing to Hyips and alternative spheres">Investing</a></li>
+<li><a href="/news/industry/" title="Industry - Tap to see the latest news from the industry of Hyip, e-money and other related spheres">Industry</a></li>
+<li><a href="/news/investigations/" title="Investigations - Look through all investigations initiated by HyipNews related to hyip investing">Investigations</a></li>
+<li><a href="/news/preview/" title="Preview - Tap to watch the official previews for the articles and exclusive materials published on HyipNews.com">Preview</a></li>
+</ul>
+</li>
+<li class="parent">
+<a href="#" title="HYIP List - See the Hyip monitor lists of hyips currently monitored at HyipNews.com"><i class="fa fa-list-ol"></i><span class="top-menu">HYIP List</span></a>
+<ul class="sub-menu">
+
+<li><a href="/hyip-monitor/" title="Classic HYIP List - Tap to see the classic version of hyip monitor to see all currently listed Hyips on one page ">HYIP List</a></li>
+<li><a href="/hyip-monitor/blacklist/" title="HYIP Black List - Watch the scam programs, look for the closed Hyips, see the archive of all programs, used to be monitored at HyipNews.com and now blacklisted">Black List</a></li>
+<li><a href="/advertise/shop-monitoring/" title="Add to list - Tap to add HYIP to listing">Add to list</a></li>
+</ul>
+</li>
+<li class="parent">
+<a href="#" title="Popular Articles - see the popular HYIP articles index published at HyipNews.com"><i class="fa fa-money"></i><span class="top-menu">Popular Articles</span></a>
+<ul class="sub-menu">
+<li><a href="/hyip-articles/" title="Latest articles - Tap to see the latest articles published at HyipNews.com">Latest articles</a></li>
+
+<li><a href="/hyip-articles/exclusive/91/" title="Exclusive - Tap to read  the Hyip reviews, interviews with the admins and other exclusive articles published by HyipNews.com authors">Exclusive</a></li>
+<li><a href="/hyip-articles/personal-finances/366/" title="Finances - Tap to learn about investment tools,  saving plans and Ponzi techniques">Finances</a></li>
+<li><a href="/hyip-articles/strategy-and-tactics/88/" title="Strategy - Find out the best strategies applied to deal with HYIP investing">Strategy</a></li>
+<li><a href="/hyip-articles/moneymaking/179/" title="Moneymaking - Tap to read the useful information to assist in making money online">Moneymaking</a></li>
+<li><a href="/hyip-articles/e-money/196/" title="Money - Tap to learn about the latest payment trends, information about the popular payment systems and exchange services used online">Money</a></li>
+</ul>
+</li>
+<li class="parent">
+<a href="#" title="HYIP Basics - read the education information about hyips"><i class="fa fa-graduation-cap"></i><span class="top-menu">HYIP Basics</span></a>
+<ul class="sub-menu">
+<li><a href="/hyip-articles/hyip-investment-wiki/89/" title="Hyip Wiki - Tap to read the education information about hyips, useful for newbies particularly">Hyip Wiki</a></li>
+<li><a href="/hyip-articles/get-started/178/" title="Get started - Tap to read the vital information for the hyip newbies, rules for newbies to follow">Get started</a></li>
+<li><a href="/hyip-articles/hyip-philosophy/189/" title="Philosophy - Tap to learn about the philosophical aspect of hyip investing">Philosophy</a></li>
+<li><a href="/hyip-articles/publicism/191/" title="Publicism - See the common information about hyip industry, general discussions and basic aspects of investment process">Publicism</a></li>
+<li><a href="/hyip-articles/how-to-avoid-problems/183/" title="Avoid scams - Tap to check the important information on how to avoid scams investing to hyips, see rules to follow not to get scammed">Avoid scams</a></li>
+<li><a href="/hyip-articles/high-yield-faq/194/" title="High Yield Faq - Most frequently asked questions discussed and answered in the articles within">High yield faq</a></li>
+<li><a href="/hyip-articles/hyip-history/187/" title="Hyip History - Tap to learn about the hyip origin, examples of world's most known Ponzi schemes">Hyip history</a></li>
+</ul>
+</li>
+<li class="menu-right parent">
+<a href="/pages/support.html" title="Support - get contact info and customers support"><i class="fa fa-life-ring"></i><span class="top-menu">Support</span></a>
+</li>
+<li class="menu-right parent">
+<a href="#" title="Get information about advertising"><i class="fa fa-buysellads"></i><span class="top-menu">Advertise</span></a>
+<ul class="sub-menu">
+
+<li><a href="/advertise/shop-banners/" title="Banners - Tap to order banner advertising">Banners</a></li>
+<li><a href="/advertise/shop-monitoring/" title="Monitoring - Tap to order monitoring">Monitoring</a></li>
+<li><a href="/advertise/shop-promoting/" title="Promoting - Tap to order promoting services">Promoting</a></li>
+
+</ul>
+</li>
+<li class="menu-right parent">
+<a href="#" title="About - read information about HyipNews, its authors and TOS"><i class="fa fa-pencil-square"></i><span class="top-menu">About</span></a>
+<ul class="sub-menu">
+<li><a href="/exportnews/" title="News Export - Tap to learn how to export news from us">News Export</a></li>
+<li><a href="/pages/authors.html" title="Our Staff - Tap here to read information about HyipNews authors">Our Staff</a></li>
+<li><a href="/pages/termsofuse.html" title="TOS - Tap here to learn about terms applied and accepted when working with HyipNews.com">Terms of use</a></li>
+<li><a href="/hyip-articles/archive/186/" title="Archive - Tap to see the outdated articles, written previously by HyipNews.com authors">Archive</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<script src="/jscript/hybridmenu.js" type="604d09836e0fe286161a7491-text/javascript"></script>
+<div id="wrap" title="Support Page"> </div>
+<div id="wrapper">
+
+<script type="604d09836e0fe286161a7491-text/javascript" src="/jscript/hichart/highcharts.js"></script>
+
+<div class="CONTENT">
+<div class="content_wrapper">
+
+<div class="content_main">
+<div class="baner_width"><div class="underhead_link" align="center" style="float: none; text-align: center;"><p title="Your AD here for $49.99 weekly! B.Static Leaderboard. Spot 10 of 10 spots are free." class="adtext">Your AD here for $49.99 weekly!</p></div></div>
+<div class="market-summary-wrapper"><h1 class="market-summary-heading">Classic HYIP monitor payment status listed on one page</h1></div>
+<div class="textingmonitor"><p style="line-height: 1.4em; color: #545454; font-size: 0.7em; font-family: verdana, arial, sans-serif;">
+Monitoring data on relevant High Yield Investment Program on one page. Classic version of HYIPNews monitoring service to help investors monitor investments
+</p>
+</div>
+<a name="top-hyip"></a>
+<div class="market-summary-wrapper">
+<h2 class="market-summary-heading"><a href="#" target="_blank" style="display:inline-block;vertical-align: top;margin:0; color:white;" title="Learn more about popularity">HYIP popularity search</a></h2>
+<div class="stock-lookup">
+<div class="ui-widget">
+<form id="getquotes" method="POST" action="/hyip-quotes/">
+<div style="margin-top:-5px;">
+<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input class="search-box ui-autocomplete-input" type="text" name="searchstr" size="25" autocomplete="off" onfocus="if (!window.__cfRLUnblockHandlers) return false; this.value=''" value="domain name" data-cf-modified-604d09836e0fe286161a7491-=""> <input type="submit" name="searchgo" value="Find" style="cursor: pointer; -webkit-appearance: button; color: #00529E; font: normal normal normal 13px/15px 'Century Gothic', 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold; text-transform: uppercase; letter-spacing: -1px; text-align: center; text-shadow: #CCC 1px 1px 1px;margin-top: 10px;">
+
+</div>
+</form>
+</div>
+</div>
+
+<script type="604d09836e0fe286161a7491-text/javascript">
+    jQuery(document).ready(function() {
+		var cache = {};	
+		jQuery( "#searchprog" ).autocomplete({
+			minLength: 2,
+			source: function( request, response ) {
+				var term = request.term;
+				if ( term in cache ) {
+					response( cache[ term ] );
+					return;
+				}
+				jQuery.getJSON( "/review/searchprog.php", request, function( data, status, xhr ) {
+					cache[ term ] = data;
+					//alert(data);
+					response( data );
+				});
+			}
+		});
+		
+		jQuery("#djSnapshotTbl tbody tr").hover(function () {
+  			jQuery(this).addClass("hover").find("div.chart-minimal").show();
+ 		}, function () {
+			jQuery(this).removeClass("hover").find("div.chart-minimal").hide();
+ 		});
+ 		
+    });
+    var myForm = document.getElementById('getquotes');
+	myForm.onsubmit = function() {
+    	var w = window.open('about:blank','Popup_Window','toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=700,height=400,left = 312,top = 234');
+    	this.target = 'Popup_Window';
+	};
+    </script>
+<div id="wrap" title="Support Page"> </div>
+<br />
+<div class="baner_width"><div id="abanner_div" align="center" style="float: none; margin: 0px"></div>
+<div id="abanners_div" style="display: none"><div id="abanner_0"><a href="/bsdb/bs.php?id=9057" target="_blank">
+<video autoplay loop muted playsinline preload=auto>
+<source src="/bsdb/9057.webm" type="video/webm">
+</video></a></div></div>
+<script language="JavaScript" type="604d09836e0fe286161a7491-text/javascript">
+	//<!--
+	var abanner_cnt = 0;
+	var abanner = new Array();
+	abanner[0] = new Array(10, 0);
+	function abannernext() {
+		var i = getAdNum(abanner, abanner_cnt);
+		++abanner_cnt;
+		document.getElementById('abanner_div').innerHTML = document.getElementById('abanner_'+i).innerHTML;
+		setTimeout("abannernext()",abanner[i][0] * 1000);
+	}
+	abannernext();
+	//-->
+</script>
+<div class="underhead_link" align="center" style="float: none; text-align: center;"><p title="Your AD here for $19.99 weekly! A.Leaderboard. Spot 9 of 10 spots are free." class="adtext">Your AD here for $19.99 weekly!</p></div></div>
+</div>
+<br /><br />
+<div class="monitor_item">
+<div class="monitor_header"> <a class="monitor_header" href="/site/58776/" rel="nofollow" target="_blank" title="Tap to open Royal&nbsp;Casino&nbsp;Funds site">Royal&nbsp;Casino&nbsp;Funds</a></div>
+<div class="table_monitor">
+<div class="col_1">
+ <div>Status: <span class="status_paying">PAYING</span></div>
+<div>Listed: 104 day(s) </br><small>since 11-05-2022</small></div>
+
+
+<div>User rating:
+<img src="/img/c02.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+</div>
+<div>ROI: <img src=/i/notprofit.gif alt="not in profit" border=0></div>
+</div>
+<div class="col_2">
+<div>Min/max: $10 / no limit</div>
+<div>Profit: 3-5% daily For 100-45 biz days<br>10-20% daily For 20-10 biz days<br>150-200% after 1-3 biz days<br>300-400% after 7-15 biz days<br></div>
+<div>Withdrawal: within 24 hours</div>
+<div>Referral: up to 15%</div>
+</div>
+<div class="col_3">
+<div class="monitor_baner"><a href="/bsdb/bs.php?id=9059" target="_blank"><img src="/bsdb/9059.jpg" alt="banner" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</div>
+</div>
+<div class="monitor_text">Royal Casino Funds Ltd is a well-respected investment company that helps investors earn reliable profits on the basis of investment in Popular Casinos and gambling. Royal Casino Funds Ltd is a well-trusted name in the gambling scene of the United Kingdom, United States of America, China, South Africa, Germany, Monaco, France and Russia . Occasionally it becomes hard to overcome the strict security requirements because we always pull through and handle it in a professional manner. This is one of the leading reasons behind our decision to increase our workforce back in 2010, and transfer our core business to the online domain. Judging from the results, we can safely say that this was the best choice we‘ve ever made. </div>
+<div class="monitor_info">
+<div class="monitor_com1"><a rel="nofollow" href="#" target="_blank"><img src="/i/logo/perfectmoney.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; <a rel="nofollow" href="#" target="_blank"><img src="/i/logo/dash.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; <a rel="nofollow" href="#" target="_blank"><img src="/i/logo/payeer.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; <a rel="nofollow" href="#" target="_blank"><img src="/i/logo/dogecoin.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; <a rel="nofollow" href="#" target="_blank"><img src="/i/logo/advcash.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; <a rel="nofollow" href="#" target="_blank"><img src="/i/logo/ltc.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; <a rel="nofollow" href="#" target="_blank"><img src="/i/logo/bitcoincash.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; <a rel="nofollow" href="#" target="_blank"><img src="/i/logo/ethereum.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; <a rel="nofollow" href="#" target="_blank"><img src="/i/logo/tron-usdts.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; <a rel="nofollow" href="#" target="_blank"><img src="/i/logo/epaycore.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; </div>
+
+<div class="monitor_link"><a href="/hyip-monitor/58776/royalcasinofunds.com/" title="Tap to open detailed info about Royal&nbsp;Casino&nbsp;Funds site">Royal&nbsp;Casino&nbsp;Funds detailed info</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</div>
+</div>
+<br /><br />
+<div class="monitor_item">
+<div class="monitor_header"> <a class="monitor_header" href="/site/51736/" rel="nofollow" target="_blank" title="Tap to open BitcoBid site">BitcoBid</a></div>
+<div class="table_monitor">
+<div class="col_1">
+<div>Status: <span class="status_paying">PAYING</span></div>
+<div>Listed: 1110 day(s) </br><small>since 02-03-2020</small></div>
+
+
+<div>User rating:
+<img src="/img/c01.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c01.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c01.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c01.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c01.gif" width="9" height="12" border="0" alt="rating point">
+</div>
+<div>Our rating:
+<img src="/img/c01.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c01.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c01.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+</div>
+<div>ROI: <img src=/i/profit.gif alt="in profit" border=0></div>
+</div>
+<div class="col_2">
+<div>Min/max: $10 / $200000</div>
+<div>Profit: 0.5% weekly for 1 year</div>
+<div>Withdrawal: within 12 biz hours</div>
+<div>Referral: 1%</div>
+</div>
+<div class="col_3">
+<div class="monitor_baner"><a href="/bsdb/bs.php?id=8633" target="_blank"><img src="/bsdb/8633.jpg" alt="banner" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</div>
+</div>
+<div class="monitor_text">BitcoBid is a long term high yield private loan program, backed up by Forex market trading and investing in various funds and activities. Profits from these investments are used to enhance our program and increase its stability for the long term. Our program is intended for people willing to achieve their financial freedom but unable to do so because they're not financial experts.</div>
+<div class="monitor_info">
+<div class="monitor_com1"><a rel="nofollow" href="#" target="_blank"><img src="/i/logo/tron-usdts.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; </div>
+
+<div class="monitor_link"><a href="/hyip-monitor/51736/bitcobid.com/" title="Tap to open detailed info about BitcoBid site">BitcoBid detailed info</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+ </div>
+</div>
+<br /><br />
+<div class="monitor_item">
+<div class="monitor_header"> <a class="monitor_header" href="/site/25833/" rel="nofollow" target="_blank" title="Tap to open Funds&nbsp;Broker site">Funds&nbsp;Broker</a></div>
+<div class="table_monitor">
+<div class="col_1">
+<div>Status: <span class="status_paying">PAYING</span></div>
+<div>Listed: 2172 day(s) </br><small>since 03-08-2017</small></div>
+
+
+<div>User rating:
+<img src="/img/c01.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c01.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c01.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c01.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c01.gif" width="9" height="12" border="0" alt="rating point">
+</div>
+<div>Our rating:
+<img src="/img/c01.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c02.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+</div>
+<div>ROI: <img src=/i/profit.gif alt="in profit" border=0></div>
+</div>
+<div class="col_2">
+<div>Min/max: $30 / no limit</div>
+<div>Profit: 2.1% weekly, for 798 days<br>1600% after 60 trading days<br>11% daily for 30 trading days</div>
+<div>Withdrawal: within 24 hours</div>
+<div>Referral: up to 0.75%</div>
+</div>
+<div class="col_3">
+<div class="monitor_baner"><a href="/bsdb/bs.php?id=8635" target="_blank"><img src="/bsdb/8635.jpg" alt="banner" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</div>
+</div>
+<div class="monitor_text">The Funds Broker Company was founded to perform brokerage services and a number of profitable and promising areas, such as investing in Forex market trading, cryptocurrency and trading on the stock market. Strong, highly efficient, talented and close-knit team, with a wealth of experience in finance and investment, making Funds Broker a perfect and unique money-making machine!</div>
+<div class="monitor_info">
+<div class="monitor_com1"><a rel="nofollow" href="#" target="_blank"><img src="/i/logo/btc.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; <a rel="nofollow" href="#" target="_blank"><img src="/i/logo/tron-usdts.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; </div>
+
+<div class="monitor_link"><a href="/hyip-monitor/25833/funds-broker.com/" title="Tap to open detailed info about Funds&nbsp;Broker site">Funds&nbsp;Broker detailed info</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</div>
+</div>
+<br /><br />
+<div class="monitor_item">
+<div class="monitor_header"> <a class="monitor_header" href="/site/51250/" rel="nofollow" target="_blank" title="Tap to open Bitcoin&nbsp;Wealth site">Bitcoin&nbsp;Wealth</a></div>
+<div class="table_monitor">
+<div class="col_1">
+<div>Status: <span class="status_paying">PAYING</span></div>
+<div>Listed: 1143 day(s) </br><small>since 01-01-2020</small></div>
+
+
+<div>User rating:
+<img src="/img/c01.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c01.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c01.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c02.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+</div>
+<div>Our rating:
+<img src="/img/c01.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c02.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+</div>
+<div>ROI: <img src=/i/profit.gif alt="in profit" border=0></div>
+</div>
+<div class="col_2">
+<div>Min/max: $30 / no limit</div>
+<div>Profit: 2.00% Weekly for 365 days </div>
+<div>Withdrawal: within 24 hours</div>
+<div>Referral: 0.5%</div>
+</div>
+<div class="col_3">
+<div class="monitor_baner"><a href="/bsdb/bs.php?id=8931" target="_blank"><img src="/bsdb/8931.jpg" alt="banner" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</div>
+</div>
+<div class="monitor_text">Bitcoin Wealth uses clients' assets to grow its operations on cryptocurrencies market.        
+Start earning with us and your assests will grow steadily. All payments are made to your account weekly.
+Minimum spend is $30 and there is no maximum. You may make an additional spend as many times as you like.
+Use our referral program and earn up to 0.50% of referral deposits!</div>
+<div class="monitor_info">
+<div class="monitor_com1"><a rel="nofollow" href="#" target="_blank"><img src="/i/logo/tron-usdts.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; </div>
+
+<div class="monitor_link"><a href="/hyip-monitor/51250/bitcoinwealth.biz/" title="Tap to open detailed info about Bitcoin&nbsp;Wealth site">Bitcoin&nbsp;Wealth detailed info</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</div>
+</div>
+<br /><br />
+<div class="monitor_item">
+<div class="monitor_header"> <a class="monitor_header" href="/site/16454/" rel="nofollow" target="_blank" title="Tap to open SafetyDepositary site">SafetyDepositary</a></div>
+<div class="table_monitor">
+<div class="col_1">
+<div>Status: <span class="status_paying">PAYING</span></div>
+<div>Listed: 3182 day(s) </br><small>since 06-02-2014</small></div>
+
+
+<div>User rating:
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+</div>
+<div>ROI: <img src=/i/notprofit.gif alt="not in profit" border=0></div>
+</div>
+<div class="col_2">
+<div>Min/max: $25 / $1060</div>
+<div>Profit: 0.2% daily for 30 days</div>
+<div>Withdrawal: within 5 days</div>
+<div>Referral: n/a</div>
+</div>
+<div class="col_3">
+<div class="monitor_baner"><a href="/bsdb/bs.php?id=9020" target="_blank"><img src="/bsdb/9020.webp" alt="banner" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</div>
+</div>
+<div class="monitor_text"> We are subsidiary enterprise of Safety Depositary insurance company. We work in financial area and offer large number of investment options. It is double pleasure for us to work with you if you have already insured yourself at our office.
+We have the tools and resources You need. Insurance for individuals, Insurance for business, Special cases. Experience an innovative approach to the old challenges. Safety Insurance is designed to make your life prosperous and fully protected.
+</div>
+<div class="monitor_info">
+<div class="monitor_com1"><a rel="nofollow" href="#" target="_blank"><img src="/i/logo/bankwire.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; <a rel="nofollow" href="#" target="_blank"><img src="/i/logo/btc.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; <a rel="nofollow" href="#" target="_blank"><img src="/i/logo/perfectmoney.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; </div>
+
+<div class="monitor_link"><a href="/hyip-monitor/16454/safetydepositary.net/" title="Tap to open detailed info about SafetyDepositary site">SafetyDepositary detailed info</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</div>
+</div>
+<br /><br />
+<div class="monitor_item">
+<div class="monitor_header"> <a class="monitor_header" href="/site/48513/" rel="nofollow" target="_blank" title="Tap to open UCTraders site">UCTraders</a></div>
+<div class="table_monitor">
+<div class="col_1">
+<div>Status: <span class="status_paying">PAYING</span></div>
+<div>Listed: 1364 day(s) </br><small>since 05-25-2019</small></div>
+
+
+<div>User rating:
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+</div>
+<div>ROI: <img src=/i/notprofit.gif alt="not in profit" border=0></div>
+</div>
+<div class="col_2">
+<div>Min/max: $30 / no limit</div>
+<div>Profit: 2% weekly for 2 years</div>
+<div>Withdrawal: within 12 biz hours</div>
+<div>Referral: 0.35%</div>
+</div>
+<div class="col_3">
+<div class="monitor_baner"><a href="/bsdb/bs.php?id=9022" target="_blank"><img src="/bsdb/9022.webp" alt="banner" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</div>
+</div>
+<div class="monitor_text">UCTRADERS is a long term high yield private loan program, backed up by Forex market trading and investing in various funds and activities. Profits from these investments are used to enhance our program and increase its stability for the long term. Our program is intended for people willing to achieve their financial freedom but unable to do so because they're not financial experts.</div>
+<div class="monitor_info">
+<div class="monitor_com1"><a rel="nofollow" href="#" target="_blank"><img src="/i/logo/tron-usdts.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; </div>
+
+<div class="monitor_link"><a href="/hyip-monitor/48513/uctraders.com/" title="Tap to open detailed info about UCTraders site">UCTraders detailed info</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</div>
+</div>
+<br /><br />
+<div class="monitor_item">
+<div class="monitor_header"> <a class="monitor_header" href="/site/58324/" rel="nofollow" target="_blank" title="Tap to open ConsPro site">ConsPro</a></div>
+<div class="table_monitor">
+<div class="col_1">
+<div>Status: <span class="status_paying">PAYING</span></div>
+<div>Listed: 240 day(s) </br><small>since 06-22-2022</small></div>
+
+
+<div>User rating:
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+</div>
+<div>ROI: <img src=/i/notprofit.gif alt="not in profit" border=0></div>
+</div>
+<div class="col_2">
+<div>Min/max: $10 / $10000</div>
+<div>Profit: 0.48% daily for 30 days<br>Principal return</div>
+<div>Withdrawal: within 12 biz hours</div>
+<div>Referral: 3%</div>
+</div>
+<div class="col_3">
+<div class="monitor_baner"><a href="/bsdb/bs.php?id=9030" target="_blank"><img src="/bsdb/9030.jpg" alt="banner" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</div>
+ </div>
+<div class="monitor_text">ConsPro is a long term high yield private loan program, backed up by Forex market trading and investing in various funds and activities. Profits from these investments are used to enhance our program and increase its stability for the long term. Our program is intended for people willing to achieve their financial freedom but unable to do so because they're not financial experts.</div>
+<div class="monitor_info">
+<div class="monitor_com1"><a rel="nofollow" href="#" target="_blank"><img src="/i/logo/perfectmoney.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; <a rel="nofollow" href="#" target="_blank"><img src="/i/logo/tron-usdts.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; </div>
+
+<div class="monitor_link"><a href="/hyip-monitor/58324/conspro.biz/" title="Tap to open detailed info about ConsPro site">ConsPro detailed info</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</div>
+</div>
+<br /><br />
+<div class="monitor_item">
+<div class="monitor_header"> <a class="monitor_header" href="/site/58391/" rel="nofollow" target="_blank" title="Tap to open Vexam site">Vexam</a></div>
+<div class="table_monitor">
+<div class="col_1">
+<div>Status: <span class="status_notpaying">NOT PAYING</span></div>
+<div>Listed: 205 day(s) </br><small>since 07-27-2022</small></div>
+
+
+<div>User rating:
+<img src="/img/c01.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c01.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c02.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+<img src="/img/c03.gif" width="9" height="12" border="0" alt="rating point">
+</div>
+<div>ROI: <img src=/i/profit.gif alt="in profit" border=0></div>
+</div>
+<div class="col_2">
+<div>Min/max: $25 / $400000</div>
+<div>Profit: 4-5% daily for 30-40 days!</div>
+<div>Withdrawal: within 24 hours</div>
+<div>Referral: 5-2-1%</div>
+</div>
+<div class="col_3">
+<div class="monitor_baner"><a href="/bsdb/bs.php?id=9037" target="_blank"><img src="/bsdb/9037.jpg" alt="banner" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</div>
+</div>
+<div class="monitor_text">VEXAM is a platform for auto trading on your assets. We offer you automatic management of your financial assets, offering guaranteed profits from two investment plans. Our trading experts will comprehensively take care of your financial resources, allowing you to achieve full-fledged passive income every day. The plans we offer guarantee you a steady income. Our company is a team of specialists working for us, who diversify investments in various fields, mainly cryptocurrencies and financial instruments used on the stock markets. We offer above-average profits thanks to the skills of our experienced traders. </div>
+<div class="monitor_info">
+<div class="monitor_com1"><a rel="nofollow" href="#" target="_blank"><img src="/i/logo/btc.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; <a rel="nofollow" href="#" target="_blank"><img src="/i/logo/perfectmoney.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; <a rel="nofollow" href="#" target="_blank"><img src="/i/logo/dash.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; <a rel="nofollow" href="#" target="_blank"><img src="/i/logo/dogecoin.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; <a rel="nofollow" href="#" target="_blank"><img src="/i/logo/ltc.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; <a rel="nofollow" href="#" target="_blank"><img src="/i/logo/bitcoincash.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; <a rel="nofollow" href="#" target="_blank"><img src="/i/logo/ethereum.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; <a rel="nofollow" href="#" target="_blank"><img src="/i/logo/tron-usdts.png" alt="e-currency logo" width="24" border="0"></a> &nbsp; </div>
+
+<div class="monitor_link"><a href="/hyip-monitor/58391/vexam.com/" title="Tap to open detailed info about Vexam site">Vexam detailed info</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</div>
+</div>
+<div class="market-summary-wrapper"><h2 class="market-summary-heading">HYIP Investments monitor Principles and general information.</h2></div>
+<div class="textingmonitor"><p style="line-height: 1.4em; color: #545454; font-size: 0.7em; font-family: verdana, arial, sans-serif;">
+Monitoring HYIPs, carried our by HyipNews team, is aimed to secure investors from investing their funds in low-quality investment programs. Our experts sort out and analyze a large number of High Yield Investment Programs, which appear on the market, on a daily basis. The most interesting and promising ones are introduced to the readers on the news pages. If a HYIP is worth attention - we start its monitoring, and the result is reflected in the regular surveys. <br /><br />We monitor the way many HYIPs fulfill their payment obligations and inform our readers of the current payment status of those programs on the HYIP Monitor page. However, monitoring service is voluntary - we can not force the program admins to let us monitor their payments. Even though absence of any HYIP in the HyipNews hyip monitor is not a crime or a sign of a fraud, potential investors need to think over the non-public position of the program admin.
+We are very responsive to any signs of violating the payment terms.<br /><br /> Below we provide a constantly updated list of HYIPs, which have deceived their investors and become scams during the previous weeks, follow there link <a href="/hyip-monitor/blacklist/" title="HYIP Blacklist closed hyips scam sites, see in new tab" rel="dofollow" target="_blank">HYIP Blacklist closed hyips scam sites.</a>
+</p>
+</div>
+</div>
+
+
+<script type="604d09836e0fe286161a7491-text/javascript" src="/jscript/sideblock_monitor.js"></script>
+<div id="mobile" class="content_sidebar">
+<div class="sidebar_wrap">
+<br />
+<div class="sidebar_baner">
+<br />
+</div>
+
+<div class="sidebar_news" style="margin-top: 6px;">
+<div class="table_item table_full_gray" style="box-shadow: 1px 1px 3px rgba(0,0,0,0.2);">
+<div class="table_item topic_title_big" style="text-align: center">
+Subscribe!
+</div>
+
+<script type="604d09836e0fe286161a7491-text/javascript">
+	function SubscrSend(prm) {
+		jQuery('#foo').addClass('active');
+		document.subscr_form.email.focus();
+		document.subscr_form.params.value = prm;
+		jQuery.post(document.subscr_form.action, jQuery("#subscr_form").serialize(), function(data) {
+			jQuery('#subscr_id').html(data);
+			jQuery('#foo').removeClass('active');
+		});
+		return false;
+	}
+</script>
+<div class="voting" id="subscr_id">
+<div>
+<div>
+<form name="subscr_form" id="subscr_form" action="/subscribe/" method="POST">
+ <input type="hidden" name="params" onfocus="if (!window.__cfRLUnblockHandlers) return false; this.value=''" value="Please enter you email" data-cf-modified-604d09836e0fe286161a7491-="">
+<div style="line-height: 1.4em;color: #545454;font-size: 0.85em;font-family: arial,sans-serif;" align="left">Keep up with the latest news!
+Not more than two times per week, you are going to receive the key takeaways of the most important events on the HYIP market <strong>52326</strong> subscribers are already in.
+</div>
+<div align="left">
+<input type="text" size="22" name="email" />
+</div>
+<div>
+<img src="/genpos.php?t=542868420" style="vertical-align: bottom;" alt="Enter code">
+<input type="text" name="you_post_key" size="4" maxlength="250" style="width: 25px;">
+<input type="button" name="subscribe" value="Subscribe" onclick="if (!window.__cfRLUnblockHandlers) return false; return SubscrSend('sub')" style="cursor: pointer; -webkit-appearance: button; color: #00529E; font: normal normal normal 13px/15px 'Century Gothic', 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold; text-transform: uppercase; letter-spacing: -1px; text-align: center; text-shadow: #CCC 1px 1px 1px;" data-cf-modified-604d09836e0fe286161a7491-="">
+<div id="foo" class="deactive"><img src="/img/spinner.gif" alt="Please wait"></div>
+</div>
+<div>
+<div style="line-height: 1.4em;color: #545454;font-size: 0.85em;font-family: arial,sans-serif;" align="left">To unsubscribe, enter your e-mail and code and click '<a href="#" name="unsubscribe" value="Unsubscribe" onclick="if (!window.__cfRLUnblockHandlers) return false; return SubscrSend('unsub')" data-cf-modified-604d09836e0fe286161a7491-="">Cancel subscription</a>'.
+</div>
+</form>
+</div>
+</div>
+</div>
+<div class="corner_sq corner_t_l"></div>
+<div class="corner_sq corner_t_r"></div>
+<div class="corner_sq corner_b_l"></div>
+<div class="corner_sq corner_b_r"></div>
+</div>
+</div>
+<div class="sidebar_baner">
+<div id="dbanner_div" align="center" style="float: none; margin: 0px"></div>
+<div id="dbanners_div" style="display: none"><div id="dbanner_0"><a href="/bsdb/bs.php?id=9063" target="_blank">
+<video autoplay loop muted playsinline preload=auto>
+<source src="/bsdb/9063.webm" type="video/webm">
+</video></a></div></div>
+<script language="JavaScript" type="604d09836e0fe286161a7491-text/javascript">
+	//<!--
+	var dbanner_cnt = 0;
+	var dbanner = new Array();
+	dbanner[0] = new Array(10, 0);
+	function dbannernext() {
+		var i = getAdNum(dbanner, dbanner_cnt);
+		++dbanner_cnt;
+		document.getElementById('dbanner_div').innerHTML = document.getElementById('dbanner_'+i).innerHTML;
+		setTimeout("dbannernext()",dbanner[i][0] * 1000);
+	}
+	dbannernext();
+	//-->
+</script>
+<div class="underhead_link" align="center" style="float: none; text-align: center;"><p title="Your AD here for $4.99 weekly! D.Square Button. Spot 9 of 10 spots are free." class="adtext">Your AD here for $4.99 weekly!</p></div>
+</div>
+<div class="sidebar_news" style="margin-top: 6px;">
+<div class="table_item table_full_gray" style="box-shadow: 1px 1px 3px rgba(0,0,0,0.2);">
+<div class="table_item topic_title_big" style="text-align: center">
+<span style=color:#AF266A>Observed new Hyips</span>
+</div>
+
+<div class="corner_sq corner_t_l"></div>
+<div class="corner_sq corner_t_r"></div>
+<div class="corner_sq corner_b_l"></div>
+<div class="corner_sq corner_b_r"></div>
+</div>
+</div>
+<div class="sidebar_news" style="margin-top: 6px;">
+<div class="table_item table_full_gray" style="box-shadow: 1px 1px 3px rgba(0,0,0,0.2);">
+<div class="table_item topic_title_big" style="text-align: center">
+Editorial Blog
+</div>
+
+<div>
+  <div class="plain"><p><span style="font-family: Tahoma,Calibri,Arial; font-size: small;"><strong><span style="color: #ff0000;">Autumn discounts!</span> </strong><br />Starting from September 1 till November end order promotion packages at up to <strong><span style="color: #ff0000;">50% discount.</span></strong>&nbsp;<a href="/advertise/shop-promoting/" target="_blank">Two discount packages</a> are offered, each of which provides unique opportunity to promote your site online with HYIPNews.com</span></p>
+<hr style="border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));" /></div>
+</div>
+</div>
+</div>
+<div class="sidebar_news" style="margin-top: 6px;">
+<div class="table_item table_full_gray" style="box-shadow: 1px 1px 3px rgba(0,0,0,0.2);">
+<div class="table_item topic_title_big" style="text-align: center">
+<span style=color:red>Latest Scam</span> <a class="atomfeed" href="/scam/" target="_blank" title="Subscribe to Scam alerts rss feed"></a>
+</div>
+
+<div>
+<div class="voting">
+<span class="grey">argentumus.club</span></br>
+<span class="grey">jetly.biz</span></br>
+<span class="grey">ifdnzact.com</span></br>
+<span class="grey">tradebit.shop</span></br>
+<span class="grey">investment.limited</span></br>
+<span class="grey">narwhaltex.ltd</span></br>
+<span class="grey">elitefundsman.com</span></br>
+<span class="grey">redhourly.top</span></br>
+<span class="grey">e-nfinity.net</span></br>
+<span class="grey">nftdouble.biz</span></br></div>
+</div>
+</div>
+</div>
+<div class="sidebar_baner" style="margin-top: 23px;">
+<div id="hbanner_div" align="center" style="float: none; margin: 0px"></div>
+<div id="hbanners_div" style="display: none"><div id="hbanner_0"><script type="604d09836e0fe286161a7491-text/javascript" src="//rf.revolvermaps.com/0/0/2.js?i=54uf55wwn9a&m=0&s=162&c=ff0000&t=1" async="async"></script></div></div>
+<script language="JavaScript" type="604d09836e0fe286161a7491-text/javascript">
+	//<!--
+	var hbanner_cnt = 0;
+	var hbanner = new Array();
+	hbanner[0] = new Array(600, 0);
+	function hbannernext() {
+		var i = getAdNum(hbanner, hbanner_cnt);
+		++hbanner_cnt;
+		document.getElementById('hbanner_div').innerHTML = document.getElementById('hbanner_'+i).innerHTML;
+		setTimeout("hbannernext()",hbanner[i][0] * 1000);
+	}
+	hbannernext();
+	//-->
+</script>
+</div>
+<div class="sidebar_baner" style="margin-top: 23px;">
+</div>
+<div class="sidebar_baner" style="margin-top: 23px;">
+<div id="jbanner_div" align="center" style="float: none; margin: 0px"></div>
+<div id="jbanners_div" style="display: none"><div id="jbanner_0"><a href="/bsdb/bs.php?id=9062" target="_blank">
+<video autoplay loop muted playsinline preload=auto>
+<source src="/bsdb/9062.webm" type="video/webm">
+</video></a></div></div>
+<script language="JavaScript" type="604d09836e0fe286161a7491-text/javascript">
+	//<!--
+	var jbanner_cnt = 0;
+	var jbanner = new Array();
+	jbanner[0] = new Array(10, 0);
+	function jbannernext() {
+		var i = getAdNum(jbanner, jbanner_cnt);
+		++jbanner_cnt;
+		document.getElementById('jbanner_div').innerHTML = document.getElementById('jbanner_'+i).innerHTML;
+		setTimeout("jbannernext()",jbanner[i][0] * 1000);
+	}
+	jbannernext();
+	//-->
+</script>
+<div class="underhead_link" align="center" style="float: none; text-align: center;"><p title="Your AD here for $14.99 weekly! J.Wide Skyscraper. Spot 9 of 10 spots are free." class="adtext">Your AD here for $14.99 weekly!</p></div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+
+<div class="footer">
+
+<div id="gbanner_div" align="center" style="float: none; margin: 0px"></div>
+<div id="gbanners_div" style="display: none"><div id="gbanner_0"><a href="/bsdb/bs.php?id=9058" target="_blank">
+<video autoplay loop muted playsinline preload=auto>
+<source src="/bsdb/9057.webm" type="video/webm">
+</video></a></div></div>
+<script language="JavaScript" type="604d09836e0fe286161a7491-text/javascript">
+	//<!--
+	var gbanner_cnt = 0;
+	var gbanner = new Array();
+	gbanner[0] = new Array(10, 0);
+	function gbannernext() {
+		var i = getAdNum(gbanner, gbanner_cnt);
+		++gbanner_cnt;
+		document.getElementById('gbanner_div').innerHTML = document.getElementById('gbanner_'+i).innerHTML;
+		setTimeout("gbannernext()",gbanner[i][0] * 1000);
+	}
+	gbannernext();
+	//-->
+</script>
+<div class="underhead_link" align="center" style="float: none; text-align: center;"><p title="Your AD here for $11.99 weekly! G.Footer leaderboard. Spot 9 of 10 spots are free." class="adtext">Your AD here for $11.99 weekly!</p></div>
+<div class="clear_b"></div>
+<div class="footer_copyright">
+Breaking crypto news and surveys on HYIP industry and related niches along with professional crypto hyip investments monitor.<br />
+HYIP crypto investments news, reviews online since 2003. <br />
+&copy; 2003-2022 All Right Reserved. HyipNews.com USA:(415)735-HYIP</div>
+</div></div>
+</div>
+
+</div>
+</div>
+
+
+
+<script defer type="604d09836e0fe286161a7491-text/javascript" src="/jscript/modernizr.custom.17475.min.js"></script>
+<script defer type="604d09836e0fe286161a7491-text/javascript" src="/jscript/float-panel.min.js"></script>
+<script defer type="604d09836e0fe286161a7491-text/javascript" src="/jscript/floatLayers.min.js"></script>
+<script defer type="604d09836e0fe286161a7491-text/javascript" src="/jscript/formhint.min.js"></script>
+<script defer type="604d09836e0fe286161a7491-text/javascript" src="/jscript/wz_tooltip.min.js"></script>
+<a href="#" class="back-to-top"></a>
+<script defer type="604d09836e0fe286161a7491-text/javascript">            
+			jQuery(document).ready(function() {
+				var offset = 220;
+				var duration = 500;
+				jQuery(window).scroll(function() {
+					if (jQuery(this).scrollTop() > offset) {
+						jQuery('.back-to-top').fadeIn(duration);
+					} else {
+						jQuery('.back-to-top').fadeOut(duration);
+					}
+				});
+				
+				jQuery('.back-to-top').click(function(event) {
+					event.preventDefault();
+					jQuery('html, body').animate({scrollTop: 0}, duration);
+					return false;
+				})
+			});
+		</script>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="604d09836e0fe286161a7491-|49" defer=""></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"79af50e7cbbb7689","version":"2023.2.0","r":1,"token":"c70a50549c1a465b8040dfa7e3caa48c","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>

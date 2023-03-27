@@ -1,0 +1,15 @@
+#* * * * * /opt/lampp/htdocs/tihuy/sh/seed1.sh
+#* * * * * /opt/lampp/htdocs/tihuy/sh/monitor.sh
+#* * * * * /opt/lampp/htdocs/tihuy/sh/hyip.sh
+#* * * * * /opt/lampp/htdocs/tihuy/sh/hyip1.sh
+#* * * * * /opt/lampp/htdocs/tihuy/sh/rate.sh
+#* * * * * /opt/lampp/htdocs/tihuy/sh/test.sh
+#* * * * * /opt/lampp/htdocs/tihuy/sh/alexa.sh
+#0 1 * * * /opt/lampp/bin/php /opt/lampp/htdocs/tihuy/sh/seed.php
+#0 13 * * * /opt/lampp/bin/php /opt/lampp/htdocs/tihuy/sh/copyall.php
+#* * * * * /opt/lampp/bin/php /opt/lampp/htdocs/tihuy/pay_cron.php
+#* * * * * /opt/lampp/htdocs/tihuy/sh/test.sh
+#* * * * * /bin/bash -l -c 'date > ~/cron-test.txt'
+#* * * * *  DISPLAY=:0 /home/al/PycharmProjects/pythonProject/download_source.py
+#* * * * *  DISPLAY=:0 /var/www/html/py/download_source.py
+* * * * * /var/www/html/sh/download_source-r.sh

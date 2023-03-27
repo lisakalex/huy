@@ -1,0 +1,828 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129070905-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+
+            gtag('config', 'UA-129070905-2');
+        </script>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="hyips4u.com HYIP Developer Group">
+    <meta name="description"
+          content="Best HYIPs Database collected with complete information and the best refback offers for investing in each of them - all together at rcbinfo.com"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>RCBinfo.com - Best HYIPs Database</title>
+    <link href="/css/styles.css?v=1.6" rel="stylesheet" type="text/css"/>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+    
+    <script type="text/javascript" src="/js/files/default.js"></script>
+    <script type="text/javascript" src="/js/files/functions.js?v=1.95"></script>
+        <script type="text/javascript" src="/js/files/functions2.js"></script>
+        
+        <style>
+            #twitcker-wrapper {
+                position: relative !important;
+                top: 9px !important;
+                margin-bottom: 13px !important;
+                z-index: 99999 !important;
+                margin-left: 170px !important;
+                margin-right: 80px !important;
+            }
+
+            body > div[id^='twitcker-'] {
+                height: 0 !important;
+            }
+
+            #twitcker-bar {
+                background: none !important;
+                box-shadow: none !important;
+            }
+
+            #twitcker-bar a.logo, #twitcker-bar a.info {
+                background: rgb(59, 59, 59) !important;
+                color: rgb(227, 227, 227) !important;
+            }
+
+            #twitcker-bar::before, #twitcker-bar::after {
+                background: none !important;
+            }
+
+            #twitcker-bar div.box {
+                box-shadow: none !important;
+                background: none !important;
+            }
+
+            #twitcker-bar div.box a {
+                color: rgb(255, 246, 246) !important;
+            }
+
+            #twitcker-bar a.info {
+                opacity: 0 !important;
+            }
+
+            #twitcker-toggler {
+                display: none !important;
+            }
+
+            @media only screen and (max-width: 768px) {
+                body > div[id^='twitcker-'] {
+                    display: none !important;
+                }
+            }
+        </style>
+    
+</head>
+
+<body>
+
+    <script>
+        $(document).ready(function () {
+            if (location.pathname.includes('user_refbacks')) {
+                loadSection('secMember', 1);
+                loadContent('refback_requests', 1)
+            } else if (location.pathname.includes('profile')) {
+                loadSection('secMember', 1);
+                loadContent('profile', 1)
+            } else if (location.pathname.includes('allrcb')) {
+                loadSection('secRefback', 1);
+                loadContent('allrcb', 1)
+            } else if (location.pathname.includes('listrcb')) {
+                loadSection('secRefback', 1);
+                loadContent('listrcb', 1)
+            } else if (location.pathname.includes('advertise')) {
+                loadSection('secAd', 1);
+                loadContent('advertise', 1)
+            } else if (location.pathname.includes('buy_ads')) {
+                loadSection('secAd', 1);
+                loadContent('buy_ads', 1);
+                $('#advWidget').slideDown()
+            } else if (location.pathname.includes('bookmarks')) {
+                loadSection('secMember', 1);
+                loadContent('bookmarks', 1)
+            } else if (location.pathname.includes('support')) {
+                loadSection('secHelp', 1);
+                loadContent('support', 1)
+            } else if (location.pathname.includes('codes')) {
+                loadSection('secHelp', 1);
+                loadContent('codes', 1)
+            } else if (location.pathname.includes('details')) {
+                loadSection('secHyip', 1);
+                /*var id = location.pathname.substring(10);
+                loadDetails('details', id, 1)*/
+            } else if (location.pathname.includes('refback')) {
+                loadSection('secHyip', 1);
+                /*var id = location.pathname.substring(10);
+                loadDetails('refback', id, 1)*/
+            } else if (location.pathname.includes('votes')) {
+                loadSection('secHyip', 1);
+                /*var id = location.pathname.substring(8);
+                loadDetails('add_vote', id, 1)*/
+            } else if (location.pathname.includes('traffic')) {
+                loadSection('secHyip', 1);
+                /*var id = location.pathname.substring(10);
+                loadDetails('traffic', id, 1)*/
+            } else if (location.pathname.includes('code')) {
+                loadSection('secHyip', 1);
+                var id = location.pathname.substring(7);
+                loadDetails('get_code', id, 1)
+            } else {
+                if (location.hash.includes('login')) {
+                    loadSection('secMember', 1);
+                    loadWidget('login', 1);
+                } else if (location.hash.includes('signup')) {
+                    loadSection('secMember', 1);
+                    loadWidget('signup', 1);
+                } else if (location.hash.includes('member')) {
+                    loadSection('secMember', 1);
+                    loadContent('refback_requests', 1)
+                } else if (location.hash.includes('user_refbacks')) {
+                    loadSection('secMember', 1);
+                    loadContent('refback_requests', 1)
+                } else if (location.hash.includes('profile')) {
+                    loadSection('secMember', 1);
+                    loadContent('profile', 1)
+                } else if (location.hash.includes('allrcb')) {
+                    loadSection('secRefback', 1);
+                    loadContent('allrcb', 1)
+                } else if (location.hash.includes('listrcb')) {
+                    loadSection('secRefback', 1);
+                    loadContent('listrcb', 1)
+                } else if (location.hash.includes('advertise')) {
+                    loadSection('secAd', 1);
+                    loadContent('advertise', 1)
+                } else if (location.hash.includes('buy_ads')) {
+                    loadSection('secAd', 1);
+                    loadContent('buy_ads', 1);
+                    $('#advWidget').slideDown()
+                } else if (location.hash.includes('bookmarks')) {
+                    loadSection('secMember', 1);
+                    loadContent('bookmarks', 1)
+                } else if (location.hash.includes('support')) {
+                    loadSection('secHelp', 1);
+                    loadContent('support', 1)
+                } else if (location.hash.includes('insurance')) {
+                    loadContent('insurance', 1)
+                } else if (location.hash.includes('codes')) {
+                    loadSection('secHelp', 1);
+                    loadContent('codes', 1)
+                } else if (location.hash.includes('details')) {
+                    loadSection('secHyip', 1);
+                    var id = location.hash.substring(10);
+                    loadDetails('details', id, 1)
+                } else if (location.hash.includes('refback')) {
+                    loadSection('secHyip', 1);
+                    var id = location.hash.substring(10);
+                    loadDetails('refback', id, 1)
+                } else if (location.hash.includes('votes')) {
+                    loadSection('secHyip', 1);
+                    var id = location.hash.substring(8);
+                    loadDetails('add_vote', id, 1)
+                } else if (location.hash.includes('traffic')) {
+                    loadSection('secHyip', 1);
+                    var id = location.hash.substring(10);
+                    loadDetails('traffic', id, 1)
+                } else if (location.hash.includes('code')) {
+                    loadSection('secHyip', 1);
+                    var id = location.hash.substring(7);
+                    loadDetails('get_code', id, 1)
+                } else {
+                    loadSection('secHyip', 1);
+                    if ($('.allHyips').is(':empty')) {
+                        loadHyips('all', 1, 500);
+                    }
+                }
+            }
+        });
+
+    </script>
+   <script>
+        /*(function () {
+            var ticker = document.createElement('script');
+            ticker.async = true;
+            ticker.src = 'https://embed.twitcker.com/ticker/rcbinfocom.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ticker);
+        })();*/
+    </script>
+
+
+<!-- Top line begins -->
+<div id="top">
+
+    <div class="wrapper">
+
+        <a href="/index.php" title="" class="logo"><img src="/images/logo.png" title="Rcbinfo main logo"
+                                                        alt="Rcbinfo main logo"/></a>
+
+        <!-- Right top nav -->
+        <div class="topNav">
+            <ul class="userNav">
+                <li><a title="" class="search"></a></li>
+                <li class="showTabletP"><a href="#" title="" class="sidebar"></a></li>
+            </ul>
+            <a title="" class="iButton"></a>
+            <div class="topSearch">
+                <div class="topDropArrow"></div>
+                <input type="text" id="search" placeholder="search for a project..." name="topSearch"/>
+                <div class="searchRes"></div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+</div>
+
+<div id="sidebar">
+    <div class="mainNav">
+        <!-- Main nav -->
+        <ul class="nav">
+            <li class="fs1 iconb"><a href="#" data-sec="secHyip" title="HYIPs List" class="active"><img
+                            src="/images/icons/mainnav/tables.png"
+                            alt="HYIPs List" title="HYIPs List"/><span>HYIPs List</span></a></li>
+            <li><a href="#" data-sec="secMember" title="Members"><img src="/images/icons/mainnav/ui.png"
+                                                                      alt="Members"
+                                                                      title="Members"/><span>Members</span></a>
+
+            </li>
+            
+            <li><a href="#" data-sec="secAd" title="Advertise"><img src="/images/icons/mainnav/forms.png"
+                                                                    alt="Advertise"
+                                                                    title="Advertise"/><span>Advertise</span></a>
+            </li>
+            <li><a href="#" data-sec="secHelp" title="Help"><img src="/images/icons/mainnav/messages.png"
+                                                                 alt="Help" title="Help"/><span>Help</span></a></li>
+
+
+            <li><a href="#" data-sec="secOther" title="Other"><img src="/images/icons/mainnav/other.png"
+                                                                   alt="Other pages" title="Other pages"/><span>Other pages</span></a>
+            </li>
+        </ul>
+        <div class="social-icons">
+            <ul style="padding-left:0;">
+                <li class="telegram">
+                    <a href="https://t.me/rcbinfo" target="_blank" title="Telegram Official Channel"></a>
+                </li>
+
+                <li class="telegram">
+                    <a href="https://t.me/hyip_discussion" target="_blank" title="Telegram Discussion Group"></a>
+                </li>
+
+                <li class="newsletter">
+                    <a href="https://www.subscribepage.com/y0v1x1" target="_blank" title="Newsletter Signup"></a>
+                </li>
+
+                <li class="skype">
+                    <a href="skype:hyips4u?chat" target="_blank" title="Skype Support"></a>
+                </li>
+
+                <li class="twitter">
+                    <a href="https://twitter.com/rcbinfocom" target="_blank" title="Twitter Page"></a>
+                </li>
+
+                <li class="facebook">
+                    <a href="https://fb.me/rcbinfocom" target="_blank" title="Facebook Page"></a>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- Secondary nav -->
+    <div class="secNav">
+        <div class="secWrapper">
+            <div id="secHyip" style="display: none">
+                <div class="secTop">
+    <div class="balance">
+        <div class="balInfo">All HYIPs:<span>Sort by feature</span></div>
+        <div class="balAmount"><img style="top: 7px;" src="/images/icons/mainnav/tables.png" alt="HYIPs List" title="HYIPs List"></div>
+    </div>
+</div>
+<!-- Sidebar dropdown -->
+<ul class="fulldd">
+    <li class="has">
+        <a title="">
+            <span class="icos-signal"></span>
+            <span>Listing type</span>
+            <span><img src="/images/elements/control/hasddArrow.png" alt="arrow" title="arrow"/></span>
+        </a>
+        <ul>
+            <li><a href="#" data-pad=1 title=""><span class="icos-signal"></span>Listing type </a></li>
+            <li><a href="#" data-pad=2 title=""><span class="icos-money"></span>Investments amount </a></li>
+            <li><a href="#" data-pad=3 title=""><span class="icos-clock"></span>Launch date</a></li>
+            <li><a href="#" data-pad=4 title=""><span class="icos-check"></span>Paying status</a></li>
+            
+        </ul>
+    </li>
+</ul>
+<div class="divider"><span></span></div>
+<div id="sidePad">
+    <div class="widget">
+        <div class="whead">
+            <h6><span class="icos-signal">&nbsp;</span>Sort by <span>listing type</span></h6>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <br>
+    <div class="sidePad sidePad1">
+        <a href="/#!all" title="" data-type="all" class="sideB bHome bBlack"><span class="icon-list"></span>All listings</a>
+        <a href="/#!gold_protected" title="" data-type="gp" class="sideB bHome bGold mt10"><span class="icon-diamond"
+                                                                                 style="margin-right: 5px;"></span><span
+                    class="icon-umbrella"></span>Gold protected</a>
+        <a href="/#!gold_regular" title="" data-type="gr" class="sideB bHome bGold"><span class="icon-diamond"></span>Gold regular</a>
+        <a href="/#!silver_protected" title="" data-type="sp" class="sideB bHome bSea  mt10"><span class="icon-trophy"
+                                                                                 style="margin-right: 5px;"></span><span
+                    class="icon-umbrella"></span>Silver protected</a>
+        <a href="/#!silver_regular" title="" data-type="sr" class="sideB bHome bSea"><span class="icon-trophy"></span>Silver regular</a>
+        <a href="/#!bronze_protected" title="" data-type="bp" class="sideB bHome bBrown mt10"><span class="icon-trophy-2"
+                                                                                  style="margin-right: 5px;"></span><span
+                    class="icon-umbrella"></span>Bronze protected</a>
+        <a href="/#!bronze_regular" title="" data-type="br" class="sideB bHome bBrown"><span class="icon-trophy-2"></span>Bronze regular</a>
+        <a href="/#!normal" title="" data-type="norm" class="sideB bHome bDefault mt10"><span class="icon-folder-2"></span>Normal</a>
+        <a href="/#!scam" title="" data-type="scam" class="sideB bHome bWildRed"><span class="icon-remove-2"></span>Scam</a>
+    </div>
+    <div class="sidePad sidePad2" style="display: none">
+        <a href="/#!total_inv" title="" data-type="total" class="sideB bHome bRed"><span class="icon-stats-up"></span>Total investments</a>
+        <a href="/#!today_inv" title="" data-type="today" class="sideB bHome bRed mt10"><span class="icon-stats-up"></span>Today investments</a>
+        <a href="/#!yesterday_inv" title="" data-type="yesterday" class="sideB bHome bRed mt10"><span class="icon-stats-up"></span>Yesterday investments</a>
+    </div>
+    <div class="sidePad sidePad3" style="display: none">
+        <a href="/#!new" title="" data-type="new" class="sideB bHome bLightBlue"><span class="icon-battery-4"></span>Newest projects</a>
+        <a href="/#!old" title="" data-type="old" class="sideB bHome bLightBlue mt10"><span class="icon-battery-2"></span>Oldest projects</a>
+    </div>
+    <div class="sidePad sidePad4" style="display: none">
+        <a href="/#!paying" title="" data-type="paying" class="sideB bHome bGreen"><span class="icon-checkmark-3"></span>Paying status</a>
+        <a href="/#!waiting" title="" data-type="waiting" class="sideB bHome bDefault mt10"><span class="icon-help-3"></span>Waiting status</a>
+        <a href="/#!problem" title="" data-type="problem" class="sideB bHome bGold mt10"><span class="icon-warning"></span>Problem status</a>
+        <a href="/#!notpaying" title="" data-type="notpaying" class="sideB bHome bWildRed mt10"><span class="icon-cancel-4"></span>Not paying status</a>
+    </div>
+    <div class="sidePad sidePad5" style="display: none">
+        <a href="/#!extreme_rcb" title="" data-type="xrcb" class="sideB bHome bWildRed"><span class="icon-rocket"></span>Extreme RCB</a>
+        <a href="/#!special_rcb" title="" data-type="srcb" class="sideB bHome bRed mt10"><span class="icon-meter-fast"></span>Special RCB</a>
+        <a href="/#!normal_rcb" title="" data-type="nrcb" class="sideB bHome bDefault mt10"><span class="icon-meter-medium"></span>Normal RCB</a>
+        <a href="/#!low_rcb" title="" data-type="lrcb" class="sideB bHome bGreyish mt10"><span class="icon-meter-slow"></span>Low RCB</a>
+    </div>
+</div>
+<div class="divider"><span></span></div>
+
+            </div>
+            <div id="secMember" style="display: none">
+                    <div class="secTop">
+        <div class="balance">
+            <div class="balInfo">Members:<span>Register or login</span></div>
+            <div class="balAmount"><img src="/images/icons/mainnav/ui.png" alt="Members" title="Members"></div>
+        </div>
+    </div>
+    <!-- Tabs container -->
+    <div class="tab-container">
+        <ul class="iconsLine ic2">
+            <li><a href="/#!register" data-wid="signup" title="">Register</a></li>
+            <li><a href="/#!login" data-wid="login" title="">Login</a></li>
+        </ul>
+
+        <div class="divider"><span></span></div>
+
+
+    </div>
+
+            </div>
+            <div id="secRefback" style="display: none">
+                <div class="secTop">
+    <div class="balance">
+        <div class="balInfo">Refback:<span>Rates & Requests</span></div>
+        <div class="balAmount"><img src="/images/icons/mainnav/statistics.png" alt="Refback" title="Refback"></div>
+    </div>
+</div>
+<!-- Tabs container -->
+<div class="tab-container">
+
+    <ul class="iconsLine ic2"></ul>
+    <div class="divider"><span></span></div>
+    <div class="sidePad">
+        <a href="/#!allrcb" title="" data-cont="allrcb" class="sideB bData bRed"><span class="icon-equalizer-2"></span>Refback
+            rates</a>
+        <a href="/#!listrcb" title="" data-cont="listrcb" class="sideB bData bRed"><span class="icon-time"></span>Refback
+            requests</a>
+    </div>
+</div>
+            </div>
+            <div id="secAd" style="display: none">
+                <div class="secTop">
+    <div class="balance">
+        <div class="balInfo">Advertise:<span>Listings & Banners</span></div>
+        <div class="balAmount"><img src="/images/icons/mainnav/forms.png" alt="Advertise" title="Advertise"></div>
+    </div>
+</div>
+<!-- Tabs container -->
+<div class="tab-container">
+
+    <ul class="iconsLine ic2"></ul>
+    <div class="divider"><span></span></div>
+    <div class="sidePad">
+        <a href="/#!advertise" title="" data-cont="advertise" onclick="$('#advWidget').slideUp()" class="sideB bData bRed"><span class="icon-plus_alt"></span>Add your project</a>
+        <a href="/#!buy_ads" title="" data-cont="buy_ads" onclick="$('#advWidget').slideDown()" class="sideB bData bRed"><span class="icon-youtube"></span>Buy banners & sticky</a>
+
+        <div id="advWidget" style="display: none">
+            <div class="divider"><span></span></div>
+            <a href="#" title="" data-ad="1" class="sideB bAd bSea"><span class="icon-center"></span>Sticky Listing</a>
+            <a href="#" title="" data-ad="6" class="sideB bAd bSea"><span class="icon-center"></span>728 x 90 Banner</a>
+            
+        </div>
+    </div>
+</div>
+            </div>
+            <div id="secHelp" style="display: none">
+                <div class="secTop">
+    <div class="balance">
+        <div class="balInfo">Help:<span>24/7 Support</span></div>
+        <div class="balAmount"><img style="top:8px" src="/images/icons/mainnav/messages.png" alt="Help" title="Help"></div>
+    </div>
+</div>
+<!-- Tabs container -->
+<div class="tab-container">
+
+    <ul class="iconsLine ic2"></ul>
+    <div class="divider"><span></span></div>
+    <div class="sidePad">
+        <a href="/#!support" title="" data-cont="support" class="sideB bData bGreen"><span class="icon-mail"></span>Support Form</a>
+        <a href="/#!codes" title="" data-cont="codes" class="sideB bData bGreen"><span class="icon-link-2"></span>Links to Us</a>
+    </div>
+</div>
+            </div>
+            <div id="secOther" style="display: none">
+                <div class="secTop">
+    <div class="balance">
+        <div class="balInfo">Other Pages:<span>HYIP Development</span></div>
+        <div class="balAmount"><img style="top:13px" src="/images/icons/mainnav/other.png"  alt="Other pages" title="Other pages"></div>
+    </div>
+</div>
+<!-- Tabs container -->
+<div class="tab-container">
+
+    <ul class="iconsLine ic2"></ul>
+    <div class="divider"><span></span></div>
+    <div class="sidePad">
+        <a href="https://hyips4u.com/template" target="_blank" class="sideB bDefault"><span class="icon-arrow-right"></span>HYIP Template</a>
+        <a href="https://hyips4u.com/hyip-script" target="_blank" class="sideB bDefault"><span class="icon-arrow-right"></span>HYIP script</a>
+        <a href="https://hyips4u.com/banner-logo-video" target="_blank" class="sideB bDefault"><span class="icon-arrow-right"></span>Banner, logo, video</a>
+        <a href="https://hyips4u.com/company" target="_blank" class="sideB bDefault"><span class="icon-arrow-right"></span>Company formation</a>
+        <a href="https://hyips4u.com/ssl-greenbar" target="_blank" class="sideB bDefault"><span class="icon-arrow-right"></span>SSL & greenbar</a>
+        <a href="https://hyips4u.com/account" target="_blank" class="sideB bDefault"><span class="icon-arrow-right"></span>Verified accounts</a>
+        <a href="https://hyips4u.com/security-seals" target="_blank" class="sideB bDefault"><span class="icon-arrow-right"></span>Security seals</a>
+
+    </div>
+</div>
+            </div>
+            <div id="widget"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div id="content">
+
+<div class="contentTop">
+    <h1><span class="pageTitle"><span class="icon-list"></span>All HYIPs List</span></h1>
+    <div class="clear"></div>
+</div>
+
+<div class="breadLine">
+    <div class="bc bc1">
+        <ul id="breadcrumbs" class="Hyips breadcrumbs">
+            <li><a href="/#!all">Home</a></li>
+            <li><a href="#">Hyips list</a>
+                <ul>
+                    <li><a href="#" data-pad="1" title="">Sort by listing type</a></li>
+                    <li><a href="#" data-pad="2" title="">Sort by investments amount</a></li>
+                    <li><a href="#" data-pad="3" title="">Sort by launch date</a></li>
+                    <li><a href="#" data-pad="4" title="">Sort by paying status</a></li>
+                </ul>
+            </li>
+            <li class="current"><a title="">All listings</a></li>
+        </ul>
+    </div>
+
+
+</div>
+
+<div class="wrapper">
+    <ul class="middleNavR">
+        <div class="fluid">
+                <div class="grid6"><a href="https://hyips4u.com" target="_blank"><img
+                    style="width:100%;border: 1px solid #d7dcde;margin-bottom:10px" src="https://hyips4u.com/h4u.gif"
+                    border="0" alt="Hyips4u HYIP Developer Group" title="Hyips4u HYIP Developer Group"></a></div>
+                        <div class="grid6">
+                <a
+                    href="https://rcbinfo.com/go/lid/3214"
+                    target=_blank><img style="width:100%;border: 1px solid #d7dcde;margin-bottom:10px"
+                                       src="https://espino.ltd/images/banner/espino-728.gif" border=0 alt="728x90 advertising banner" title="728x90 advertising banner">
+                    </a>            </div>
+                
+        </div>
+    </ul>
+    <div class="divider"><span></span></div>
+    <div class="leftWrap">
+        <div class="allHyips"></div>
+    </div>
+    <div class="rightWrap">
+    <div style="height:1259px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F; padding: 0px; margin: 0px; width: 100%;">
+        <div style="height:1239px; padding:0px; margin:0px; width: 100%;">
+            <iframe src="https://widget.coinlib.io/widget?type=full_v2&theme=light&cnt=20&pref_coin_id=1505&graph=yes"
+                    width="100%" height="1235px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0"
+                    border="0" style="border:0;margin:0;padding:0;"></iframe>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+</div>
+
+    <script>
+
+        $('#secMember .iconsLine a').click(function () {
+            loadWidget($(this).data('wid'), 500);
+        });
+        $('#secHyip ul.fulldd ul > li > a , .Hyips.breadcrumbs ul > li > a').click(function () {
+            $('.sidePad').slideUp(500);
+            $('.bc').removeClass().addClass('bc ' + 'bc' + $(this).data('pad'));
+            span1 = $('#secHyip ul.fulldd li.has a span:eq(0) , #sidePad .whead h6 span:eq(0)');
+            span2 = $('#secHyip ul.fulldd li.has a span:eq(1) , #sidePad .whead h6 span:eq(1)');
+            span1.removeClass();
+            $('.Hyips.breadcrumbs ul').hide();
+            switch ($(this).data('pad')) {
+                case 1:
+                    $('.sidePad1').slideDown(500);
+                    span1.addClass('icos-signal');
+                    span2.text('Listing type');
+                    break;
+                case 2:
+                    $('.sidePad2').slideDown(500);
+                    span1.addClass('icos-money');
+                    span2.text('Investments amount');
+                    break;
+                case 3:
+                    $('.sidePad3').slideDown(500);
+                    span1.addClass('icos-clock');
+                    span2.text('Launch date');
+                    break;
+                case 4:
+                    $('.sidePad4').slideDown(500);
+                    span1.addClass('icos-check');
+                    span2.text('Paying status');
+                    break;
+                /*case 5:
+                    $('.sidePad5').slideDown(500);
+                    span1.addClass('icos-star');
+                    span2.text('RCB offer');
+                    break;*/
+            }
+        });
+        $('.sideB.bData').click(function () {
+            loadContent($(this).data('cont'), 500);
+        });
+        $('.sideB').click(function () {
+            if ($('.secNav').hasClass('display')) {
+                $('.secNav').removeClass('display');
+            }
+        });
+        $(document).on("click", '.tabs > li > a', function () {
+            if ($(this).data('tab')!='visit') {
+                loadDetails($(this).data('tab'), $(this).data('id'), 500);
+            }
+        });
+        $('.sideB.bHome').click(function () {
+            $('.wrapper .leftWrap').empty();
+            $('.wrapper .leftWrap').append('<div class="allHyips"></div>');
+            $('.contentTop').html('<h1><span class="pageTitle"><span class="icon-list"></span>All HYIPs List</span></h1>\n' +
+                '    <div class="clear"></div>');
+            $('#breadcrumbs').html('<div class="bc bc1">\n' +
+                '        <ul id="breadcrumbs" class="Hyips breadcrumbs">\n' +
+                '            <li><a href="/#!all">Home</a></li>\n' +
+                '            <li><a href="#">Hyips list</a>\n' +
+                '                <ul>\n' +
+                '                    <li><a href="#" data-pad="1" title="">Sort by listing type</a></li>\n' +
+                '                    <li><a href="#" data-pad="2" title="">Sort by investments amount</a></li>\n' +
+                '                    <li><a href="#" data-pad="3" title="">Sort by launch date</a></li>\n' +
+                '                    <li><a href="#" data-pad="4" title="">Sort by paying status</a></li>\n' +
+                '                    <li><a href="#" data-pad="5" title="">Sort by RCB offer</a></li>\n' +
+                '                </ul>\n' +
+                '            </li>\n' +
+                '            <li class="current"><a title="">All listings</a></li>\n' +
+                '        </ul>\n' +
+                '    </div>');
+            loadHyips($(this).data('type'), 1, 500);
+            $('#breadcrumbs li.current a').text($(this).text());
+            $('.bc1 #breadcrumbs li.current a:not(:contains("listing"))').append(' listing');
+            $('.bc2 #breadcrumbs li.current a').prepend('Highest ');
+            $('.bc4 #breadcrumbs li.current a').prepend('Projects with ');
+            $('.bc5 #breadcrumbs li.current a').prepend('Projects with ');
+
+        });
+        $('ul.nav > li > a').click(function () {
+            var section = $(this).data('sec')
+            if ($('.secNav').css('display') == 'none') {
+                $('.secNav').addClass('display');
+            }
+            if ($('#' + section).css('display') == 'none') {
+                $('.secWrapper > div').slideUp(500).delay(500);
+                loadSection(section, 500);
+                $('ul.nav > li > a').removeClass('active');
+                $(this).addClass('active');
+            }
+        });
+        $('.sideB').click(function () {
+            if ($('#sidebar').hasClass('mobile')) {
+                $('#sidebar').slideToggle(100);
+                $('#sidebar').removeClass('mobile');
+            }
+        });
+        $(document).on("click", '.home_paging a.paginate_button', function () {
+            loadHyips($(this).data('type'), $(this).data('page'), 500);
+        })
+
+        $('#search').on('keyup paste', function () {
+            if (this.value.length >= 3)
+                ajaxSearch(this.value, 'inside');
+            else if (this.value.length == 0)
+                $('.searchRes').empty();
+        });
+        $(window).on('load', function () {
+            if (window.location.search.indexOf('search=') > 0) {
+                value = window.location.search.substr(8)
+                ajaxSearch(value, 'outside')
+            }
+
+        })
+    </script>
+    <script type="text/javascript" charset="utf-8">
+        // Place this code snippet near the footer of your page before the close of the /body tag
+        // LEGAL NOTICE: The content of this website and all associated program code are protected under the Digital Millennium Copyright Act. Intentionally circumventing this code may constitute a violation of the DMCA.
+
+        eval(function (p, a, c, k, e, d) {
+            e = function (c) {
+                return (c < a ? '' : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36))
+            };
+            if (!''.replace(/^/, String)) {
+                while (c--) {
+                    d[e(c)] = k[c] || e(c)
+                }
+                k = [function (e) {
+                    return d[e]
+                }];
+                e = function () {
+                    return '\\w+'
+                };
+                c = 1
+            }
+            ;
+            while (c--) {
+                if (k[c]) {
+                    p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c])
+                }
+            }
+            return p
+        }(';q O=\'\',29=\'1V\';1R(q i=0;i<12;i++)O+=29.X(D.N(D.J()*29.F));q 2G=21,2U=5q,2C=5r,2j=5t,2r=B(t){q n=!1,i=B(){z(k.1g){k.2T(\'2Z\',e);E.2T(\'1U\',e)}P{k.33(\'36\',e);E.33(\'1W\',e)}},e=B(){z(!n&&(k.1g||5v.2x===\'1U\'||k.2V===\'2W\')){n=!0;i();t()}};z(k.2V===\'2W\'){t()}P z(k.1g){k.1g(\'2Z\',e);E.1g(\'1U\',e)}P{k.37(\'36\',e);E.37(\'1W\',e);q o=!1;2l{o=E.5H==4X&&k.1Y}2i(a){};z(o&&o.2e){(B d(){z(n)G;2l{o.2e(\'17\')}2i(e){G 52(d,50)};n=!0;i();t()})()}}};E[\'\'+O+\'\']=(B(){q t={t$:\'1V+/=\',53:B(e){q d=\'\',r,o,n,c,s,l,i,a=0;e=t.e$(e);1a(a<e.F){r=e.14(a++);o=e.14(a++);n=e.14(a++);c=r>>2;s=(r&3)<<4|o>>4;l=(o&15)<<2|n>>6;i=n&63;z(2I(o)){l=i=64}P z(2I(n)){i=64};d=d+U.t$.X(c)+U.t$.X(s)+U.t$.X(l)+U.t$.X(i)};G d},11:B(e){q o=\'\',r,l,c,s,a,i,d,n=0;e=e.1A(/[^A-5c-5d-9\\+\\/\\=]/g,\'\');1a(n<e.F){s=U.t$.1H(e.X(n++));a=U.t$.1H(e.X(n++));i=U.t$.1H(e.X(n++));d=U.t$.1H(e.X(n++));r=s<<2|a>>4;l=(a&15)<<4|i>>2;c=(i&3)<<6|d;o=o+S.T(r);z(i!=64){o=o+S.T(l)};z(d!=64){o=o+S.T(c)}};o=t.o$(o);G o},e$:B(t){t=t.1A(/;/g,\';\');q o=\'\';1R(q n=0;n<t.F;n++){q e=t.14(n);z(e<1s){o+=S.T(e)}P z(e>6p&&e<6r){o+=S.T(e>>6|6s);o+=S.T(e&63|1s)}P{o+=S.T(e>>12|2E);o+=S.T(e>>6&63|1s);o+=S.T(e&63|1s)}};G o},o$:B(t){q n=\'\',e=0,o=6u=1u=0;1a(e<t.F){o=t.14(e);z(o<1s){n+=S.T(o);e++}P z(o>6A&&o<2E){1u=t.14(e+1);n+=S.T((o&31)<<6|1u&63);e+=2}P{1u=t.14(e+1);2K=t.14(e+2);n+=S.T((o&15)<<12|(1u&63)<<6|2K&63);e+=3}};G n}};q r=[\'5O==\',\'5P\',\'5N=\',\'62\',\'69\',\'6a=\',\'6b=\',\'3A=\',\'3y\',\'3l\',\'5T=\',\'6F=\',\'4g\',\'4f\',\'4e=\',\'4d\',\'4c=\',\'4b=\',\'4a=\',\'49=\',\'48=\',\'47=\',\'46==\',\'45==\',\'44==\',\'43==\',\'41=\',\'3M\',\'40\',\'3Z\',\'3Y\',\'3X\',\'3W\',\'3V==\',\'3U=\',\'3T=\',\'3S=\',\'3R==\',\'3Q=\',\'3P\',\'3O=\',\'3N=\',\'4h==\',\'42=\',\'4i==\',\'4A==\',\'4O=\',\'4N=\',\'4M\',\'4L==\',\'4K==\',\'4J\',\'4I==\',\'4H=\'],y=D.N(D.J()*r.F),Y=t.11(r[y]),w=Y,Z=1,W=\'#4G\',a=\'#4F\',g=\'#4E\',v=\'#4D\',L=\'\',b=\'4C!\',p=\'4B 4z 4k 4y\\\'4x 4P 4v 2y 2z. 4u\\\'s 4t.  4s 4r\\\'t?\',f=\'4q 4p 4o-4n, 4m 4l\\\'t 4j 3L U 3o 3n.\',s=\'I 3m, I 3k 38 3e 2y 2z.  3b 39 3p!\',n=0,u=0,o=\'3r.3I\',l=0,Q=e()+\'.2R\';B h(t){z(t)t=t.1S(t.F-15);q n=k.2v(\'3F\');1R(q o=n.F;o--;){q e=S(n[o].1G);z(e)e=e.1S(e.F-15);z(e===t)G!0};G!1};B m(t){z(t)t=t.1S(t.F-15);q e=k.3u;x=0;1a(x<e.F){1n=e[x].1Q;z(1n)1n=1n.1S(1n.F-15);z(1n===t)G!0;x++};G!1};B e(t){q o=\'\',n=\'1V\';t=t||30;1R(q e=0;e<t;e++)o+=n.X(D.N(D.J()*n.F));G o};B i(n){q i=[\'3G\',\'3H==\',\'3a\',\'3d\',\'2S\',\'3h==\',\'3J=\',\'3s==\',\'3x=\',\'3w==\',\'3B==\',\'3t==\',\'3v\',\'3z\',\'3C\',\'2S\'],a=[\'2k=\',\'3E==\',\'3q==\',\'3i==\',\'3c=\',\'3f\',\'3g=\',\'3j=\',\'2k=\',\'4w\',\'3K==\',\'5k\',\'6f==\',\'6e==\',\'6d==\',\'6c=\'];x=0;1P=[];1a(x<n){c=i[D.N(D.J()*i.F)];d=a[D.N(D.J()*a.F)];c=t.11(c);d=t.11(d);q r=D.N(D.J()*2)+1;z(r==1){o=\'//\'+c+\'/\'+d}P{o=\'//\'+c+\'/\'+e(D.N(D.J()*20)+4)+\'.2R\'};1P[x]=27 26();1P[x].1X=B(){q t=1;1a(t<7){t++}};1P[x].1G=o;x++}};B M(t){};G{2A:B(t,a){z(68 k.K==\'67\'){G};q n=\'0.1\',a=w,e=k.1d(\'1y\');e.1k=a;e.j.1h=\'1O\';e.j.17=\'-1o\';e.j.V=\'-1o\';e.j.1t=\'2b\';e.j.13=\'66\';q r=k.K.32,d=D.N(r.F/2);z(d>15){q o=k.1d(\'2a\');o.j.1h=\'1O\';o.j.1t=\'1r\';o.j.13=\'1r\';o.j.V=\'-1o\';o.j.17=\'-1o\';k.K.5Z(o,k.K.32[d]);o.1f(e);q i=k.1d(\'1y\');i.1k=\'34\';i.j.1h=\'1O\';i.j.17=\'-1o\';i.j.V=\'-1o\';k.K.1f(i)}P{e.1k=\'34\';k.K.1f(e)};l=5Y(B(){z(e){t((e.1T==0),n);t((e.24==0),n);t((e.1K==\'2F\'),n);t((e.1N==\'2h\'),n);t((e.1J==0),n)}P{t(!0,n)}},28)},1F:B(e,c){z((e)&&(n==0)){n=1;E[\'\'+O+\'\'].1z();E[\'\'+O+\'\'].1F=B(){G}}P{q f=t.11(\'5X\'),u=k.5W(f);z((u)&&(n==0)){z((2U%3)==0){q l=\'5V=\';l=t.11(l);z(h(l)){z(u.1E.1A(/\\s/g,\'\').F==0){n=1;E[\'\'+O+\'\'].1z()}}}};q y=!1;z(n==0){z((2C%3)==0){z(!E[\'\'+O+\'\'].2t){q r=[\'5U==\',\'4Q==\',\'5S=\',\'5R=\',\'5Q=\'],m=r.F,a=r[D.N(D.J()*m)],d=a;1a(a==d){d=r[D.N(D.J()*m)]};a=t.11(a);d=t.11(d);i(D.N(D.J()*2)+1);q o=27 26(),s=27 26();o.1X=B(){i(D.N(D.J()*2)+1);s.1G=d;i(D.N(D.J()*2)+1)};s.1X=B(){n=1;i(D.N(D.J()*3)+1);E[\'\'+O+\'\'].1z()};o.1G=a;z((2j%3)==0){o.1W=B(){z((o.13<8)&&(o.13>0)){E[\'\'+O+\'\'].1z()}}};i(D.N(D.J()*3)+1);E[\'\'+O+\'\'].2t=!0};E[\'\'+O+\'\'].1F=B(){G}}}}},1z:B(){z(u==1){q C=2D.6j(\'2B\');z(C>0){G!0}P{2D.6E(\'2B\',(D.J()+1)*28)}};q h=\'6C==\';h=t.11(h);z(!m(h)){q c=k.1d(\'6z\');c.1Z(\'6y\',\'6x\');c.1Z(\'2x\',\'1m/6w\');c.1Z(\'1Q\',h);k.2v(\'6v\')[0].1f(c)};6t(l);k.K.1E=\'\';k.K.j.16+=\'R:1r !19\';k.K.j.16+=\'1C:1r !19\';q Q=k.1Y.24||E.35||k.K.24,y=E.6q||k.K.1T||k.1Y.1T,d=k.1d(\'1y\'),Z=e();d.1k=Z;d.j.1h=\'2f\';d.j.17=\'0\';d.j.V=\'0\';d.j.13=Q+\'1v\';d.j.1t=y+\'1v\';d.j.2n=W;d.j.23=\'6o\';k.K.1f(d);q r=\'<a 1Q="6n://6m.6l" j="H-1e:10.6k;H-1j:1i-1l;1c:61;">5M 5L 5K 5h 5g</a>\';r=r.1A(\'5f\',e());r=r.1A(\'5e\',e());q i=k.1d(\'1y\');i.1E=r;i.j.1h=\'1O\';i.j.1B=\'1I\';i.j.17=\'1I\';i.j.13=\'5b\';i.j.1t=\'5a\';i.j.23=\'2q\';i.j.1J=\'.6\';i.j.2J=\'2p\';i.1g(\'58\',B(){o=o.57(\'\').55().4S(\'\');E.2u.1Q=\'//\'+o});k.1D(Z).1f(i);q n=k.1d(\'1y\'),M=e();n.1k=M;n.j.1h=\'2f\';n.j.V=y/7+\'1v\';n.j.51=Q-4Z+\'1v\';n.j.4Y=y/3.5+\'1v\';n.j.2n=\'#4W\';n.j.23=\'2q\';n.j.16+=\'H-1j: "4V 4U", 1w, 1x, 1i-1l !19\';n.j.16+=\'4T-1t: 5i !19\';n.j.16+=\'H-1e: 56 !19\';n.j.16+=\'1m-1p: 1q !19\';n.j.16+=\'1C: 5j !19\';n.j.1K+=\'2O\';n.j.2Y=\'1I\';n.j.5y=\'1I\';n.j.5I=\'2H\';k.K.1f(n);n.j.5G=\'1r 5E 5D -5C 5B(0,0,0,0.3)\';n.j.1N=\'2o\';q w=30,Y=22,x=18,L=18;z((E.35<2M)||(5A.13<2M)){n.j.2X=\'50%\';n.j.16+=\'H-1e: 5l !19\';n.j.2Y=\'5w;\';i.j.2X=\'65%\';q w=22,Y=18,x=12,L=12};n.1E=\'<2Q j="1c:#5u;H-1e:\'+w+\'1L;1c:\'+a+\';H-1j:1w, 1x, 1i-1l;H-1M:5s;R-V:1b;R-1B:1b;1m-1p:1q;">\'+b+\'</2Q><2P j="H-1e:\'+Y+\'1L;H-1M:5p;H-1j:1w, 1x, 1i-1l;1c:\'+a+\';R-V:1b;R-1B:1b;1m-1p:1q;">\'+p+\'</2P><5o j=" 1K: 2O;R-V: 0.2N;R-1B: 0.2N;R-17: 2d;R-2L: 2d; 2s:5n 5m #4R; 13: 25%;1m-1p:1q;"><p j="H-1j:1w, 1x, 1i-1l;H-1M:2m;H-1e:\'+x+\'1L;1c:\'+a+\';1m-1p:1q;">\'+f+\'</p><p j="R-V:5x;"><2a 5F="U.j.1J=.9;" 5J="U.j.1J=1;"  1k="\'+e()+\'" j="2J:2p;H-1e:\'+L+\'1L;H-1j:1w, 1x, 1i-1l; H-1M:2m;2s-54:2H;1C:1b;59-1c:\'+g+\';1c:\'+v+\';1C-17:2b;1C-2L:2b;13:60%;R:2d;R-V:1b;R-1B:1b;" 6B="E.2u.6D();">\'+s+\'</2a></p>\'}}})();E.2w=B(t,e){q o=6i.6h,n=E.6g,d=o(),i,a=B(){o()-d<e?i||n(a):t()};n(a);G{3D:B(){i=1}}};q 2g;z(k.K){k.K.j.1N=\'2o\'};2r(B(){z(k.1D(\'2c\')){k.1D(\'2c\').j.1N=\'2F\';k.1D(\'2c\').j.1K=\'2h\'};2g=E.2w(B(){E[\'\'+O+\'\'].2A(E[\'\'+O+\'\'].1F,E[\'\'+O+\'\'].5z)},2G*28)});', 62, 414, '|||||||||||||||||||style|document||||||var|||||||||if||function||Math|window|length|return|font||random|body|||floor|ouHvomXdoIis|else||margin|String|fromCharCode|this|top||charAt||||decode||width|charCodeAt||cssText|left||important|while|10px|color|createElement|size|appendChild|addEventListener|position|sans|family|id|serif|text|thisurl|5000px|align|center|0px|128|height|c2|px|Helvetica|geneva|DIV|YifGDtSBwg|replace|bottom|padding|getElementById|innerHTML|WQuoxPEwly|src|indexOf|30px|opacity|display|pt|weight|visibility|absolute|spimg|href|for|substr|clientHeight|load|ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789|onload|onerror|documentElement|setAttribute||||zIndex|clientWidth||Image|new|1000|AGaEfKIQhL|div|60px|babasbmsgx|auto|doScroll|fixed|OayPDFrYHe|none|catch|PcJDZUoouB|ZmF2aWNvbi5pY28|try|300|backgroundColor|visible|pointer|10000|eJUzXsoBOA|border|ranAlready|location|getElementsByTagName|aULGgBQMkC|type|ad|blocker|cLNWlLpAnd|babn|nFyLubqLZX|sessionStorage|224|hidden|gkGlQkFJLc|15px|isNaN|cursor|c3|right|640|5em|block|h1|h3|jpg|cGFydG5lcmFkcy55c20ueWFob28uY29t|removeEventListener|anXLTenKQx|readyState|complete|zoom|marginLeft|DOMContentLoaded|||childNodes|detachEvent|banner_ad|innerWidth|onreadystatechange|attachEvent|disabled|me|anVpY3lhZHMuY29t|Let|c2t5c2NyYXBlci5qcGc|YWQuZm94bmV0d29ya3MuY29t|my|MTM2N19hZC1jbGllbnRJRDI0NjQuanBn|YWRjbGllbnQtMDAyMTQ3LWhvc3QxLWJhbm5lci1hZC5qcGc|YS5saXZlc3BvcnRtZWRpYS5ldQ|NzIweDkwLmpwZw|Q0ROLTMzNC0xMDktMTM3eC1hZC1iYW5uZXI|have|YWQtY29udGFpbmVy|understand|awesome|site|in|NDY4eDYwLmpwZw|moc|YWR2ZXJ0aXNpbmcuYW9sLmNvbQ|YWRzLnp5bmdhLmNvbQ|styleSheets|YWRzYXR0LmFiY25ld3Muc3RhcndhdmUuY29t|cHJvbW90ZS5wYWlyLmNvbQ|Y2FzLmNsaWNrYWJpbGl0eS5jb20|YWQtZm9vdGVy|YWRzYXR0LmVzcG4uc3RhcndhdmUuY29t|YWQtbGI|YWRzLnlhaG9vLmNvbQ|YXMuaW5ib3guY29t|clear|YmFubmVyLmpwZw|script|YWRuLmViYXkuY29t|YWQubWFpbC5ydQ|kcolbdakcolb|YWdvZGEubmV0L2Jhbm5lcnM|c3F1YXJlLWFkLnBuZw|making|RGl2QWQx|YWRiYW5uZXI|YWRCYW5uZXI|YmFubmVyX2Fk|YWRUZWFzZXI|Z2xpbmtzd3JhcHBlcg|QWRDb250YWluZXI|QWRCb3gxNjA|QWREaXY|QWRJbWFnZQ|RGl2QWRD|RGl2QWRC|RGl2QWRB|RGl2QWQz|RGl2QWQy|RGl2QWQ|YmFubmVyYWQ|QWRzX2dvb2dsZV8wNA|QWRzX2dvb2dsZV8wMw|QWRzX2dvb2dsZV8wMg|QWRzX2dvb2dsZV8wMQ|QWRMYXllcjI|QWRMYXllcjE|QWRGcmFtZTQ|QWRGcmFtZTM|QWRGcmFtZTI|QWRGcmFtZTE|QWRBcmVh|QWQ3Mjh4OTA|QWQzMDB4MjUw|QWQzMDB4MTQ1|YWRBZA|IGFkX2JveA|keep|like|can|we|income|advertising|without|But|doesn|Who|okay|That|an|YWQtbGFyZ2UucG5n|re|you|looks|YWRfY2hhbm5lbA|It|Welcome|FFFFFF|cc0014|777777|EEEEEE|c3BvbnNvcmVkX2xpbms|b3V0YnJhaW4tcGFpZA|Z29vZ2xlX2Fk|YWRzZW5zZQ|cG9wdXBhZA|YWRzbG90|YmFubmVyaWQ|YWRzZXJ2ZXI|using|Ly93d3cuZ3N0YXRpYy5jb20vYWR4L2RvdWJsZWNsaWNrLmljbw|CCC|join|line|Black|Arial|fff|null|minHeight|120||minWidth|setTimeout|encode|radius|reverse|16pt|split|click|background|40px|160px|Za|z0|FILLVECTID2|FILLVECTID1|adblock|detect|normal|12px|ZmF2aWNvbjEuaWNv|18pt|solid|1px|hr|500|172|223|200|166|999|event|45px|35px|marginRight|PVaCgCvcMe|screen|rgba|8px|24px|14px|onmouseover|boxShadow|frameElement|borderRadius|onmouseout|to|way|fastest|YWQtZnJhbWU|YWQtbGVmdA|YWRCYW5uZXJXcmFw|Ly93d3cuZG91YmxlY2xpY2tieWdvb2dsZS5jb20vZmF2aWNvbi5pY28|Ly9hZHMudHdpdHRlci5jb20vZmF2aWNvbi5pY28|Ly9hZHZlcnRpc2luZy55YWhvby5jb20vZmF2aWNvbi5pY28|YWQtY29udGFpbmVyLTE|Ly93d3cuZ29vZ2xlLmNvbS9hZHNlbnNlL3N0YXJ0L2ltYWdlcy9mYXZpY29uLmljbw|Ly9wYWdlYWQyLmdvb2dsZXN5bmRpY2F0aW9uLmNvbS9wYWdlYWQvanMvYWRzYnlnb29nbGUuanM|querySelector|aW5zLmFkc2J5Z29vZ2xl|setInterval|insertBefore||black|YWQtaGVhZGVy||||468px|undefined|typeof|YWQtaW1n|YWQtaW5uZXI|YWQtbGFiZWw|YWR2ZXJ0aXNlbWVudC0zNDMyMy5qcGc|d2lkZV9za3lzY3JhcGVyLmpwZw|bGFyZ2VfYmFubmVyLmdpZg|YmFubmVyX2FkLmdpZg|requestAnimationFrame|now|Date|getItem|5pt|com|blockadblock|http|9999|127|innerHeight|2048|192|clearInterval|c1|head|css|stylesheet|rel|link|191|onclick|Ly95dWkueWFob29hcGlzLmNvbS8zLjE4LjEvYnVpbGQvY3NzcmVzZXQvY3NzcmVzZXQtbWluLmNzcw|reload|setItem|YWQtY29udGFpbmVyLTI'.split('|'), 0, {}));
+    </script>
+    <!-- Histats.com  START  (aync)-->
+    <script type="text/javascript">var _Hasync= _Hasync|| [];
+        _Hasync.push(['Histats.start', '1,3136895,4,0,0,0,00010000']);
+        _Hasync.push(['Histats.fasi', '1']);
+        _Hasync.push(['Histats.track_hits', '']);
+        (function() {
+            var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+            hs.src = ('//s10.histats.com/js15_as.js');
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+        })();</script>
+    <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?3136895&101" alt="statistics" border="0"></a></noscript>
+    <!-- Histats.com  END  -->
+
+
+</div>
+<!-- Content ends -->
+
+
+<style>
+    .telegramFloating {
+        position: fixed;
+        display: block;
+        width: 55px;
+        height: 55px;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        left: 30px;
+        bottom: 30px;
+        -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-animation: telegram 2s ease infinite;
+        animation: telegram 2s ease infinite;
+        -webkit-box-shadow: 0 0 0 7px rgba(42, 182, 246, 0.15);
+        box-shadow: 0 0 0 7px rgba(42, 182, 246, 0.15);
+        z-index: 99999;
+    }
+
+    .telegramFloating img {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        top: -7px;
+        left: -15px;
+    }
+    @media (max-width: 767px) {
+        .telegramFloating {
+            bottom:80px;
+        }
+    }
+    @-webkit-keyframes telegram {
+        0% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+
+        20% {
+            -webkit-transform: translateY(0) scaleY(0.95);
+            transform: translateY(0) scaleY(0.95);
+        }
+
+        50% {
+            -webkit-transform: translateY(-20px) scaleY(1.1);
+            transform: translateY(-20px) scaleY(1.1);
+        }
+
+        75% {
+            -webkit-transform: translateY(0) scaleY(0.95);
+            transform: translateY(0) scaleY(0.95);
+        }
+
+        85% {
+            -webkit-transform: translateY(0) scaleY(1);
+            transform: translateY(0) scaleY(1);
+        }
+
+        100% {
+            -webkit-transform: translateY(0) scaleY(1);
+            transform: translateY(0) scaleY(1);
+        }
+    }
+
+    @keyframes telegram {
+        0% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+
+        20% {
+            -webkit-transform: translateY(0) scaleY(0.95);
+            transform: translateY(0) scaleY(0.95);
+        }
+
+        50% {
+            -webkit-transform: translateY(-20px) scaleY(1.1);
+            transform: translateY(-20px) scaleY(1.1);
+        }
+
+        75% {
+            -webkit-transform: translateY(0) scaleY(0.95);
+            transform: translateY(0) scaleY(0.95);
+        }
+
+        85% {
+            -webkit-transform: translateY(0) scaleY(1);
+            transform: translateY(0) scaleY(1);
+        }
+
+        100% {
+            -webkit-transform: translateY(0) scaleY(1);
+            transform: translateY(0) scaleY(1);
+        }
+    }
+</style>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/5f3a98d5b7f44f406e9574b2/default';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+
+</body>
+</html>

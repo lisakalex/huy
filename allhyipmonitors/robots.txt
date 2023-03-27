@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /addtofavorites/
+Disallow: /info/
+Disallow: /random_monitor/

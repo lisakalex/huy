@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Investment market | Finance & Crypto Advertising Network</title>
+    <link rel="canonical" href="index.html"/>
+    <meta property="og:site_name" content="About Us - Investment market - Finance & Crypto Display Advertising">
+    <meta property="og:title" content="About Investment market | Crypto & Finance Advertising Network">
+    <meta name="description"
+          content="Investment market was developed in 2016 by Sevio, an advertising technology company. Throughout this time, we worked on more than 700 campaigns, and generated more than €2M turnover in 2018.">
+    <meta property="og:description"
+          content="Investment market was developed in 2016 by Sevio, an advertising technology company. Throughout this time, we worked on more than 700 campaigns, and generated more than €2M turnover in 2018.">
+    <meta property="og:url" content="https://Investment market.com/about/">
+    <meta property="og:image" content="https://Investment market.com/assets/images/display-presentation.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <base href="">
+    <link href="../assets/images/favicon.png" rel="shortcut icon" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.9.1/sweetalert2.min.css">
+    <link rel="stylesheet" href="../assets/plugins/font-awesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/plugins/font-awesome/css/fa-regular.min.css">
+    <link rel="stylesheet" href="../assets/plugins/font-awesome/css/fa-solid.min.css">
+    <link rel="stylesheet" href="../assets/plugins/font-awesome/css/fa-brands.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5D4MPDT');
+    </script>
+
+    <script>
+        !function (e, t, n, s, u, a) {
+            e.twq || (s = e.twq = function () {
+                s.exe ? s.exe.apply(s, arguments) : s.queue.push(arguments);
+            }, s.version = '1.1', s.queue = [], u = t.createElement(n), u.async = !0, u.src = '//static.ads-twitter.com/uwt.js',
+                a = t.getElementsByTagName(n)[0], a.parentNode.insertBefore(u, a))
+        }(window, document, 'script');
+        // Insert Twitter Pixel ID and Standard Event data below
+        twq('init', 'o48r2');
+        twq('track', 'PageView');
+    </script>
+
+
+    <script>
+        !function (q, e, v, n, t, s) {
+            if (q.qp) return;
+            n = q.qp = function () {
+                n.qp ? n.qp.apply(n, arguments) : n.queue.push(arguments);
+            };
+            n.queue = [];
+            t = document.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = document.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
+        }(window, 'script', 'https://a.quora.com/qevents.js');
+        qp('init', '9202237d25bb4ca8a992b693ab0a3541');
+        qp('track', 'ViewContent');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://q.quora.com/_/ad/9202237d25bb4ca8a992b693ab0a3541/pixel?tag=ViewContent&noscript=1"/>
+    </noscript>
+
+
+    <script>
+        !function (w, d) {
+            if (!w.rdt) {
+                var p = w.rdt = function () {
+                    p.sendEvent ? p.sendEvent.apply(p, arguments) : p.callQueue.push(arguments)
+                };
+                p.callQueue = [];
+                var t = d.createElement("script");
+                t.src = "https://www.redditstatic.com/ads/pixel.js", t.async = !0;
+                var s = d.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(t, s)
+            }
+        }(window, document);
+        rdt('init', 't2_a4nxww9f');
+        rdt('track', 'PageVisit');
+    </script>
+
+
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(71768668, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/71768668" style="position:absolute; left:-9999px;" alt=""/></div>
+    </noscript>
+</head>
+<body class="overflow__limited">
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D4MPDT" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+</noscript>
+<div id="wrap__header">
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="sh/index.php">
+                            <img src="assets/images/hindex-logo.svg" alt="Investment market Advertising Network"
+                                 class="logo">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent">
+                            <span class="navbar-toggler-icon far fa-bars button-menu-mobile"></span>
+                        </button>
+                        <div class="navbar-collapse collapse toggle-menu-mobile" id="navbarSupportedContent">
+                            <ul class="navbar-nav navbar-right-Investment market">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../advertisers/index.html" id="advertisersMenu">Advertisers</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../publishers/index.html"
+                                       id="publishersMenu">Publishers</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../marketplace/index.html" id="marketplaceMenu">Marketplace</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://academy.Investment market.com//"
+                                       id="marketplaceMenu">Academy</a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav navbar-right">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://display.Investment market.com/sign-up/"
+                                       id="signUp">Sign Up</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link btn outline-dark" href="https://display.Investment market.com/"
+                                       id="signIn"><span class="far fa-lock-alt"></span> Sign In</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+<div id="wrap__page">
+    <section class="content page-top-slider top-slider-spacing">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div class="video">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/k1zi-WghtQY"
+                                iv_load_policy="3" showinfo="0" controls="1" autoplay="1" rel="0" fs="0"
+                                frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content multi-features">
+        <div class="container">
+            <div class="row row-flex">
+                <div class="col-md-6 bg__simple_lines_left">
+                    <h1>About Investment market</h1>
+                    <div class="line-bellow"></div>
+                    <div class="content-bellow-line">
+                        <h3 class="medium-text">Who We Are?</h3>
+                        <p>
+                            Investment market is part of the Sevio Advertising Technology company. The project was
+                            founded in November 2016 as an initiative to promote the continuously-expanding crypto
+                            niche.
+                        </p>
+                        <h4 class="medium-text">Investment market for Advertisers</h4>
+                        <p>
+                            Our platform helps advertisers promote their finance & cryptocurrency project by displaying
+                            a variety of ads directly on the websites of our publishers.
+                        </p>
+                        <p>
+                            One of our main goals regarding advertising is to provide high-quality leads. That is why we
+                            carefully select all the publishers that join our network.
+                        </p>
+                        <h4 class="medium-text"> Investment market for Publishers</h4>
+                        <p>
+                            Through our platform, the owners of a website can generate an additional revenue stream by
+                            displaying the ads of our advertisers on their website.
+                        </p>
+                        <p>
+                            Our ads are designed to provide a non-intrusive user experience, and they are analyzed in
+                            detail to make sure they are relevant to your audience.
+                        </p>
+                        <h3 class="medium-text">WHAT DO WE AIM FOR?</h3>
+                        <p>
+                            Since 2016, we signed hundreds of partnerships with well-known publishers from the finance &
+                            cryptocurrency network, and we aim to continue our journey towards working together with all
+                            the major websites in the industry.
+                        </p>
+                        <p>
+                            Our company is continuously evolving, and we constantly work to develop new features and
+                            sub-projects that will help our customers grow their business.The main focus at Investment
+                            market is to aid our partners in achieving the results and revenue they desire with the help
+                            of our tools.
+                        </p>
+                    </div>
+                    <p>
+                        <a href="../contact/index.html" class="dashed underlined">I want to know more &xrarr;</a>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="title">
+                                        12,000+ Served Campaigns
+                                    </div>
+                                    <div class="description">
+                                        Since the project’s release in 2016, we delivered over 12,000 campaigns for more
+                                        than 10,000 advertisers.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card dark">
+                                <div class="card-body">
+                                    <div class="title">
+                                        21 Team Members
+                                    </div>
+                                    <div class="description">
+                                        Our team is formed of 21 young and talented members, and we are constantly
+                                        looking to expand.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="title">
+                                        Over 20,000 publishers monetized their websites
+                                    </div>
+                                    <div class="description">
+                                        Since the emergence of Investment market, we helped over 20,000 publishers
+                                        monetize their websites.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card dark">
+                                <div class="card-body">
+                                    <div class="title">
+                                        1652 Days of Investment market
+                                    </div>
+                                    <div class="description">
+                                        Our project has been up and running ever since the 9th of November 2016, and it
+                                        is in a state of continuous development.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="mascot">
+                        <img src="../assets/images/mascot/target-network.svg" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content xs-pb-50" id="team">
+        <div class="container">
+            <div class="row contact-info-blocks">
+                <div class="col-md-12">
+                    <h2>Meet our team</h2>
+                    <div class="line-bellow mb-2 d-block"></div>
+                    We’re not here to stay. We’re here to lead! We are constantly growing, and if you are ready to join
+                    our team email us with your cv at hr@sevio.com
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="gray-text team-v2">
+                        <img class="mb-2" src="../assets/images/team2/Tibi.png" alt="Tiberiu S.">
+                        <strong>Tiberiu S.</strong>
+                        <div class="line-bellow-small"></div>
+                        <div class="placeholder">
+                            CEO & Co-founder
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="gray-text team-v2">
+                        <img class="mb-2" src="../assets/images/team2/Alex.png" alt="Alexandru C.">
+                        <strong>Alexandru C.</strong>
+                        <div class="line-bellow-small"></div>
+                        <div class="placeholder">
+                            CTO & Co-founder
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="gray-text team-v2">
+                        <img class="mb-2" src="../assets/images/team2/Catalin.png" alt="Stefan L.">
+                        <strong>Stefan L.</strong>
+                        <div class="line-bellow-small"></div>
+                        <div class="placeholder">
+                            Project Manager
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="gray-text team-v2">
+                        <img class="mb-2" src="../assets/images/team2/Raluca.png" alt="Raluca A.">
+                        <strong>Raluca A.</strong>
+                        <div class="line-bellow-small"></div>
+                        <div class="placeholder">
+                            Head of Sales
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="gray-text team-v2">
+                        <img class="mb-2" src="../assets/images/team2/Maria.png" alt="Maria D.">
+                        <strong>Maria D.</strong>
+                        <div class="line-bellow-small"></div>
+                        <div class="placeholder">
+                            Sales Account Manager
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="gray-text team-v2">
+                        <img class="mb-2" src="../assets/images/team2/Alina-new.png" alt="Alina B.">
+                        <strong>Alina B.</strong>
+                        <div class="line-bellow-small"></div>
+                        <div class="placeholder">
+                            Sales Account Manager
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="gray-text team-v2">
+                        <img class="mb-2" src="../assets/images/team2/Alice.png" alt=" Alice C.">
+                        <strong>Alice C.</strong>
+                        <div class="line-bellow-small"></div>
+                        <div class="placeholder">
+                            Sales Account Manager
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="gray-text team-v2">
+                        <img class="mb-2" src="../assets/images/team2/Cosmin.png" alt="Cosmin L.">
+                        <strong>Cosmin L.</strong>
+                        <div class="line-bellow-small"></div>
+                        <div class="placeholder">
+                            Publisher Manager
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="gray-text team-v2">
+                        <img class="mb-2" src="../assets/images/team2/Olga.png" alt="Olga S.">
+                        <strong>Olga S.</strong>
+                        <div class="line-bellow-small"></div>
+                        <div class="placeholder">
+                            Publisher Manager
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="gray-text team-v2">
+                        <img class="mb-2" src="../assets/images/team2/Bogdan.png" alt="Bogdan C.">
+                        <strong>Bogdan C.</strong>
+                        <div class="line-bellow-small"></div>
+                        <div class="placeholder">
+                            Marketing Specialist
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="gray-text team-v2">
+                        <img class="mb-2" src="../assets/images/team2/Vlad.png" alt="Vlad M.">
+                        <strong>Vlad M.</strong>
+                        <div class="line-bellow-small"></div>
+                        <div class="placeholder">
+                            Copywriter
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="gray-text team-v2">
+                        <img class="mb-2" src="../assets/images/team2/Lavinia.png" alt="Lavinia N.">
+                        <strong>Lavinia N.</strong>
+                        <div class="line-bellow-small"></div>
+                        <div class="placeholder">
+                            Copywriter
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="gray-text team-v2">
+                        <img class="mb-2" src="../assets/images/team2/Vladut.png" alt="Vlad F.">
+                        <strong>Vlad F.</strong>
+                        <div class="line-bellow-small"></div>
+                        <div class="placeholder">
+                            Marketing Specialist
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="gray-text team-v2">
+                        <img class="mb-2" src="../assets/images/team2/Dani.png" alt="Daniel C.">
+                        <strong>Daniel C.</strong>
+                        <div class="line-bellow-small"></div>
+                        <div class="placeholder">
+                            Creative Director
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="gray-text team-v2">
+                        <img class="mb-2" src="../assets/images/team2/Tim.png" alt="Timotei B.">
+                        <strong>Timotei B.</strong>
+                        <div class="line-bellow-small"></div>
+                        <div class="placeholder">
+                            Graphic Designer
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="gray-text team-v2">
+                        <img class="mb-2" src="../assets/images/team2/Andre.png" alt="Andrei A.">
+                        <strong>Andrei A.</strong>
+                        <div class="line-bellow-small"></div>
+                        <div class="placeholder">
+                            Digital Designer
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="gray-text team-v2">
+                        <img class="mb-2" src="../assets/images/team2/Simi.png" alt=" Vlad S.">
+                        <strong>Vlad S.</strong>
+                        <div class="line-bellow-small"></div>
+                        <div class="placeholder">
+                            Digital Designer
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="gray-text team-v2">
+                        <img class="mb-2" src="../assets/images/team2/laura.png" alt="Laura A.">
+                        <strong>Laura A.</strong>
+                        <div class="line-bellow-small"></div>
+                        <div class="placeholder">
+                            Ui / Ux Designer
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="gray-text team-v2">
+                        <img class="mb-2" src="../assets/images/team2/ioan.png" alt="Ioan B.">
+                        <strong>Ioan B.</strong>
+                        <div class="line-bellow-small"></div>
+                        <div class="placeholder">
+                            Ui / Ux Designer
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="gray-text team-v2">
+                        <img class="mb-2" src="../assets/images/team2/Teodora.png" alt="Teodora U.">
+                        <strong>Teodora U.</strong>
+                        <div class="line-bellow-small"></div>
+                        <div class="placeholder">
+                            HR Specialist
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="gray-text team-v2">
+                        <img class="mb-2" src="../assets/images/team2/Madalina.png" alt="Madalina A.">
+                        <strong>Madalina A.</strong>
+                        <div class="line-bellow-small"></div>
+                        <div class="placeholder">
+                            Accountant
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<footer>
+    <div class="container footer__above">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="title">Let's Reach New Borders</div>
+                <div class="line-bellow"></div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-12 card-item">
+                <div class="item">
+                    <div class="value">280M+</div>
+                    <div class="info">Impressions</div>
+                    <div class="placeholder">per month</div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-12 card-item">
+                <div class="item">
+                    <div class="value">300k+</div>
+                    <div class="info">Clicks</div>
+                    <div class="placeholder">per month</div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-12 card-item">
+                <div class="item">
+                    <div class="value">450+</div>
+                    <div class="info">Websites</div>
+                    <div class="placeholder">per month</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-12 col-12 footer-meet-container">
+                <div class="title">Meet Your Account Manager</div>
+                <a href="../contact/index.html" class="b-fcnt">Contact Us &xrarr;</a>
+            </div>
+        </div>
+    </div>
+    <div class="container footer__info">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-lg-3 footer-item">
+                <span class="title">About</span>
+                <ul>
+                    <li><a href="index.html">Who Are We?</a></li>
+                    <li><a href="../bug-bounty/index.html">Bug Bounty Program</a></li>
+                    <li><a href="../partners/index.html">Meet our Partners</a></li>
+                    <li><a href="../contact/index.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 footer-item">
+                <span class="title">Services</span>
+                <ul>
+                    <li><a href="../advertisers/index.html">Investment market for Advertisers</a></li>
+                    <li><a href="../publishers/index.html">Investment market for Publishers</a></li>
+                    <li><a href="../marketplace/index.html">Investment Marketplace</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 footer-item">
+                <span class="title">Help</span>
+                <ul>
+                    <li><a href="https://academy.Investment market.com/news/">Announcements</a></li>
+                    <li><a href="../faq/index.html">Frequently Asked Questions</a></li>
+                    <li><a href="https://academy.Investment market.com/crypto-advertising/"
+                           target="_blank">Tutorials</a></li>
+                    <li><a href="https://docs.Investment market.com/Investment market-media-kit.zip" class="dashed">Download
+                            Media Kit</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 footer-item">
+                <span class="title">Social Presence</span>
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <ul>
+                            <li><a href="https://facebook.com/adsbyInvestment market" target="_blank">Facebook</a></li>
+                            <li>
+                                <a href="https://twitter.com/intent/follow?original_referer=https%3A%2F%2FadsbyInvestment market%2F&ref_src=twsrc%5Etfw&region=follow_link&screen_name=adsbyInvestment market&tw_p=followbutton"
+                                   target="_blank">Twitter</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <ul>
+                            <li><a href="https://www.youtube.com/c/Investment market?sub_confirmation=1"
+                                   target="_blank">Youtube</a></li>
+                            <li><a href="https://www.linkedin.com/company/Investment market/"
+                                   target="_blank">Linkedin</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="sub-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    Copyright © 2016 - 2020 <a href="https://sevio.com" target="_blank">Sevio</a> -
+                    <a href="../user-agreement/index.html">User Agreement</a> - <a href="../privacy-policy/index.html">Privacy
+                        Policy</a> - <a href="../cookie-policy/index.html">Cookie Policy</a> - <a
+                            href="../refund-policy/index.html">Refund Policy</a> - <a
+                            href="../website-acceptance-policy/index.html">Website Acceptance Policy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>
+<div class="legal-notice">
+    <div class="container-fluid p-0">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <div class="information">
+                    This website uses cookies. Continued use of this website indicates that you accept our <a
+                            href="../privacy-policy/index.html">Privacy Policy</a>.
+                </div>
+            </div>
+            <div class="col-md-4 text-right">
+                <a href="sh/index.php#" class="consent btn btn-danger">I Agree</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.9.1/sweetalert2.min.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="../assets/js/app.js"></script>
+<script src="https://Investment markettag.com/lib/performance.js" async></script>
+<script>
+    window.Investment
+    market_performance = window.Investment
+    market_performance || [];
+    Investment
+    market_performance.push({});
+</script>
+<script>
+    window.intercomSettings = {
+        app_id: "aoltuu4t"
+    };
+</script>
+<script>(function () {
+        var w = window;
+        var ic = w.Intercom;
+        if (typeof ic === "function") {
+            ic('reattach_activator');
+            ic('update', intercomSettings);
+        } else {
+            var d = document;
+            var i = function () {
+                i.c(arguments)
+            };
+            i.q = [];
+            i.c = function (args) {
+                i.q.push(args)
+            };
+            w.Intercom = i;
+
+            function l() {
+                var s = d.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = 'https://widget.intercom.io/widget/aoltuu4t';
+                var x = d.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+            }
+
+            if (w.attachEvent) {
+                w.attachEvent('onload', l);
+            } else {
+                w.addEventListener('load', l, false);
+            }
+        }
+    })()</script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://coinzilla.com/sitemap.xml

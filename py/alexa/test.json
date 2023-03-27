@@ -1,0 +1,149 @@
+{
+  'Date': 'Fri, 30 Sep 2022 15:34:19 GMT',
+  'Content-Type': 'text/html; charset=UTF-8',
+  'Transfer-Encoding': 'chunked',
+  'Connection': 'close',
+  'X-Frame-Options': 'SAMEORIGIN',
+  'Permissions-Policy': 'accelerometer=(),autoplay=(),camera=(),clipboard-read=(),clipboard-write=(),fullscreen=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()',
+  'Cache-Control': 'private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0',
+  'Expires': 'Thu, 01 Jan 1970 00:00:01 GMT',
+  'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=iW0%2FjfCIyw%2Bj%2FeXBVlZcANavpBz6H2YcCwArAmWDiH%2BkBppkhhURiJZIoxeLvmQvuIsbHd5HUwW6pH2h7TvZ6j29S0AmaAPGm%2BKMedzo2hVAlKj3eKm3eHhmskErxw%3D%3D"}],"group":"cf-nel","max_age":604800}',
+  'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}',
+  'Vary': 'Accept-Encoding',
+  'Server': 'cloudflare',
+  'CF-RAY': '752e05a668467519-LHR',
+  'alt-svc': 'h3=":443"; ma=86400, h3-29=":443"; ma=86400'
+}
+
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 67, in <module>
+driver = webdriver.Chrome(options=options)
+File "/var/www/html/venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py", line 69, in __init__
+super().__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+File "/var/www/html/venv/lib/python3.10/site-packages/selenium/webdriver/chromium/webdriver.py", line 92, in __init__
+super().__init__(
+File "/var/www/html/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 270, in __init__
+self.start_session(capabilities, browser_profile)
+File "/var/www/html/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 363, in start_session
+response = self.execute(Command.NEW_SESSION, parameters)
+File "/var/www/html/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 428, in execute
+self.error_handler.check_response(response)
+File "/var/www/html/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created exception: Missing or invalid capabilities
+(Driver info: chromedriver=2.41.578700 (2f1ed5f9343c13f73144538f15c00b370eda6706),platform=Linux 5.15.0-48-generic x86_64)
+
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 67, in <module>
+driver = webdriver.Chrome(options=options)
+File "/var/www/html/venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py", line 69, in __init__
+super().__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+File "/var/www/html/venv/lib/python3.10/site-packages/selenium/webdriver/chromium/webdriver.py", line 92, in __init__
+super().__init__(
+File "/var/www/html/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 270, in __init__
+self.start_session(capabilities, browser_profile)
+File "/var/www/html/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 363, in start_session
+response = self.execute(Command.NEW_SESSION, parameters)
+File "/var/www/html/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 428, in execute
+self.error_handler.check_response(response)
+File "/var/www/html/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created exception: Missing or invalid capabilities
+(Driver info: chromedriver=2.41.578700 (2f1ed5f9343c13f73144538f15c00b370eda6706),platform=Linux 5.15.0-48-generic x86_64)
+
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 39, in <module>
+data_monitor = (hit, monitor)
+NameError: name 'monitor' is not defined. Did you mean: 'monitors'?
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 39, in <module>
+data_monitor = (hit, monitor)
+NameError: name 'monitor' is not defined. Did you mean: 'monitors'?
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 39, in <module>
+data_monitor = (hit, monitor)
+NameError: name 'monitor' is not defined. Did you mean: 'monitors'?
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 39, in <module>
+data_monitor = (hit, monitor)
+NameError: name 'monitor' is not defined. Did you mean: 'monitors'?
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 39, in <module>
+data_monitor = (hit, monitor)
+NameError: name 'monitor' is not defined. Did you mean: 'monitors'?
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 39, in <module>
+data_monitor = (hit, monitor)
+NameError: name 'monitor' is not defined. Did you mean: 'monitors'?
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 39, in <module>
+data_monitor = (hit, monitor)
+NameError: name 'monitor' is not defined. Did you mean: 'monitors'?
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 39, in <module>
+data_monitor = (hit, monitor)
+NameError: name 'monitor' is not defined. Did you mean: 'monitors'?
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 39, in <module>
+data_monitor = (hit, monitor)
+NameError: name 'monitor' is not defined. Did you mean: 'monitors'?
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 39, in <module>
+data_monitor = (hit, monitor)
+NameError: name 'monitor' is not defined. Did you mean: 'monitors'?
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 39, in <module>
+data_monitor = (hit, monitor)
+NameError: name 'monitor' is not defined. Did you mean: 'monitors'?
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 39, in <module>
+data_monitor = (hit, monitor)
+NameError: name 'monitor' is not defined. Did you mean: 'monitors'?
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 39, in <module>
+data_monitor = (hit, monitor)
+NameError: name 'monitor' is not defined. Did you mean: 'monitors'?
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 39, in <module>
+data_monitor = (hit, monitor)
+NameError: name 'monitor' is not defined. Did you mean: 'monitors'?
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 39, in <module>
+data_monitor = (hit, monitor)
+NameError: name 'monitor' is not defined. Did you mean: 'monitors'?
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 39, in <module>
+data_monitor = (hit, monitor)
+NameError: name 'monitor' is not defined. Did you mean: 'monitors'?
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 39, in <module>
+data_monitor = (hit, monitor)
+NameError: name 'monitor' is not defined. Did you mean: 'monitors'?
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 39, in <module>
+data_monitor = (hit, monitor)
+NameError: name 'monitor' is not defined. Did you mean: 'monitors'?
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 39, in <module>
+data_monitor = (hit, monitor)
+NameError: name 'monitor' is not defined. Did you mean: 'monitors'?
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 39, in <module>
+data_monitor = (hit, monitor)
+NameError: name 'monitor' is not defined. Did you mean: 'monitors'?
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 39, in <module>
+data_monitor = (hit, monitor)
+NameError: name 'monitor' is not defined. Did you mean: 'monitors'?
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 39, in <module>
+data_monitor = (hit, monitor)
+NameError: name 'monitor' is not defined. Did you mean: 'monitors'?
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 39, in <module>
+data_monitor = (hit, monitor)
+NameError: name 'monitor' is not defined. Did you mean: 'monitors'?
+Traceback (most recent call last):
+File "/var/www/html/py/alexa/alexa-sel-1.py", line 39, in <module>
+data_monitor = (hit, monitor)
+NameError: name 'monitor' is not defined. Did you mean: 'monitors'?

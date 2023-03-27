@@ -1,0 +1,804 @@
+<?php
+include(__DIR__ . '/../a.php');
+
+page_protect();
+$cus_id = $_SESSION ['cus_id'];
+$first_name = $_SESSION ['first_name'];
+$avatar_first_name = $first_name[0];
+$user_email = $_SESSION ['user_email'];
+$rate = get_rate();
+
+$banner_price["Top"] = 100;
+$banner_price["Left side 1"] = 50;
+$banner_price["Left side 2"] = 50;
+$banner_price["Left side 3.json"] = 50;
+$banner_price["Left side 4"] = 50;
+$banner_price["Left side 5"] = 50;
+$banner_price["Right side 1"] = 50;
+$banner_price["Right side 2"] = 50;
+$banner_price["Right side 3.json"] = 50;
+$banner_price["Right side 4"] = 50;
+$banner_price["Right side 5"] = 50;
+$banner_price["Bottom"] = 75;
+
+$banner_url = $banner_id = $site = $slot = $days = $start_date = "";
+
+if (filter_input(INPUT_POST, 'da', FILTER_SANITIZE_SPECIAL_CHARS) === 'yes') {
+    $banner_url = clean_input($_POST["banner_url"]);
+    $banner_id = clean_input($_POST["banner_id"]);
+    $site = clean_input($_POST["site"]);
+    $slot = clean_input($_POST["slot"]);
+    $days = clean_input($_POST["days"]);
+    $start_date = clean_input($_POST["start_date"]);
+
+    $usd = $banner_price[$banner_id] * $slot * $days;
+    $btc = $usd / $rate;
+
+    $link = get_link();
+    $stmt = mysqli_stmt_init($link);
+    $sql = "INSERT INTO banner ( cus_id, banner_url, banner_id, site, slot, days, start_date)
+	VALUES(?,?,?,?,?,?,?)";
+    if (mysqli_stmt_prepare($stmt, $sql)) {
+        mysqli_stmt_bind_param($stmt, "isssiis", $cus_id, $banner_url, $banner_id, $site, $slot, $days, $start_date);
+        mysqli_stmt_execute($stmt);
+        $b_id = mysqli_insert_id($link);
+        mysqli_stmt_close($stmt);
+    }
+}
+
+$payment = "new";
+$limit = 1;
+$link = get_link();
+$stmt = mysqli_stmt_init($link);
+if (mysqli_stmt_prepare($stmt, 'SELECT address FROM trans WHERE payment=? LIMIT ?')) {
+    mysqli_stmt_bind_param($stmt, "si", $payment, $limit);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_bind_result($stmt, $newaddress);
+    mysqli_stmt_fetch($stmt);
+    mysqli_stmt_close($stmt);
+}
+
+$payment = "pending";
+$link = get_link();
+$stmt = mysqli_stmt_init($link);
+if (mysqli_stmt_prepare($stmt, 'UPDATE trans SET cus_id=?, banner_id=?, usd=?, btc=?, payment=?, start_date=NOW() WHERE address=? ')) {
+    mysqli_stmt_bind_param($stmt, "iiddss", $cus_id, $b_id, $usd, $btc, $payment, $newaddress);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+}
+
+$btc = number_format($btc, 8);
+$qr = "bitcoin:" . $newaddress . "?amount=" . $btc;
+
+?>
+
+<!DOCTYPE html>
+<html lang="en" class=" wqtlrxoe idc0_344">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Account - Coinzilla - Finance &amp; Crypto Display Advertising</title>
+    <link href="assets/images/favicon.png" rel="shortcut icon" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--    <base href="https://display.coinzilla.com">-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.9.1/sweetalert2.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote-bs4.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.3/daterangepicker.min.css">
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/plugins/switch/style.css">
+    <link rel="stylesheet" href="assets/plugins/switch/simple.css">
+    <link rel="stylesheet" href="assets/plugins/flags/sprite-flags.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/me.css">
+
+
+    <script>
+        // Set the date we're counting down to
+        // var countDownDate = new Date("Dec 28, 2020 00:00:00").getTime();
+        var countDownDate = new Date();
+        countDownDate.setHours(countDownDate.getHours() + 1);
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s ";
+
+            // If the count down is over, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+<body>
+<script id="headerHandlerView" type="text/template">
+    <div id="wrap__loading"></div>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar main-navigation navbar-expand-md navbar-light">
+                        <div class="dropdown">
+                            <a class="navbar-brand" data-toggle="dropdown" href="#">
+                                <img src="assets/images/coinzilla-logo.svg" class="logo d-inline-block align-top">
+                                <span class="icon far fa-angle-down"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header">
+                                    <a href="https://display.coinzilla.com" class="placeholder">Coinzilla > Display Network</a>
+                                    <h3>Our Available Products</h3>
+                                </div>
+                                <a href="https://marketplace.coinzilla.com" class="dropdown-item">Coinzilla Marketplace</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="https://academy.coinzilla.com" class="dropdown-item" target="_blank">Coinzilla Academy</a>
+                            </div>
+                        </div>
+                        <button class="navbar-toggler toggle-button" type="button" data-toggle="#mainNavBar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="navbar-collapse justify-content-end collapse toggle-content" id="mainNavBar">
+                            <ul class="nav">
+                                <li class="nav-item">
+                                    <a class="nav-link navigate dot" href="/">Overview <span class="display-mobile icon-wrapper"><span class="far fa-long-arrow-right"></span></span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link navigate tag_adv_trigger dot" href="campaigns/">Campaigns <span class="display-mobile icon-wrapper"><span class="far fa-long-arrow-right"></span></span></a>
+                                </li>
+                                <li class="nav-item no-border">
+                                    <a class="nav-link navigate" href="reports/">Reports <span class="display-mobile icon-wrapper"><span class="far fa-long-arrow-right"></span></span></a>
+                                </li>
+                                <li class="nav-item border-left d-none d-md-block"></li>
+                                <li class="nav-item nav-user-balance">
+                                    <a class="nav-link navigate" href="billing/"><span class="balance_wrapper"><span class="symbol">&euro;</span><span class="balance">0.00</span></span></a>
+                                </li>
+                                <li class="nav-item dropdown nav-user-account mr-0 ">
+                                    <a class="nav-link" data-toggle="dropdown" href="#"><span class="avatar rounded-circle">A</span><span class="display-mobile">Account</span><span class="icon far fa-angle-down"></span><span
+                                                class="display-mobile user-current-balance"><span class="balance_wrapper"><span class="symbol">&euro;</span><span class="balance">0.00</span></span></span></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <div class="dropdown-header">
+                                            <span class="d-none" id="u_target">838636421b180d0b237</span>
+                                            <h3>Al La</h3>
+                                            <h4 class="u_email" id="u_email">lisakalex@gmail.com</h4>
+                                            <div class="line-bellow-small"></div>
+                                            <a href="logout/"><span class="far fa-sign-out icon"></span> Sign Out</a>
+                                        </div>
+                                        <a class="dropdown-item navigate" href="billing/"><span class="far fa-credit-card-blank icon"></span> Billing Center</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item navigate" href="change-password/"><span class="far fa-user-cog icon"></span> Account Settings</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item navigate" href="security/"><span class="far fa-user-shield icon"></span> Account Security</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item navigate" href="referral-program/"><span class="far fa-users icon"></span> Refer a Friend</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+</script>
+<script id="footerHandlerView" type="text/template">
+    <footer>
+        <section class="sub-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        Copyright © 2016 - 2022 <a href="https://sevio.com" target="_blank">Sevio</a>
+                    </div>
+                    <div class="col-md-7 text-md-right">
+                        <a href="https://coinzilla.com/terms/" target="_blank">Terms & Conditions</a> - <a href="https://coinzilla.com/privacy-policy/" target="_blank">Privacy Policy</a> - <a href="https://coinzilla.com/cookie-policy/"
+                                                                                                                                                                                                target="_blank">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+</script>
+<script id="modalHandlerView" type="text/template">
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal">
+        <div class="modal-dialog">
+            <div class="modal-content"></div>
+        </div>
+    </div>
+</script>
+<div id="headerHandler">
+    <div id="wrap__loading"></div>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar main-navigation navbar-expand-md navbar-light">
+                        <div class="dropdown">
+                            <a class="navbar-brand" data-toggle="dropdown" href="#">
+                                <img src="assets/images/coinzilla-logo.svg" class="logo d-inline-block align-top">
+                                <span class="icon far fa-angle-down"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header">
+                                    <a href="https://display.coinzilla.com" class="placeholder">Coinzilla &gt; Display Network</a>
+                                    <h3>Our Available Products</h3>
+                                </div>
+                                <a href="https://marketplace.coinzilla.com" class="dropdown-item">Coinzilla Marketplace</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="https://academy.coinzilla.com" class="dropdown-item" target="_blank">Coinzilla Academy</a>
+                            </div>
+                        </div>
+                        <button class="navbar-toggler toggle-button" type="button" data-toggle="#mainNavBar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="navbar-collapse justify-content-end collapse toggle-content" id="mainNavBar" style="display: none;">
+                            <ul class="nav">
+                                <li class="nav-item">
+                                    <a class="nav-link navigate dot" href="/">Overview <span class="display-mobile icon-wrapper"><span class="far fa-long-arrow-right"></span></span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link navigate tag_adv_trigger dot" href="campaigns/">Campaigns <span class="display-mobile icon-wrapper"><span class="far fa-long-arrow-right"></span></span></a>
+                                </li>
+                                <li class="nav-item no-border">
+                                    <a class="nav-link navigate" href="reports/">Reports <span class="display-mobile icon-wrapper"><span class="far fa-long-arrow-right"></span></span></a>
+                                </li>
+                                <li class="nav-item border-left d-none d-md-block"></li>
+                                <li class="nav-item nav-user-balance">
+                                    <a class="nav-link navigate" href="billing/"><span class="balance_wrapper"><span class="symbol">€</span><span class="balance">0.00</span></span></a>
+                                </li>
+                                <li class="nav-item dropdown nav-user-account mr-0">
+                                    <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false"><span class="avatar rounded-circle">A</span><span class="display-mobile">Account</span><span class="icon far fa-angle-down"></span><span
+                                                class="display-mobile user-current-balance"><span class="balance_wrapper"><span class="symbol">€</span><span class="balance">0.00</span></span></span></a>
+                                    <div class="dropdown-menu dropdown-menu-right active">
+                                        <div class="dropdown-header">
+                                            <span class="d-none" id="u_target">838636421b180d0b237</span>
+                                            <h3>Al La</h3>
+                                            <h4 class="u_email" id="u_email">lisakalex@gmail.com</h4>
+                                            <div class="line-bellow-small"></div>
+                                            <a href="logout/"><span class="far fa-sign-out icon"></span> Sign Out</a>
+                                        </div>
+                                        <a class="dropdown-item navigate" href="billing/"><span class="far fa-credit-card-blank icon"></span> Billing Center</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item navigate" href="change-password/"><span class="far fa-user-cog icon"></span> Account Settings</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item navigate" href="security/"><span class="far fa-user-shield icon"></span> Account Security</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item navigate" href="referral-program/"><span class="far fa-users icon"></span> Refer a Friend</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+<div id="alertHandler">
+    <div class="container">
+        <section class="alert alert-standard fade show" role="alert">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 active">
+                        <strong></strong> <span class="icon far fa-exclamation-triangle text-warning"></span> Please complete your billing details to have your account fully functional. <a href="billing/" class="action navigate" data-action="">Fix it
+                            ⟶</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<div class="container" style="align-items: center">
+    <div class="row">
+        <div class="col-md-6 col-lg-8 col-sm-8 col-11 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div id="advanced-targeting" class="card-body " style="display: block;">
+                            <div class="container-fluid targeting table-select">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="browse-card card-select">
+                                            <div>
+                                                <h1>Send Bitcoin</h1>
+                                                <p class="placeholder">
+                                                    Please scan QR code or copy BTC address</a></p>
+                                            </div>
+                                            <div style="">
+                                                <div class="line-bellow mt-3"></div>
+
+                                                <img src="../qr/php/qr_img.php?d=<?= $qr ?>&s=6">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class=" selected-card card-select">
+                                            <div style="text-align: right; margin-top: auto; width: 60%">
+                                                <h5><b>$<?= $usd ?> </b>(BTC <?= $btc ?>)</h5>
+
+                                            </div>
+                                            <div style="padding-left: 5%; height: 50%; margin: auto ">
+                                                The deposit will be automatically created after 3
+                                                confirmations of your
+                                                transaction! <br/>
+                                                And then it will be displayed in your personal account.
+                                                <div style="text-align: center">
+                                                    <p style="" id="demo"></p>
+                                                    <img src="assets/images/30.gif">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div style="display: flex; flex-direction: row;">
+                                            <div style="width: 50%">
+                                                <div style="display: flex; flex-direction: row; margin-bottom: 20px">
+                                                    <div style="padding-right: 20px">
+                                                        Amount
+                                                    </div>
+                                                    <div style="">
+                                                        <input size="8" type="text" value="<?= $btc ?>" id="myInput" style="border: 0; outline: none; color: #536677">
+                                                    </div>
+                                                    <div class="copytooltip" style="">
+                                                        <div onclick="copyFunction('myInput', 'myTooltip')" onmouseout="outFunc('myTooltip', 'amount')">
+                                                            <span class="copytooltiptext" id="myTooltip">Copy amount</span>
+                                                            <div class="copy-button">
+                                                                <img src="assets/images/clipboard.png" class="icon" height="20">
+
+                                                                <!--                                                                        copy-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display: flex; flex-direction: row;">
+                                                    <div style="">
+                                                        <label for="btcAddress"><img src="assets/images/bitcoin.png" class="icon" height="20"> BTC Deposit Address</label>
+                                                        <!--                                                                    <b>--><? //= $newaddress ?><!--</b>-->
+                                                        <input size="43" type="text" value="<?= $newaddress ?>" id="myInput1" style="border: 0; outline: none; font-family: monospace; color: #536677">
+
+                                                    </div>
+                                                    <div class="copytooltip" style="margin-top: auto;">
+                                                        <div onclick="copyFunction('myInput1', 'myTooltip1')" onmouseout="outFunc('myTooltip1', 'address')">
+                                                            <span class="copytooltiptext" id="myTooltip1">Copy address</span>
+                                                            <div class="copy-button">
+                                                                <img src="assets/images/clipboard.png" class="icon" height="20">
+                                                                <!--                                                                            copy-->
+                                                                <!--                                                                            <span class="input-group-btn"><button class="btn btn-secondary copy b-cd-c-dtc" data-id="btcAddress" type="button"><span class="far fa-copy"></span> Copy</button></span>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footerHandler">
+    <footer>
+        <section class="sub-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        Copyright © 2016 - 2022 <a href="https://sevio.com" target="_blank">Sevio</a>
+                    </div>
+                    <div class="col-md-7 text-md-right">
+                        <a href="https://coinzilla.com/terms/" target="_blank">Terms &amp; Conditions</a> - <a href="https://coinzilla.com/privacy-policy/" target="_blank">Privacy Policy</a> - <a href="https://coinzilla.com/cookie-policy/"
+                                                                                                                                                                                                    target="_blank">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+</div>
+<div id="modalHandler">
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal">
+        <div class="modal-dialog">
+            <div class="modal-content"></div>
+        </div>
+    </div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.3/moment.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.3/daterangepicker.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.9.1/sweetalert2.min.js"></script>
+<script src="assets/js/app.js?ver=2.012"></script>
+<script type="text/javascript" id="">!function (b, e, f, g, a, c, d) {
+        b.fbq || (a = b.fbq = function () {
+            a.callMethod ? a.callMethod.apply(a, arguments) : a.queue.push(arguments)
+        }, b._fbq || (b._fbq = a), a.push = a, a.loaded = !0, a.version = "2.0", a.queue = [], c = e.createElement(f), c.async = !0, c.src = g, d = e.getElementsByTagName(f)[0], d.parentNode.insertBefore(c, d))
+    }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+    fbq("init", "289069491732770");
+    fbq("track", "PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=289069491732770&amp;ev=PageView&amp;noscript=1"></noscript>
+
+<script type="text/javascript" id="">(function (a, e, b, f, g, c, d) {
+        a[b] = a[b] || function () {
+            (a[b].q = a[b].q || []).push(arguments)
+        };
+        c = e.createElement(f);
+        c.async = 1;
+        c.src = "https://www.clarity.ms/tag/" + g;
+        d = e.getElementsByTagName(f)[0];
+        d.parentNode.insertBefore(c, d)
+    })(window, document, "clarity", "script", "44rkufhugt");</script>
+<script type="text/javascript" id="">!function (d, g, e) {
+        d.TiktokAnalyticsObject = e;
+        var a = d[e] = d[e] || [];
+        a.methods = "page track identify instances debug on off once ready alias group enableCookie disableCookie".split(" ");
+        a.setAndDefer = function (b, c) {
+            b[c] = function () {
+                b.push([c].concat(Array.prototype.slice.call(arguments, 0)))
+            }
+        };
+        for (d = 0; d < a.methods.length; d++) a.setAndDefer(a, a.methods[d]);
+        a.instance = function (b) {
+            b = a._i[b] || [];
+            for (var c = 0; c < a.methods.length; c++) a.setAndDefer(b, a.methods[c]);
+            return b
+        };
+        a.load = function (b, c) {
+            var f = "https://analytics.tiktok.com/i18n/pixel/events.js";
+            a._i = a._i || {};
+            a._i[b] = [];
+            a._i[b]._u = f;
+            a._t = a._t || {};
+            a._t[b] = +new Date;
+            a._o = a._o || {};
+            a._o[b] = c || {};
+            c = document.createElement("script");
+            c.type = "text/javascript";
+            c.async = !0;
+            c.src = f + "?sdkid\x3d" + b + "\x26lib\x3d" + e;
+            b = document.getElementsByTagName("script")[0];
+            b.parentNode.insertBefore(c, b)
+        };
+        a.load("CAOQV0BC77UFDAKTB3E0");
+        a.page()
+    }(window, document, "ttq");</script>
+
+<script>
+    window.intercomSettings = {
+        api_base: "https://api-iam.intercom.io",
+        app_id: "aoltuu4t",
+        "ID": "838636421b180d0b237",
+        user_id: "838636421b180d0b237",
+        name: "Al La",
+        email: "lisakalex@gmail.com",
+        created_at: "2022-11-03",
+        user_hash: "a136b3395c049d10ec1cf54c02b1bd771e5b2811cb4498f9e15d25b0748fb4b1",
+        "User Type": "Advertiser",
+        "active": false,
+        "has_action": false,
+        "running": false
+    };
+
+</script>
+<script>
+    (function () {
+        var w = window;
+        var ic = w.Intercom;
+        if (typeof ic === "function") {
+            ic('reattach_activator');
+            ic('update', w.intercomSettings);
+        } else {
+            var d = document;
+            var i = function () {
+                i.c(arguments);
+            };
+            i.q = [];
+            i.c = function (args) {
+                i.q.push(args);
+            };
+            w.Intercom = i;
+            var l = function () {
+                var s = d.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = 'https://widget.intercom.io/widget/aoltuu4t';
+                var x = d.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+            };
+            if (document.readyState === 'complete') {
+                l();
+            } else if (w.attachEvent) {
+                w.attachEvent('onload', l);
+            } else {
+                w.addEventListener('load', l, false);
+            }
+        }
+    })();
+</script>
+<noscript>
+    <style>html {
+            display: none;
+        }</style>
+    <meta http-equiv="refresh" content="0.0;url=/sign-in/">
+</noscript>
+
+
+<img src="https://t.co/i/adsct?bci=1&amp;eci=1&amp;event_id=ca07617f-6a80-46cd-94e1-440919b20520&amp;integration=advertiser&amp;p_id=Twitter&amp;p_user_id=0&amp;pl_id=60be337e-b723-4c92-bf45-4f381a63f27b&amp;tw_document_href=https%3A%2F%2Fdisplay.coinzilla.com%2F%3Fauth%3Dtrue&amp;tw_iframe_status=0&amp;tw_order_quantity=0&amp;tw_sale_amount=0&amp;txn_id=o4d02&amp;type=javascript&amp;version=2.3.29"
+     height="1" width="1" style="display: none;"><img
+        src="https://analytics.twitter.com/i/adsct?bci=1&amp;eci=1&amp;event_id=ca07617f-6a80-46cd-94e1-440919b20520&amp;integration=advertiser&amp;p_id=Twitter&amp;p_user_id=0&amp;pl_id=60be337e-b723-4c92-bf45-4f381a63f27b&amp;tw_document_href=https%3A%2F%2Fdisplay.coinzilla.com%2F%3Fauth%3Dtrue&amp;tw_iframe_status=0&amp;tw_order_quantity=0&amp;tw_sale_amount=0&amp;txn_id=o4d02&amp;type=javascript&amp;version=2.3.29"
+        height="1" width="1" style="display: none;">
+<script type="text/javascript" id="">function getSelectionText() {
+        var a = "";
+        window.getSelection ? a = window.getSelection().toString() : document.selection && "Control" != document.selection.type && (a = document.selection.createRange().text);
+        return a
+    }
+
+    document.addEventListener("copy", function (a) {
+        dataLayer.push({event: "textCopied", clipboardText: getSelectionText(), clipboardLength: getSelectionText().length})
+    });</script>
+<iframe id="intercom-frame"
+        style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important; pointer-events: none;"
+        aria-hidden="true" tabindex="-1" title="Intercom"></iframe>
+<div class="intercom-lightweight-app">
+    <div class="intercom-lightweight-app-launcher intercom-launcher" role="button" tabindex="0" aria-label="Open Intercom Messenger" aria-live="polite">
+        <div class="intercom-lightweight-app-launcher-icon intercom-lightweight-app-launcher-icon-open">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 32">
+                <path d="M28 32s-4.714-1.855-8.527-3.34H3.437C1.54 28.66 0 27.026 0 25.013V3.644C0 1.633 1.54 0 3.437 0h21.125c1.898 0 3.437 1.632 3.437 3.645v18.404H28V32zm-4.139-11.982a.88.88 0 00-1.292-.105c-.03.026-3.015 2.681-8.57 2.681-5.486 0-8.517-2.636-8.571-2.684a.88.88 0 00-1.29.107 1.01 1.01 0 00-.219.708.992.992 0 00.318.664c.142.128 3.537 3.15 9.762 3.15 6.226 0 9.621-3.022 9.763-3.15a.992.992 0 00.317-.664 1.01 1.01 0 00-.218-.707z"></path>
+            </svg>
+        </div>
+        <div class="intercom-lightweight-app-launcher-icon intercom-lightweight-app-launcher-icon-minimize">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M18.601 8.39897C18.269 8.06702 17.7309 8.06702 17.3989 8.39897L12 13.7979L6.60099 8.39897C6.26904 8.06702 5.73086 8.06702 5.39891 8.39897C5.06696 8.73091 5.06696 9.2691 5.39891 9.60105L11.3989 15.601C11.7309 15.933 12.269 15.933 12.601 15.601L18.601 9.60105C18.9329 9.2691 18.9329 8.73091 18.601 8.39897Z"
+                      fill="white"></path>
+            </svg>
+        </div>
+    </div>
+    <style id="intercom-lightweight-app-style" type="text/css">
+        @keyframes intercom-lightweight-app-launcher {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes intercom-lightweight-app-gradient {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes intercom-lightweight-app-messenger {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        .intercom-lightweight-app {
+            position: fixed;
+            z-index: 2147483001;
+            width: 0;
+            height: 0;
+            font-family: intercom-font, "Helvetica Neue", "Apple Color Emoji", Helvetica, Arial, sans-serif;
+        }
+
+        .intercom-lightweight-app-gradient {
+            position: fixed;
+            z-index: 2147483002;
+            width: 500px;
+            height: 500px;
+            bottom: 0;
+            right: 0;
+            pointer-events: none;
+            background: radial-gradient(
+                    ellipse at bottom right,
+                    rgba(29, 39, 54, 0.16) 0%,
+                    rgba(29, 39, 54, 0) 72%);
+            animation: intercom-lightweight-app-gradient 200ms ease-out;
+        }
+
+        .intercom-lightweight-app-launcher {
+            position: fixed;
+            z-index: 2147483003;
+            padding: 0 !important;
+            margin: 0 !important;
+            border: none;
+            bottom: 20px;
+            right: 20px;
+            max-width: 60px;
+            width: 60px;
+            max-height: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #EA973D;
+            cursor: pointer;
+            box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.06), 0 2px 32px 0 rgba(0, 0, 0, 0.16);
+            transition: transform 167ms cubic-bezier(0.33, 0.00, 0.00, 1.00);
+            box-sizing: content-box;
+        }
+
+
+        .intercom-lightweight-app-launcher:focus {
+            outline: none;
+
+
+        }
+
+        .intercom-lightweight-app-launcher-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 60px;
+            transition: transform 100ms linear, opacity 80ms linear;
+        }
+
+        .intercom-lightweight-app-launcher-icon-open {
+
+            opacity: 1;
+            transform: rotate(0deg) scale(1);
+
+        }
+
+        .intercom-lightweight-app-launcher-icon-open svg {
+            width: 28px;
+            height: 32px;
+        }
+
+        .intercom-lightweight-app-launcher-icon-open svg path {
+            fill: rgb(255, 255, 255);
+        }
+
+        .intercom-lightweight-app-launcher-icon-self-serve {
+
+            opacity: 1;
+            transform: rotate(0deg) scale(1);
+
+        }
+
+        .intercom-lightweight-app-launcher-icon-self-serve svg {
+            height: 56px;
+        }
+
+        .intercom-lightweight-app-launcher-icon-self-serve svg path {
+            fill: rgb(255, 255, 255);
+        }
+
+        .intercom-lightweight-app-launcher-custom-icon-open {
+            max-height: 36px;
+            max-width: 36px;
+
+
+            opacity: 1;
+            transform: rotate(0deg) scale(1);
+
+        }
+
+        .intercom-lightweight-app-launcher-icon-minimize {
+
+            opacity: 0;
+            transform: rotate(-60deg) scale(0);
+
+        }
+
+        .intercom-lightweight-app-launcher-icon-minimize svg path {
+            fill: rgb(255, 255, 255);
+        }
+
+        .intercom-lightweight-app-messenger {
+            position: fixed;
+            z-index: 2147483003;
+            overflow: hidden;
+            background-color: white;
+            animation: intercom-lightweight-app-messenger 250ms cubic-bezier(0, 1.2, 1, 1);
+            transform-origin: bottom right;
+
+            width: 376px;
+            height: calc(100% - 120px);
+            max-height: 704px;
+            min-height: 250px;
+            right: 20px;
+            bottom: 100px;
+            box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16);
+
+            border-radius: 8px;
+        }
+
+        .intercom-lightweight-app-messenger-header {
+            height: 75px;
+            border-bottom: none;
+            background: linear-gradient(
+                    135deg,
+                    rgb(234, 151, 61) 0%,
+                    rgb(174, 100, 19) 100%
+            );
+        }
+
+        .intercom-lightweight-app-messenger-footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            min-height: 81px;
+            background: #fff;
+            font-size: 14px;
+            line-height: 21px;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        @media print {
+            .intercom-lightweight-app {
+                display: none;
+            }
+        }
+    </style>
+</div>
+<div class="daterangepicker ltr show-ranges show-calendar opensright">
+    <div class="ranges">
+        <ul>
+            <li data-range-key="Today">Today</li>
+            <li data-range-key="Yesterday">Yesterday</li>
+            <li data-range-key="Last 7 Days">Last 7 Days</li>
+            <li data-range-key="Last 30 Days">Last 30 Days</li>
+            <li data-range-key="This Month">This Month</li>
+            <li data-range-key="Last Month">Last Month</li>
+            <li data-range-key="Last 3 Months">Last 3 Months</li>
+            <li data-range-key="Custom Range">Custom Range</li>
+        </ul>
+    </div>
+    <div class="drp-calendar left">
+        <div class="calendar-table"></div>
+        <div class="calendar-time" style="display: none;"></div>
+    </div>
+    <div class="drp-calendar right">
+        <div class="calendar-table"></div>
+        <div class="calendar-time" style="display: none;"></div>
+    </div>
+    <div class="drp-buttons"><span class="drp-selected"></span>
+        <button class="cancelBtn btn btn-sm btn-dark" type="button">Cancel</button>
+        <button class="applyBtn btn btn-sm btn-primary" disabled="disabled" type="button">Apply</button>
+    </div>
+</div>
+</body>
+<iframe id="__JSBridgeIframe_1.0__" title="jsbridge___JSBridgeIframe_1.0__" style="display: none;"></iframe>
+<iframe id="__JSBridgeIframe_SetResult_1.0__" title="jsbridge___JSBridgeIframe_SetResult_1.0__" style="display: none;"></iframe>
+<iframe id="__JSBridgeIframe__" title="jsbridge___JSBridgeIframe__" style="display: none;"></iframe>
+<iframe id="__JSBridgeIframe_SetResult__" title="jsbridge___JSBridgeIframe_SetResult__" style="display: none;"></iframe>
+</html>

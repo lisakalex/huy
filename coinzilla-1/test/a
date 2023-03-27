@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title></title>
+    <script src='somefile.js' data-param1='hello' data-param2='world'></script>
+</head>
+<body>
+huy
+<a class="" href="./b">bbb</a>
+
+<!--<h1>The object-fit Property</h1>-->
+<!--<h2>No object-fit:</h2>-->
+<!--<img src="kak.png" alt="Paris" style="width:728px;height:90px">-->
+
+
+<!--<h2>object-fit: contain:</h2>-->
+<!--<div class="me-flex" >-->
+<!--    <img class="" src="solid-trade_728x90.gif" alt="Paris" style="">-->
+<!--</div>-->
+
+
+<!--<h2>object-fit: cover:</h2>-->
+<!--<img class="cover" src="kak.png" alt="Paris" style="width:728px;height:90px">-->
+<!--<h2>object-fit: scale-down:</h2>-->
+<!--<img class="scale-down" src="kak.png" alt="Paris" style="width:728px;height:90px">-->
+<!--<h2>object-fit: none:</h2>-->
+<!--<img class="none" src="kak.png" alt="Paris" style="width:728px;height:90px">-->
+</body>
+</html>
+
+https://v2.cimg.co/news/107644/261863/responsive-images/adobestock-ea09-studio-1___media_library_original_300_158.jpeg
+https://v2.cimg.co/news/86472/233774/responsive-images/new-crypto___media_library_original_600_375.jpg
+https://v2.cimg.co/p/crypto-news-logo-full.svg
+http://da-1.com/
