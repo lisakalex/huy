@@ -1,7 +1,7 @@
 """
 process bank file, do not forget to change month and year
 """
-month = "Feb 23"
+month = "Mar 23"
 try:
     with open("bank.txt", "r", encoding='utf-8') as hf:
         bank = hf.read()

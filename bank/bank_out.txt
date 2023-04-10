@@ -1,26 +1,24 @@
-Wed, 1 Feb 23~Santander Mortgage~~863.16~29,490.91
-Wed, 1 Feb 23~Tv Licence Dda~~159.00~29,331.91
-Wed, 1 Feb 23~Southern Water~~14.90~29,317.01
-Wed, 1 Feb 23~E.On Next~~61.35~29,255.66
-Mon, 6 Feb 23~Lidl Gb Crawley~~47.15~29,208.51
-Mon, 6 Feb 23~Lisak N~775.00~~29,983.51
-Mon, 6 Feb 23~Lisak N~39.00~~30,022.51
-Tue, 7 Feb 23~Paysend.Com~~39.14~29,983.37
-Tue, 7 Feb 23~Klarna* Other Stor~~76.50~29,906.87
-Thu, 9 Feb 23~Autodoc*- 81970124~~20.15~29,886.72
-Mon, 13 Feb 23~Paysend.Com~~11.46~29,875.26
-Mon, 13 Feb 23~Lidl Gb Crawley~~86.23~29,789.03
-Mon, 13 Feb 23~Virgin Money~~781.45~29,007.58
-Tue, 14 Feb 23~Paysend.Com~~61.57~28,946.01
-Fri, 17 Feb 23~Lisak N~62.00~~29,008.01
-Mon, 20 Feb 23~Paysend.Com~~23.25~28,984.76
-Mon, 20 Feb 23~Lidl Gb Crawley~~131.72~28,853.04
-Mon, 20 Feb 23~Thames Water~~8.00~28,845.04
-Tue, 21 Feb 23~Paysend.Com~~43.45~28,801.59
-Thu, 23 Feb 23~Talktalk Telecom T~~20.00~28,781.59
-Fri, 24 Feb 23~Total Gas & Power~2,099.06~~30,880.65
-Fri, 24 Feb 23~Asda Stores~~24.40~30,856.25
-Tue, 28 Feb 23~B/Card Plat Visa~~79.14~30,777.11
-Tue, 28 Feb 23~Paysend.Com~~39.27~30,737.84
-Tue, 28 Feb 23~Lidl Gb Crawley~~22.53~30,715.31
-Tue, 28 Feb 23~Lidl Gb Crawley~~43.10~30,672.21
+Wed, 1 Mar 23~E.On Next~~61.35~30,610.86
+Wed, 1 Mar 23~Southern Water~~14.90~30,595.96
+Wed, 1 Mar 23~Santander Mortgage~~863.17~29,732.79
+Thu, 2 Mar 23~Lisak N~44.00~~29,776.79
+Thu, 2 Mar 23~Lisak N~39.00~~29,815.79
+Mon, 6 Mar 23~Paysend.Com~~11.46~29,804.33
+Wed, 8 Mar 23~Asda Stores~~25.60~29,778.73
+Wed, 8 Mar 23~Baltic Crawley Ltd~~12.06~29,766.67
+Wed, 8 Mar 23~Wilko Retail Limit~~9.50~29,757.17
+Thu, 9 Mar 23~Klarna* Other Stor~76.50~~29,833.67
+Fri, 10 Mar 23~Lisak N~720.00~~30,553.67
+Tue, 14 Mar 23~Virgin Money~~448.50~30,105.17
+Mon, 20 Mar 23~Paysend.Com~~28.16~30,077.01
+Mon, 20 Mar 23~Lidl Gb Crawley~~44.94~30,032.07
+Mon, 20 Mar 23~Lidl Gb Crawley~~49.29~29,982.78
+Mon, 20 Mar 23~Thames Water~~8.00~29,974.78
+Thu, 23 Mar 23~Talktalk Telecom T~~20.00~29,954.78
+Fri, 24 Mar 23~Total Gas & Power~2,312.55~~32,267.33
+Mon, 27 Mar 23~Bupa Payments~40.00~~32,307.33
+Mon, 27 Mar 23~Asda Superstore~~1.45~32,305.88
+Mon, 27 Mar 23~Tk Maxx~~396.50~31,909.38
+Mon, 27 Mar 23~Ikea Ltd 144 Croyd~~47.50~31,861.88
+Mon, 27 Mar 23~Lidl Gb Crawley~~78.36~31,783.52
+Tue, 28 Mar 23~B/Card Plat Visa~~154.62~31,628.90
