@@ -12,7 +12,7 @@ driver = webdriver.Chrome(options=options, service=Service(ChromeDriverManager()
 
 url = "http://localhost/calendar/calendar-mobile-2024.html"
 # url = "http://localhost/calendar/calendar-2024.html"
-
+# huy
 try:
     driver.set_window_size(850, 10800)  # for calendar-mobile.html
     # driver.set_window_size(3480, 3010)  # for calendar.html
