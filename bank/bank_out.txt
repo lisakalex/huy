@@ -1,24 +1,21 @@
-Wed, 1 Mar 23~E.On Next~~61.35~30,610.86
-Wed, 1 Mar 23~Southern Water~~14.90~30,595.96
-Wed, 1 Mar 23~Santander Mortgage~~863.17~29,732.79
-Thu, 2 Mar 23~Lisak N~44.00~~29,776.79
-Thu, 2 Mar 23~Lisak N~39.00~~29,815.79
-Mon, 6 Mar 23~Paysend.Com~~11.46~29,804.33
-Wed, 8 Mar 23~Asda Stores~~25.60~29,778.73
-Wed, 8 Mar 23~Baltic Crawley Ltd~~12.06~29,766.67
-Wed, 8 Mar 23~Wilko Retail Limit~~9.50~29,757.17
-Thu, 9 Mar 23~Klarna* Other Stor~76.50~~29,833.67
-Fri, 10 Mar 23~Lisak N~720.00~~30,553.67
-Tue, 14 Mar 23~Virgin Money~~448.50~30,105.17
-Mon, 20 Mar 23~Paysend.Com~~28.16~30,077.01
-Mon, 20 Mar 23~Lidl Gb Crawley~~44.94~30,032.07
-Mon, 20 Mar 23~Lidl Gb Crawley~~49.29~29,982.78
-Mon, 20 Mar 23~Thames Water~~8.00~29,974.78
-Thu, 23 Mar 23~Talktalk Telecom T~~20.00~29,954.78
-Fri, 24 Mar 23~Total Gas & Power~2,312.55~~32,267.33
-Mon, 27 Mar 23~Bupa Payments~40.00~~32,307.33
-Mon, 27 Mar 23~Asda Superstore~~1.45~32,305.88
-Mon, 27 Mar 23~Tk Maxx~~396.50~31,909.38
-Mon, 27 Mar 23~Ikea Ltd 144 Croyd~~47.50~31,861.88
-Mon, 27 Mar 23~Lidl Gb Crawley~~78.36~31,783.52
-Tue, 28 Mar 23~B/Card Plat Visa~~154.62~31,628.90
+Mon, 3 Apr 23~Lidl Gb Crawley~~41.64~31,587.26
+Mon, 3 Apr 23~Crawley Borough Co~~182.47~31,404.79
+Mon, 3 Apr 23~Santander Mortgage~~863.16~30,541.63
+Mon, 3 Apr 23~E.On Next~~61.35~30,480.28
+Mon, 3 Apr 23~Southern Water~~14.90~30,465.38
+Tue, 11 Apr 23~Lidl Gb Crawley~~85.00~30,380.38
+Tue, 11 Apr 23~Tk Maxx~89.97~~30,470.35
+Tue, 11 Apr 23~Virgin Money~~394.46~30,075.89
+Tue, 11 Apr 23~Lloyds~~50.00~30,025.89
+Wed, 12 Apr 23~Sainsburys S/Mkts~~6.00~30,019.89
+Mon, 17 Apr 23~Paysend.Com~~27.85~29,992.04
+Mon, 17 Apr 23~Lidl Gb Crawley~~26.37~29,965.67
+Mon, 17 Apr 23~Lidl Gb Crawley~~27.40~29,938.27
+Mon, 17 Apr 23~Lidl Gb Crawley~~3.53~29,934.74
+Tue, 18 Apr 23~Thames Water~~8.00~29,926.74
+Thu, 20 Apr 23~Western Union~~22.41~29,904.33
+Fri, 21 Apr 23~Talktalk Telecom T~~22.84~29,881.49
+Fri, 21 Apr 23~Lisak N~816.00~~30,697.49
+Mon, 24 Apr 23~Western Union~~134.79~30,562.70
+Mon, 24 Apr 23~Lidl Gb Crawley~~91.11~30,471.59
+Tue, 25 Apr 23~Total Gas & Power~2,169.05~~32,640.64

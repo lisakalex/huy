@@ -1,0 +1,147 @@
+AccelerationVector	0.07186870275 -0.9743924745 -0.4252240359
+Aperture	1.6
+ApertureValue	1.6
+BitsPerSample	8
+BlueMatrixColumn	0.1571 0.06657 0.78407
+BlueTRC	Binary data 32 bytes
+BrightnessValue	4.473351851
+CMMFlags	Not Embedded, Independent
+ChromaticAdaptation	1.04788 0.02292 -0.0502 0.02959 0.99048 -0.01706 -0.00923 0.01508 0.75168
+CircleOfConfusion	0.005 mm
+ColorComponents	3
+ColorSpace	Uncalibrated
+ColorSpaceData	RGB
+ComponentsConfiguration	Y, Cb, Cr, -
+CompositeImage	General Composite Image
+Compression	JPEG (old-style)
+ConnectionSpaceIlluminant	0.9642 1 0.82491
+CreateDate	2022-06-24 18:53:10 +0000
+CreatorTool	15.5
+DateCreated	2022-06-24 18:53:10 +0000
+DateTimeOriginal	2022-06-24 18:53:10 +0000
+DependentImage1EntryNumber	0
+DependentImage2EntryNumber	0
+DeviceAttributes	Reflective, Glossy, Positive, Color
+DeviceManufacturer	Apple Computer Inc.
+EncodingProcess	Baseline DCT, Huffman coding
+ExifByteOrder	Big-endian (Motorola, MM)
+ExifImageHeight	3024
+ExifImageWidth	4032
+ExifVersion	0232
+ExposureCompensation	0
+ExposureMode	Auto
+ExposureProgram	Program AE
+ExposureTime	1/121
+FNumber	1.6
+FOV	69.4 deg
+FileAccessDate	2023-05-11 19:30:49 +0000
+FileInodeChangeDate	2023-05-11 19:30:49 +0000
+FileModifyDate	2023-05-11 19:30:49 +0000
+FilePermissions	prw-------
+FileSize	0 bytes
+FileType	JPEG
+FileTypeExtension	jpg
+Flash	Off, Did not fire
+FlashpixVersion	0100
+FocalLength	4.2 mm
+FocalLength35efl	4.2 mm (35 mm equivalent: 26.0 mm)
+FocalLengthIn35mmFormat	26 mm
+FocusDistanceRange	0.78 - 1.11 m
+GPSAltitude	76.4 m Above Sea Level
+GPSAltitudeRef	Above Sea Level
+GPSDateStamp	2022:06:24
+GPSDestBearing	11.54041576
+GPSDestBearingRef	True North
+GPSHPositioningError	14.43081321 m
+GPSImgDirection	11.54041576
+GPSImgDirectionRef	True North
+GPSLatitude	51 deg 6' 56.88" N
+GPSLatitudeRef	North
+GPSLongitude	0 deg 12' 13.80" W
+GPSLongitudeRef	West
+GPSPosition	51 deg 6' 56.88" N, 0 deg 12' 13.80" W
+GPSSpeed	0
+GPSSpeedRef	km/h
+GreenMatrixColumn	0.29198 0.69225 0.04189
+GreenTRC	Binary data 32 bytes
+HostComputer	iPhone 12 mini
+HyperfocalDistance	2.27 m
+ISO	64
+ImageHeight	3024
+ImageSize	4032x3024
+ImageWidth	4032
+JFIFVersion	1.01
+LensID	iPhone 12 mini back dual wide camera 4.2mm f/1.6
+LensInfo	1.549999952-4.2mm f/1.6-2.4
+LensMake	Apple
+LensModel	iPhone 12 mini back dual wide camera 4.2mm f/1.6
+LightValue	8.9
+MIMEType	image/jpeg
+MPFVersion	0100
+MPImageFlags	(none)
+MPImageFormat	JPEG
+MPImageLength	146481
+MPImageStart	4020908
+MPImageType	Undefined
+Make	Apple
+MediaWhitePoint	0.96419 1 0.82489
+Megapixels	12.2
+MeteringMode	Spot
+Model	iPhone 12 mini
+ModifyDate	2022-06-24 18:53:10 +0000
+NumberOfImages	2
+OffsetTime	+01:00
+OffsetTimeDigitized	+01:00
+OffsetTimeOriginal	+01:00
+Orientation	Rotate 90 CW
+PrimaryPlatform	Apple Computer Inc.
+ProfileCMMType	Apple Computer Inc.
+ProfileClass	Display Device Profile
+ProfileConnectionSpace	XYZ
+ProfileCopyright	Copyright Apple Inc., 2022
+ProfileCreator	Apple Computer Inc.
+ProfileDateTime	2022-01-01 00:00:00 +0000
+ProfileDescription	Display P3
+ProfileFileSignature	acsp
+ProfileID	ecfda38e388547c36db4bd4f7ada182f
+ProfileVersion	4.0.0
+RedMatrixColumn	0.51512 0.2412 -0.00105
+RedTRC	Binary data 32 bytes
+RegionAppliedToDimensionsH	3168
+RegionAppliedToDimensionsUnit	pixel
+RegionAppliedToDimensionsW	4224
+RegionAreaH	0.053428571428571436
+RegionAreaUnit	normalized
+RegionAreaW	0.039809523809523822
+RegionAreaX	0.2014285714285714
+RegionAreaY	0.41880952380952385
+RegionType	Face
+RenderingIntent	Perceptual
+ResolutionUnit	inches
+RunTimeEpoch	0
+RunTimeFlags	Valid
+RunTimeScale	1000000000
+RunTimeSincePowerUp	1 days 7:51:31
+RunTimeValue	114690589272416
+ScaleFactor35efl	6.2
+SceneCaptureType	Standard
+SceneType	Directly photographed
+SensingMethod	One-chip color area
+ShutterSpeed	1/121
+ShutterSpeedValue	1/121
+Software	15.5
+SubSecCreateDate	2022-06-24 18:53:10 +0100
+SubSecDateTimeOriginal	2022-06-24 18:53:10 +0100
+SubSecModifyDate	2022-06-24 18:53:10 +0100
+SubSecTimeDigitized	076
+SubSecTimeOriginal	076
+SubjectArea	1643 1371 751 750
+ThumbnailImage	Binary data 9209 bytes
+ThumbnailLength	9209
+ThumbnailOffset	2634
+WhiteBalance	Auto
+XMPToolkit	XMP Core 6.0.0
+XResolution	72
+YCbCrPositioning	Centered
+YCbCrSubSampling	YCbCr4:2:0 (2 2)
+YResolution	72
