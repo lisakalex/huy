@@ -1,0 +1,19 @@
+# * * * * * /var/www/html/sh/seed1.sh
+# * * * * * /var/www/html/sh/monitor.sh
+# * * * * * /var/www/html/sh/hyip.sh
+# * * * * * /var/www/html/sh/hyip1.sh
+# * * * * * /var/www/html/sh/rate.sh
+#* * * * * /var/www/html/sh/test.sh
+#* * * * * /var/www/html/sh/alexa.sh
+#0 1 * * * /usr/bin/php8.1 /var/www/html/sh/seed.php
+#0 13 * * * /usr/bin/php8.1 /var/www/html/sh/copyall.php
+#* * * * * /usr/bin/php8.1 /var/www/html/pay_cron.php
+#* * * * * /usr/bin/php8.1 /var/www/html/sh/test6.php
+#* * * * * /bin/bash -l -c 'date > ~/cron-test.txt'
+#* * * * *  DISPLAY=:0 /home/al/PycharmProjects/pythonProject/download_source.py
+#* * * * * /var/www/html/py/download_source.py
+#* * * * * /var/www/html/sh/download_source.sh
+# * * * * * /usr/bin/python3 /var/www/html/internetspeed/intspeed.py
+# * * * * * /var/www/html/venv/bin/python3.10 /var/www/html/internetspeed/intspeed.py
+# * * * * * /var/www/html/venv/bin/python3.10 /var/www/html/sh/alexa.py
+# * * * * * /var/www/html/sh/alexa.sh

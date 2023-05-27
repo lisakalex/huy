@@ -150,7 +150,7 @@ include(__DIR__ . '/header.php');
                         <div class="card dark">
                             <div class="card-body">
                                 <div>
-                                    <h4 style="color: white"> Investment Market index</h4>
+                                    <h4 style="color: white"> Investment Market index huy</h4>
                                     <div style="color: white; font-size: 3em; font-weight: 500; padding: 30px"><?= $today_index ?></div>
                                     <div style="color: white; font-size: 1em; font-weight: 500; padding: 0 30px 0 30px"><?= $index_change ?>
                                         (<?= $index_change_percentage . "%" ?>)

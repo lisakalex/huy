@@ -1,0 +1,212 @@
+
+tcps@bk.ru
+Zaichik1.&
+
+fix wifi
+after os update it fixed itself
+
+reinstall driver
+https://askubuntu.com/questions/55868/installing-broadcom-wireless-drivers
+
+~~~
+install ifuse
+https://www.maketecheasier.com/easily-mount-your-iphone-as-an-external-drive-in-ubuntu/
+
+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 
+
+~~~
+Your license information:
+Domain: jkfund.com
+License code: UW4T4AZWP4HV6GW6QH2G
+Enter this license code when install.php script asks you.
+(IonCube - PHP <= 5.6 zip archive - recommended version) (Last Update: 17, Oct 2020).
+
+Installation:
+1. Generate a license code for your domain.
+2. Download an archive.
+2. Upload the files from the arhive to your server. Upload the files in binary mode only.
+3. Create a 'tmpl_c' folder (if not exists) and set 777 permissions for this folder.
+  Rename settings_default.php file to settings.php
+4. Run the install.php script and follow the instructions.
+
+~~~
+        $start_time = microtime(true);
+    
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $pu);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        // https://stackoverflow.com/questions/17801094/php-curl-how-to-add-the-user-agent-value-or-overcome-the-servers-blocking-curl-r
+        curl_setopt($ch,CURLOPT_USERAGENT,'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13');
+        $contents = curl_exec($ch);
+
+eco microtime(true) - $start_time;
+
+~~~
+wget
+copy a site like httrack
+wget --mirror --convert-links --adjust-extension --page-requisites --no-parent https://creditfy.net/
+
+wget --mirror --convert-links --adjust-extension --page-requisites --no-parent --user=dadada --password='Zaichik1.&' https://zion-finance.com
+
+/usr/lib/php/20190902/xdebug.so
+
+
+
+zend_extension=xdebug.so
+zend_extension=/usr/lib/php/20190902/xdebug.so
+xdebug.remote_autostart = 1
+xdebug.remote_enable = 1
+xdebug.remote_handler = dbgp
+xdebug.remote_host = 127.0.0.1
+xdebug.remote_log = /tmp/xdebug_remote.log
+xdebug.remote_mode = req
+xdebug.remote_port = 9005 #if you want to change the port you can change
+
+[xdebug]
+zend_extension=xdebug.so
+zend_extension=/opt/lampp/lib/php/extensions/no-debug-non-zts-20190902/xdebug.so
+xdebug.mode=debug
+xdebug.client_host=127.0.0.1
+xdebug.client_port=9003
+xdebug.remote_log = /tmp/xdebug_remote.log
+
+[xdebug]
+zend_extension=xdebug.so
+zend_extension=/opt/lampp/lib/php/extensions/no-debug-non-zts-20190902/xdebug.so
+xdebug.remote_autostart = 1
+xdebug.remote_enable = 1
+xdebug.remote_handler = dbgp
+xdebug.remote_host = 127.0.0.1
+xdebug.remote_log = /tmp/xdebug_remote.log
+xdebug.remote_mode = req
+xdebug.remote_port = 9003 #if you want to change the port you can change
+
+
+~~~
+/home/da/Documents/idea/IdeaProjects/da/da.iml
+
+https://linuxconfig.org/how-to-allow-gui-root-login-on-ubuntu-20-04-focal-fossa-linux
+
+~~~
+exec -a "$0" "$HERE/chrome" "$@" --no-sandbox
+--user-data-dir
+
+        $start_time1 = microtime(true);
+    
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $pu);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        // https://stackoverflow.com/questions/17801094/php-curl-how-to-add-the-user-agent-value-or-overcome-the-servers-blocking-curl-r
+        curl_setopt($ch,CURLOPT_USERAGENT,'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13');
+        $contents = curl_exec($ch);
+
+microtime(true) - $start_time1
+
+set all directories to 755 and files to 644
+chmod -R a=r,u+w,a+X dir
+
+might need to set all to 777 first
+chmod -R 777 dir
+
+tar -czf docs.tgz docs &&  gpg -c docs.tgz && rm -rf docs.tgz
+
+~~~
+[xdebug]
+zend_extension = /opt/lampp/lib/php/extensions/no-debug-non-zts-20190902/xdebug.so
+xdebug.mode=debug
+xdebug.client_host=127.0.0.1
+xdebug.client_port=9003
+xdebug.log=/opt/lampp/xdebug.log
+
+~~~
+start phpstorm
+/home/da/Downloads/[FTUApps.com]\ -\ JetBrains\ PhpStorm\ 2020.1\ build\ 201.6668.153\ Win\ \&\ MacOS\ &\ Linux\ +\ Crack/JetBrains\ PhpStorm\ 2020.1\ build\ 201.6668.153\ for\ Linux/PhpStorm-201.6668.153/bin phpstorm.sh
+
+Log path '/opt/idea/.IntelliJIdea2017.2/system/log' is inaccessible.
+If you have modified the 'idea.log.path' property please make sure it is correct,
+otherwise please re-install the IDE.
+
+~~~
+da@da:~$ lspci -vvnn | grep -A 9 Network 
+03:00.0 Network controller [0280]: Broadcom Inc. and subsidiaries BCM4312 802.11b/g LP-PHY [14e4:4315] (rev 01)
+	Subsystem: Dell Wireless 1397 WLAN Mini-Card [1028:000c]
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR+ FastB2B- DisINTx-
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0, Cache Line Size: 64 bytes
+	Interrupt: pin A routed to IRQ 17
+	Region 0: Memory at f0400000 (64-bit, non-prefetchable) [size=16K]
+	Capabilities: <access denied>
+	Kernel driver in use: b43-pci-bridge
+	Kernel modules: ssb
+
+~~~
+https://www.goldpoll.com/images/paymeny-bitcoin.png,https://www.goldpoll.com/images/payeer.png,https://www.goldpoll.com/images/pm.png
+
+curlinfo_effective_url
+curlinfo_total_time
+curlinfo_response_code
+curlinfo_filetime
+curlinfo_namelookup_time
+curlinfo_connect_time
+curlinfo_redirect_count
+curlinfo_size_download
+curlinfo_speed_download
+
+
+$hyip_url1, $ctime, $curlinfo_response_code, $curlinfo_namelookup_time, $curlinfo_connect_time, $curlinfo_redirect_count, $curlinfo_size_download,$curlinfo_speed_download
+
+*/1 * * * */opt/lampp/bin/php /opt/lampp/htdocs/hh.php
+
+~~~
+fuck mysql
+
+*** Some errors have been detected on the server!
+Please look at the bottom of this window.***
+
+https://stackoverflow.com/questions/27370372/phpmyadmin-pop-up-error-notice-keeps-appearing-when-clicking-on-columns-of-datab
+
+Append the following line
+
+ $cfg['SendErrorReports'] = 'never';
+inside /etc/phpmyadmin/config.inc.php file to disable this annoying window.
+
+~~~
+tor
+https://justhackerthings.com/post/using-tor-from-the-command-line/
+sudo /etc/init.d/tor start
+sudo /etc/init.d/tor stop
+sudo /etc/init.d/tor restart
+
+check your ip
+curl ifconfig.me
+
+The torify command can be used to run any command through tor.
+torify curl ifconfig.me 2>/dev/null
+
+force Tor to generate a new circuit, and thus a new IP
+echo -e 'AUTHENTICATE ""\r\nsignal NEWNYM\r\nQUIT' | nc 127.0.0.1 9051
+
+~~~
+crontab
+* * * * * /opt/lampp/htdocs/hyip/da.sh
+0 1 * * * /opt/lampp/bin/php /opt/lampp/htdocs/hyip/seed.php
+0 13 * * * /opt/lampp/bin/php /opt/lampp/htdocs/hyip/copyall.php
+
+~~~
+-javaagent:/opt/idea/bin/JetbrainsCrack.jar
+-Duser.home=/opt/idea
+
+CREATE USER 'kumpenot_ocar843'@'localhost' IDENTIFIED VIA mysql_native_password USING '***';GRANT ALL PRIVILEGES ON *.* TO 'kumpenot_ocar843'@'localhost' REQUIRE NONE WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;GRANT ALL PRIVILEGES ON `kumpenot_ocar843`.* TO 'kumpenot_ocar843'@'localhost';
+
+
+
+
+
+
+
+
+
+
+

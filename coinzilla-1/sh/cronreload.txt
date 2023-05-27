@@ -1,0 +1,7 @@
+# * * * * * /var/www/html/sh/seed1.sh
+# * * * * * /var/www/html/sh/monitor.sh
+# * * * * * /var/www/html/sh/hyip.sh
+# * * * * * /var/www/html/sh/hyip1.sh
+# * * * * * /var/www/html/sh/rate.sh
+# 0 1 * * * /usr/bin/php8.1 /var/www/html/sh/seed.php
+# 0 13 * * * /usr/bin/php8.1 /var/www/html/sh/copyall.php
