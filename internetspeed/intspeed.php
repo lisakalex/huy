@@ -1,6 +1,7 @@
 <?php
 //include 'a.php';
-function get_link() {
+function get_link()
+{
     $link = mysqli_connect("localhost", "al", "111", "intspeed");
 //    $link = mysqli_connect("localhost", "al", "111", "aaa");
     if (!$link) {
@@ -34,11 +35,22 @@ $data = json_encode($graph);
 
 ?>
 
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<meta charset="UTF-8">
+<title>Title</title>
+<meta http-equiv="refresh" content="60">
 
 <!-- Resources -->
-<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
-<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
-<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+<!--<script src="https://cdn.amcharts.com/lib/4/core.js"></script>-->
+<!--<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>-->
+<!--<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>-->
+<script src="/internetspeed/assets/cdn.amcharts.com_lib_4_core.js"></script>
+<script src="/internetspeed/assets/cdn.amcharts.com_lib_4_charts.js"></script>
+<script src="/internetspeed/assets/cdn.amcharts.com_lib_4_themes_animated.js"></script>
+<!--</head>-->
+<!--<body>-->
 
 <!-- Chart code -->
 <script>
@@ -104,7 +116,9 @@ $data = json_encode($graph);
         chart.scrollbarX.series.push(series);
         chart.scrollbarX.parent = chart.bottomAxesContainer;
 
-        dateAxis.start = 0.79;
+        // show whole graph: dateAxis.start = 0.0;
+        // dateAxis.start = 0.79;
+        dateAxis.start = 0.0;
         dateAxis.keepSelection = true;
 
 
@@ -113,6 +127,7 @@ $data = json_encode($graph);
 
 <!-- HTML -->
 <div id="chartdiv"></div>
-
+<!--</body>-->
+<!--</html>-->
 
 

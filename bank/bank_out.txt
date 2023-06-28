@@ -1,21 +1,33 @@
-Mon, 3 Apr 23~Lidl Gb Crawley~~41.64~31,587.26
-Mon, 3 Apr 23~Crawley Borough Co~~182.47~31,404.79
-Mon, 3 Apr 23~Santander Mortgage~~863.16~30,541.63
-Mon, 3 Apr 23~E.On Next~~61.35~30,480.28
-Mon, 3 Apr 23~Southern Water~~14.90~30,465.38
-Tue, 11 Apr 23~Lidl Gb Crawley~~85.00~30,380.38
-Tue, 11 Apr 23~Tk Maxx~89.97~~30,470.35
-Tue, 11 Apr 23~Virgin Money~~394.46~30,075.89
-Tue, 11 Apr 23~Lloyds~~50.00~30,025.89
-Wed, 12 Apr 23~Sainsburys S/Mkts~~6.00~30,019.89
-Mon, 17 Apr 23~Paysend.Com~~27.85~29,992.04
-Mon, 17 Apr 23~Lidl Gb Crawley~~26.37~29,965.67
-Mon, 17 Apr 23~Lidl Gb Crawley~~27.40~29,938.27
-Mon, 17 Apr 23~Lidl Gb Crawley~~3.53~29,934.74
-Tue, 18 Apr 23~Thames Water~~8.00~29,926.74
-Thu, 20 Apr 23~Western Union~~22.41~29,904.33
-Fri, 21 Apr 23~Talktalk Telecom T~~22.84~29,881.49
-Fri, 21 Apr 23~Lisak N~816.00~~30,697.49
-Mon, 24 Apr 23~Western Union~~134.79~30,562.70
-Mon, 24 Apr 23~Lidl Gb Crawley~~91.11~30,471.59
-Tue, 25 Apr 23~Total Gas & Power~2,169.05~~32,640.64
+Tue, 2 May 23~Western Union~~44.55~32,596.09
+Tue, 2 May 23~Lidl Gb Crawley~~63.21~32,532.88
+Tue, 2 May 23~The Range~~8.00~32,524.88
+Tue, 2 May 23~202397 01May 13.55~~200.00~32,324.88
+Tue, 2 May 23~Crawley Borough Co~~187.00~32,137.88
+Tue, 2 May 23~Santander Mortgage~~863.16~31,274.72
+Tue, 2 May 23~B/Card Plat Visa~~140.22~31,134.50
+Tue, 2 May 23~E.On Next~~94.60~31,039.90
+Tue, 2 May 23~Southern Water~~14.90~31,025.00
+Wed, 3 May 23~N Lisak~~300.00~30,725.00
+Tue, 9 May 23~Lidl Gb Crawley~~63.95~30,661.05
+Tue, 9 May 23~B & Q 1155~~9.00~30,652.05
+Wed, 10 May 23~Lisak N~740.00~~31,392.05
+Thu, 11 May 23~Asda Stores~~8.50~31,383.55
+Mon, 15 May 23~Lidl Gb Crawley~~62.61~31,320.94
+Mon, 15 May 23~T K Maxx~~39.95~31,280.99
+Mon, 15 May 23~Asda Stores~~36.74~31,244.25
+Mon, 15 May 23~Squires Garden Cen~~21.98~31,222.27
+Mon, 15 May 23~Virgin Money~~938.58~30,283.69
+Thu, 18 May 23~Thames Water~~8.00~30,275.69
+Fri, 19 May 23~Asda Stores~~41.72~30,233.97
+Fri, 19 May 23~Wilko Retail Limit~~15.25~30,218.72
+Mon, 22 May 23~Western Union~~26.79~30,191.93
+Mon, 22 May 23~Bkg*Hotel At Booki~~374.90~29,817.03
+Tue, 23 May 23~Talktalk Telecom T~~22.84~29,794.19
+Tue, 23 May 23~Artur *~~8.95~29,785.24
+Tue, 23 May 23~Easyjet K5Gbp1V~~355.44~29,429.80
+Wed, 24 May 23~Paysend.Com~~878.45~28,551.35
+Wed, 24 May 23~Kubus Polish Shop~~5.27~28,546.08
+Thu, 25 May 23~Total Gas & Power~2,169.05~~30,715.13
+Fri, 26 May 23~Asda Stores~~39.88~30,675.25
+Tue, 30 May 23~Lidl Gb Crawley~~61.30~30,613.95
+Tue, 30 May 23~B/Card Plat Visa~~84.59~30,529.36
