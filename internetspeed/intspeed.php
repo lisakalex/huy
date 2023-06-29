@@ -68,7 +68,7 @@ $data = json_encode($graph);
 
 // Set input format for the dates
 //                     chart.dateFormatter.inputDateFormat = "yyyy-MM-dd-hh-mm";
-        chart.dateFormatter.inputDateFormat = "yyyy-MM-dd hh-mm";
+        chart.dateFormatter.inputDateFormat = "yyyy-MM-dd HH-mm";
 
 // Create axes
         var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
