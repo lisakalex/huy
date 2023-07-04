@@ -3,6 +3,7 @@ import speedtest as st
 import mysql.connector
 import sys
 import time
+from datetime import datetime
 
 
 def get_exception():
@@ -22,6 +23,9 @@ def get_new_speeds():
 
     speed_test = None
     start = time.time()
+
+    dtime = datetime.now()
+    # t = nowdate.strftime("%H:%M:%S")
 
     try:
         # speed_test = st.Speedtest()
@@ -65,8 +69,8 @@ def get_new_speeds():
     upload_mbs = round(upload / (10 ** 6), 2)
     # upload_mbs = 5
 
-    add_hyip = "INSERT INTO speed (ping, download, upload, elapsed) VALUES (%s, %s, %s, %s)"
-    data_hyip = (ping, download_mbs, upload_mbs, elapsed)
+    add_hyip = "INSERT INTO speed (ping, download, upload, elapsed, dtime) VALUES (%s, %s, %s, %s, %s)"
+    data_hyip = (ping, download_mbs, upload_mbs, elapsed, dtime)
 
     cursor.execute(add_hyip, data_hyip)
     emp_no = cursor.lastrowid

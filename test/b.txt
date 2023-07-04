@@ -1,0 +1,63 @@
+al@da:~$ exif /home/al/Pictures/me/DCIM/202304__/IMG_E5654.JPG
+EXIF tags in '/home/al/Pictures/me/DCIM/202304__/IMG_E5654.JPG' ('Motorola' byte order):
+--------------------+----------------------------------------------------------
+Tag                 |Value
+--------------------+----------------------------------------------------------
+Manufacturer        |Apple
+Model               |iPhone 12 mini
+Orientation         |Top-left
+X-Resolution        |72
+Y-Resolution        |72
+Resolution Unit     |Inch
+Software            |16.3.1
+Date and Time       |2023:04:13 08:55:24
+YCbCr Positioning   |Centred
+Exposure Time       |1/60 sec.
+F-Number            |f/1.6
+Exposure Program    |Normal programme
+ISO Speed Ratings   |125
+Exif Version        |Exif Version 2.32
+Date and Time (Origi|2023:04:13 08:55:24
+Date and Time (Digit|2023:04:13 08:55:24
+Offset Time For Date|+01:00
+Offset Time For Date|+01:00
+Offset Time For Date|+01:00
+Components Configura|Y Cb Cr -
+Shutter Speed       |5.92 EV (1/60 sec.)
+Aperture            |1.36 EV (f/1.6)
+Brightness          |2.29 EV (16.80 cd/m^2)
+Exposure Bias       |0.00 EV
+Metering Mode       |Pattern
+Flash               |Flash did not fire, compulsory flash mode
+Focal Length        |4.2 mm
+Subject Area        |Within rectangle (width 2208, height 1387) around (x,y) =
+Maker Note          |1291 bytes undefined data
+Sub-second Time (Ori|159
+Sub-second Time (Dig|159
+FlashPixVersion     |FlashPix Version 1.0
+Colour Space        |Uncalibrated
+Pixel X Dimension   |4032
+Pixel Y Dimension   |3024
+Sensing Method      |One-chip colour area sensor
+Scene Type          |Directly photographed
+Exposure Mode       |Auto exposure
+White Balance       |Auto white balance
+Focal Length in 35mm|26
+Scene Capture Type  |Standard
+Lens Specification  |1.550000, 4.2, 1.6, 2.4
+Lens Make           |Apple
+Lens Model          |iPhone 12 mini back dual wide camera 4.2mm f/1.6
+Composite Image     |2
+North or South Latit|N
+Latitude            |51,  6, 55.80
+East or West Longitu|W
+Longitude           | 0, 12, 14.90
+Altitude Reference  |Sea level
+Altitude            |77.9328
+Speed Unit          |K
+Speed of GPS Receive| 0
+GPS Image Direction |T
+GPS Image Direction |322.3332
+Reference for Bearin|T
+Bearing of Destinati|322.3332
+GPS Horizontal Posit|3.53553

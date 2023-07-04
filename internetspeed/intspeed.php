@@ -16,7 +16,7 @@ function get_link()
 }
 
 $link = get_link();
-$sql = "SELECT ttime, download FROM speed";
+$sql = "SELECT dtime, download FROM speed";
 //$sql = "SELECT da, du FROM da";
 //$sql = "SELECT cats FROM kak";
 //$sql = "SELECT hyip, url, perf FROM graph WHERE ttime like '" . $ttime . "' AND perf > 0";
@@ -118,7 +118,8 @@ $data = json_encode($graph);
 
         // show whole graph: dateAxis.start = 0.0;
         // dateAxis.start = 0.79;
-        dateAxis.start = 0.0;
+        // dateAxis.start = 0.0;
+        dateAxis.start = 0.9;
         dateAxis.keepSelection = true;
 
 
