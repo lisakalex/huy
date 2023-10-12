@@ -79,5 +79,9 @@ def get_new_speeds():
     cursor.close()
     cnx.close()
 
+    # with open('/var/www/html/intspeed/downloads.txt', "a") as file:
+    with open('/var/www/html/internetspeed/downloads.txt', "a") as file:
+        file.write(str(dtime) + ' ' + str(download_mbs) + '\n')
+
 
 get_new_speeds()

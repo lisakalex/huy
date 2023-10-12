@@ -10,19 +10,21 @@ from xvfbwrapper import Xvfb  # stopped working
 options = Options()
 options.headless = True
 options.add_argument("hide-scrollbars")
-options.add_argument(
-    "user-agent=Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36")
-# driver = webdriver.Chrome(options=options, executable_path="/var/www/html/py/chromedriver") executable_path has been deprecated, please pass in a Service object
-driver = webdriver.Chrome(options=options, service=Service(ChromeDriverManager().install()))
+options.add_argument("user-agent=Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36")
+# executable_path has been deprecated, please pass in a Service object
+driver = webdriver.Chrome(options=options, executable_path="/var/www/html/py/chromedriver-linux64/chromedriver")
+# driver = webdriver.Chrome(options=options, service=Service(ChromeDriverManager().install()))
 
-# url = "http://localhost/coinzilla-1/test/calendar-template.html"
-url = "http://localhost/coinzilla-1/test/calendar-template-mobile.html"
-# url = "http://localhost/coinzilla-1/test/calendar-mobile-1-3.html"
-# url = "https://www.gnu.org/software/wget/manual/wget.html"
+# url = "https://www.allhyipmonitors.com/"
+url = "https://www.amkamdam.com/"
+# url = "https://www.amkamdam.com/test/cloudflare.html"
+# url = "https://www.amkamdam.com/login/?err=Invalid+login+credentials%2C+please+try+again."
 
 try:
     # driver.set_window_size(1366, 768)
-    driver.set_window_size(850, 10800)  # for calendar-mobile.html
+    driver.set_window_size(1920, 1080)
+    # driver.set_window_size(2560, 1600)
+    # driver.set_window_size(850, 10800)  # for calendar-mobile.html
     # driver.set_window_size(3480, 3010)  # for calendar-tb.html
     # driver.set_window_size(1000, 100000)
     driver.maximize_window()
