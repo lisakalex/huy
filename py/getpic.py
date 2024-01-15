@@ -1,3 +1,4 @@
+#!/home/al/.venv/bin/python3.10
 from selenium import webdriver
 from bs4 import BeautifulSoup
 # import mysql.connector
