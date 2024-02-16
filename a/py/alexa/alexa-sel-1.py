@@ -61,7 +61,7 @@ if monitor:
             options.add_argument('user-agent=Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 '
                                  '(KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36')
 
-            driver = webdriver.Chrome(options=options, executable_path="/var/www/html/py/chromedriver")
+            driver = webdriver.Chrome(options=options, executable_path="/py/oldchromedriver/2/chromedriver")
             driver.set_window_size(1366, 768)
             driver.maximize_window()
             start = time.time()
