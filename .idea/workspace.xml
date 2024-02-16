@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5c178cbd-f02a-4c7f-97ca-b246017c21a2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/html.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/py/curl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/py/hyip.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/py/monitor_alexa.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/py/oldchromedriver/2/chromedriver" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/py/oldchromedriver/3/chromedriver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a/py/alexa/alexa-sel-1-1.py" beforeDir="false" afterPath="$PROJECT_DIR$/a/py/alexa/alexa-sel-1-1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a/py/alexa/alexa-sel-1.py" beforeDir="false" afterPath="$PROJECT_DIR$/a/py/alexa/alexa-sel-1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/bank.py" beforeDir="false" afterPath="$PROJECT_DIR$/bank/bank.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/bank.txt" beforeDir="false" afterPath="$PROJECT_DIR$/bank/bank.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/bank_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/bank/bank_out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pp/py/alexa/alexa-sel-1-1.py" beforeDir="false" afterPath="$PROJECT_DIR$/pp/py/alexa/alexa-sel-1-1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pp/py/alexa/alexa-sel-1.py" beforeDir="false" afterPath="$PROJECT_DIR$/pp/py/alexa/alexa-sel-1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pp/py/alexa/alexa-sel-11.py" beforeDir="false" afterPath="$PROJECT_DIR$/pp/py/alexa/alexa-sel-11.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/alexa/alexa-sel-1-1.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/alexa/alexa-sel-1-1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/alexa/alexa-sel-1.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/alexa/alexa-sel-1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/alexa/alexa-sel-11.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/alexa/alexa-sel-11.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/chromedriver" beforeDir="false" afterPath="$PROJECT_DIR$/py/chromedriver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/getpic.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/getpic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2cH3eLuv2txfp1sLkAvndgGecwo" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/py" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.30450782" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/py/oldchromedriver/3" />
+      <recent name="$PROJECT_DIR$/py/oldchromedriver/2" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/py" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.hyip">
+    <configuration name="console.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$APPLICATION_CONFIG_DIR$/consoles/db/da2acef5-6d6a-4a2e-bec0-4340c4e40a36/console.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
+    <configuration name="bank" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="html" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bank" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bank/bank.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="getpic" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="html" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/py" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/py/getpic.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="hyip" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="html" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/py" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/py/hyip.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="monitor_alexa" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="html" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/py" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/py/monitor_alexa.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.hyip" />
+        <item itemvalue="Python.bank" />
+        <item itemvalue="Python.monitor_alexa" />
+        <item itemvalue="Python.getpic" />
+        <item itemvalue="Database Script.console.sql" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5c178cbd-f02a-4c7f-97ca-b246017c21a2" name="Default Changelist" comment="" />
+      <created>1707754770908</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707754770908</updated>
+      <workItem from="1707754772147" duration="13600000" />
+      <workItem from="1708075753351" duration="2334000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="830" y="474" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1707757891728">
+      <screen x="70" y="37" width="2490" height="1563" />
+    </state>
+    <state x="830" y="474" key="#com.intellij.execution.impl.EditConfigurationsDialog/70.37.2490.1563@70.37.2490.1563" timestamp="1707757891728" />
+    <state x="836" y="595" width="947" height="453" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1707762068378">
+      <screen x="70" y="37" width="2490" height="1563" />
+    </state>
+    <state x="836" y="595" width="947" height="453" key="#com.intellij.fileTypes.FileTypeChooser/70.37.2490.1563@70.37.2490.1563" timestamp="1707762068378" />
+    <state x="848" y="367" width="923" height="910" key="#console.sql" timestamp="1707758059174">
+      <screen x="70" y="37" width="2490" height="1563" />
+    </state>
+    <state x="848" y="367" width="923" height="910" key="#console.sql/70.37.2490.1563@70.37.2490.1563" timestamp="1707758059174" />
+    <state width="2488" height="650" key="DebuggerActiveHint" timestamp="1707886231995">
+      <screen x="70" y="37" width="2490" height="1563" />
+    </state>
+    <state width="2488" height="650" key="DebuggerActiveHint/70.37.2490.1563@70.37.2490.1563" timestamp="1707886231995" />
+    <state width="2420" height="305" key="GridCell.Tab.0.bottom" timestamp="1708077667752">
+      <screen x="70" y="38" width="2490" height="1562" />
+    </state>
+    <state width="2424" height="426" key="GridCell.Tab.0.bottom/70.37.2490.1563@70.37.2490.1563" timestamp="1707976826318" />
+    <state width="2420" height="305" key="GridCell.Tab.0.bottom/70.38.2490.1562@70.38.2490.1562" timestamp="1708077667752" />
+    <state width="2420" height="305" key="GridCell.Tab.0.center" timestamp="1708077667751">
+      <screen x="70" y="38" width="2490" height="1562" />
+    </state>
+    <state width="2424" height="426" key="GridCell.Tab.0.center/70.37.2490.1563@70.37.2490.1563" timestamp="1707976826316" />
+    <state width="2420" height="305" key="GridCell.Tab.0.center/70.38.2490.1562@70.38.2490.1562" timestamp="1708077667751" />
+    <state width="2420" height="305" key="GridCell.Tab.0.left" timestamp="1708077667749">
+      <screen x="70" y="38" width="2490" height="1562" />
+    </state>
+    <state width="2424" height="426" key="GridCell.Tab.0.left/70.37.2490.1563@70.37.2490.1563" timestamp="1707976826315" />
+    <state width="2420" height="305" key="GridCell.Tab.0.left/70.38.2490.1562@70.38.2490.1562" timestamp="1708077667749" />
+    <state width="2420" height="305" key="GridCell.Tab.0.right" timestamp="1708077667752">
+      <screen x="70" y="38" width="2490" height="1562" />
+    </state>
+    <state width="2424" height="426" key="GridCell.Tab.0.right/70.37.2490.1563@70.37.2490.1563" timestamp="1707976826317" />
+    <state width="2420" height="305" key="GridCell.Tab.0.right/70.38.2490.1562@70.38.2490.1562" timestamp="1708077667752" />
+    <state width="2420" height="305" key="GridCell.Tab.1.bottom" timestamp="1708077667753">
+      <screen x="70" y="38" width="2490" height="1562" />
+    </state>
+    <state width="2424" height="319" key="GridCell.Tab.1.bottom/70.37.2490.1563@70.37.2490.1563" timestamp="1707887101583" />
+    <state width="2420" height="305" key="GridCell.Tab.1.bottom/70.38.2490.1562@70.38.2490.1562" timestamp="1708077667753" />
+    <state width="2420" height="305" key="GridCell.Tab.1.center" timestamp="1708077667753">
+      <screen x="70" y="38" width="2490" height="1562" />
+    </state>
+    <state width="2424" height="319" key="GridCell.Tab.1.center/70.37.2490.1563@70.37.2490.1563" timestamp="1707887101582" />
+    <state width="2420" height="305" key="GridCell.Tab.1.center/70.38.2490.1562@70.38.2490.1562" timestamp="1708077667753" />
+    <state width="2420" height="305" key="GridCell.Tab.1.left" timestamp="1708077667753">
+      <screen x="70" y="38" width="2490" height="1562" />
+    </state>
+    <state width="2424" height="319" key="GridCell.Tab.1.left/70.37.2490.1563@70.37.2490.1563" timestamp="1707887101582" />
+    <state width="2420" height="305" key="GridCell.Tab.1.left/70.38.2490.1562@70.38.2490.1562" timestamp="1708077667753" />
+    <state width="2420" height="305" key="GridCell.Tab.1.right" timestamp="1708077667753">
+      <screen x="70" y="38" width="2490" height="1562" />
+    </state>
+    <state width="2424" height="319" key="GridCell.Tab.1.right/70.37.2490.1563@70.37.2490.1563" timestamp="1707887101583" />
+    <state width="2420" height="305" key="GridCell.Tab.1.right/70.38.2490.1562@70.38.2490.1562" timestamp="1708077667753" />
+    <state x="670" y="294" width="1280" height="1056" key="SettingsEditor" timestamp="1707755065736">
+      <screen x="70" y="37" width="2490" height="1563" />
+    </state>
+    <state x="670" y="294" width="1280" height="1056" key="SettingsEditor/70.37.2490.1563@70.37.2490.1563" timestamp="1707755065736" />
+    <state x="906" y="452" width="818" height="732" key="find.popup" timestamp="1707763272886">
+      <screen x="70" y="37" width="2490" height="1563" />
+    </state>
+    <state x="906" y="452" width="818" height="732" key="find.popup/70.37.2490.1563@70.37.2490.1563" timestamp="1707763272886" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/py/getpic.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/py/hyip.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/html$hyip.coverage" NAME="hyip Coverage Results" MODIFIED="1708077572572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py" />
+    <SUITE FILE_PATH="coverage/html$monitor_alexa.coverage" NAME="monitor_alexa Coverage Results" MODIFIED="1707888014082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py" />
+    <SUITE FILE_PATH="coverage/html$bank.coverage" NAME="bank Coverage Results" MODIFIED="1707975909028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bank" />
+    <SUITE FILE_PATH="coverage/html$getpic.coverage" NAME="getpic Coverage Results" MODIFIED="1707886737386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py" />
+  </component>
+</project>
