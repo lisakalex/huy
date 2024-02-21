@@ -1,282 +1,116 @@
 from bs4 import BeautifulSoup
 import mysql.connector
-import time
-import random
-from pathlib import Path
-
-cnx = mysql.connector.connect(host='localhost', user='al', passwd='Zaichik1.&', database='hyip')
-cursor = cnx.cursor(prepared=True)
-query = '''SELECT monitor FROM hyip.monitor'''
-cursor.execute(query)
-monitors = cursor.fetchall()
+import requests
+from urllib.parse import urlparse
 
 
-# def monitor(self):
-#     """
-#     This will loop through the dictionary of APIs and write there content to a string to be inserted in the html
-#     file.
-#     :return: the string of api details to add.
-#     """
-#     cnx = mysql.connector.connect(host='localhost', user='root', passwd=None, database='tihuy')
-#     cursor = cnx.cursor()
-#
-#     query = "SELECT monitor FROM monitor WHERE hit = %s LIMIT 1"
-#     hit = [0]
-#     cursor.execute(query, hit)
-#
-#     monitor = None
-#
-#     for (mon) in cursor:
-#         monitor = mon[0]
-#
-#     cursor.close()
-#     cnx.close()
-#
-#     cnx = mysql.connector.connect(host='localhost', user='root', passwd=None, database='tihuy')
-#     cursor = cnx.cursor()
-#
-#     hit = 1
-#     update_monitor = "UPDATE monitor SET hit = %s WHERE monitor = %s"
-#     data_monitor = (hit, monitor)
-#
-#     cursor.execute(update_monitor, data_monitor)
-#     cnx.commit()
-#     cursor.close()
-#     cnx.close()
-#
-#     return monitor
-#
-#
-# def __source(self, monitor):
-#     display = Xvfb()
-#     display.start()
-#     options = Options()
-#     options.headless = True
-#     options.add_argument(
-#         "user-agent=Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36")
-#     options.add_argument("ignore-certificate-errors")
-#     options.add_argument("--no-sandbox");
-#     options.add_argument("--disable-blink-features=AutomationControlled")
-#     driver = webdriver.Chrome(options=options)
-#     try:
-#         driver.get(monitor)
-#         source = driver.page_source
-#     except TimeoutException:
-#         source = "xxx"
-#         pass
-#
-#     driver.close()
-#     display.stop()
-#     return BeautifulSoup(source, features="html.parser")
-#
-#
-# def sel_time(self, sel_time, monitor):
-#     """
-#     This will loop through the dictionary of APIs and write there content to a string to be inserted in the html
-#     file.
-#     :return: the string of api details to add.
-#     """
-#
-#     cnx = mysql.connector.connect(host='localhost', user='root', passwd=None, database='tihuy')
-#     cursor = cnx.cursor()
-#
-#     update_monitor = "UPDATE monitor SET sel_time = %s WHERE monitor = %s"
-#     data_monitor = (sel_time, monitor)
-#
-#     cursor.execute(update_monitor, data_monitor)
-#     cnx.commit()
-#     cursor.close()
-#     cnx.close()
-#
-#
-# def ttm(self, monitor, ttm):
-#     cnx = mysql.connector.connect(host='localhost', user='root', passwd=None, database='tihuy')
-#     cursor = cnx.cursor()
-#     update_monitor = "UPDATE monitor SET ttm = %s WHERE monitor = %s"
-#     data_monitor = (ttm, monitor)
-#     cursor.execute(update_monitor, data_monitor)
-#     cnx.commit()
-#     cursor.close()
-#     cnx.close()
-#
-#
-# def __test_source(self):
-#     f = open("/a/ku.htm", "r")
-#     source = f.read()
-#     return BeautifulSoup(source)
+# https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+def __get_status(status):
+    s = 0
+    if status.lower().find("paying") != -1 and status.lower().find("not paying") == -1:
+        s = 1
+    return s
 
 
-# def __store_hyip(self, monitor, hyip, url, status):
-#     cnx = mysql.connector.connect(host='localhost', user='root', passwd=None, database='tihuy')
-#     cursor = cnx.cursor()
-#
-#     add_hyip = "INSERT INTO hyip (monitor, hyip, url, status) VALUES (%s, %s, %s, %s)"
-#     data_hyip = (monitor, hyip, url, status)
-#
-#     cursor.execute(add_hyip, data_hyip)
-#     emp_no = cursor.lastrowid
-#     cnx.commit()
-#     cursor.close()
-#     cnx.close()
+def soups(monitor):
+    source = None
+    try:
+        source = requests.get(monitor, headers=headers, timeout=None)
+    except Exception as e:
+        print(e)
+        pass
 
-# def __store_hyip1(self, hyip_data):
-#     cnx = mysql.connector.connect(host='localhost', user='root', passwd=None, database='tihuy')
-#     cursor = cnx.cursor()
-#     add_hyip = "INSERT INTO hyip (monitor, hyip, url, status, ttm) VALUES (%s, %s, %s, %s, %s)"
-#     cursor.executemany(add_hyip, hyip_data)
-#     emp_no = cursor.lastrowid
-#     cnx.commit()
-#     cursor.close()
-#     cnx.close()
+    if source is not None:
+        source = requests.get(monitor, headers=headers, timeout=None)
+        elapsed = source.elapsed.total_seconds()
+        res_code = source.status_code
 
-# def __get_status(self, status):
-#     s = 0
-#     if status.lower().find("paying") != -1 and status.lower().find("not paying") == -1:
-#         s = 1
-#     return s
+        query = "UPDATE monitor SET res_code = %s, elapsed = %s WHERE monitor = %s"
+        data = (res_code, elapsed, monitor)
+        cursor.execute(query, data)
+        cnx.commit()
+
+        return BeautifulSoup(source.text, features='html.parser')
+
+    return BeautifulSoup('<!DOCTYPE html><html lang="en"><head></head><body></body></html>', features='html.parser')
 
 
-# def __hyip_url(self, hyip_id, hyip_url):
-#     # start_time = time.time()
-#     # cnx = mysql.connector.connect(host='localhost', user='root', passwd=None, database='tihuy')
-#     # cursor = cnx.cursor()
-#     #
-#     # query = "SELECT id, url FROM hyip WHERE hit = %s LIMIT 1"
-#     # hit = [0]
-#     # cursor.execute(query, hit)
-#     #
-#     # id = None
-#     # url = None
-#     #
-#     # for (h_id) in cursor:
-#     #     id = h_id[0]
-#     #     url = h_id[1]
-#     #
-#     # hit = 1
-#     # update_hyip = "UPDATE hyip SET hit = %s WHERE id = %s"
-#     # data_hyip = (hit, id)
-#     #
-#     # cursor.execute(update_hyip, data_hyip)
-#     # cnx.commit()
-#
-#     start_time = time.time()
-#     display = Xvfb()
-#     display.start()
-#     options = Options()
-#     options.headless = True
-#     options.add_argument("user-agent=Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36")
-#     driver = webdriver.Chrome(options=options)
-#     driver.get(hyip_url)
-#     hyip_url = driver.current_url
-#     driver.close()
-#     display.stop()
-#
-#     hyip_url = self.get_url(hyip_url)
-#
-#     end_time = time.time()
-#     huy = end_time - start_time
-#
-#     cnx = mysql.connector.connect(host='localhost', user='root', passwd=None, database='tihuy')
-#     cursor = cnx.cursor()
-#     update_hyip = "UPDATE hyip SET url = %s, huy = %s, ttime = NOW() WHERE id = %s"
-#     data_hyip = (hyip_url, huy, hyip_id)
-#
-#     cursor.execute(update_hyip, data_hyip)
-#     cnx.commit()
-#     cursor.close()
-#     cnx.close()
+def addhyip(data):
+    query = "INSERT INTO hyip_py (monitor, hyip, url, pay_status) VALUES (%s, %s, %s, %s)"
+    cursor.executemany(query, data)
+    cnx.commit()
 
-# def __hyip_url(self, hyip_url):
-#     display = Xvfb()
-#     display.start()
-#     options = Options()
-#     options.headless = True
-#     options.add_argument(
-#         "user-agent=Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36")
-#     driver = webdriver.Chrome(options=options)
-#     try:
-#         driver.get(hyip_url)
-#         hyip_url = driver.current_url
-#     except TimeoutException:
-#         hyip_url = "xxx"
-#         pass
-#
-#     driver.close()
-#     display.stop()
-#     return self.get_url(hyip_url)
-#
-#
-# def convert_url(self):
-#     cnx = mysql.connector.connect(host='localhost', user='root', passwd=None, database='tihuy')
-#     cursor = cnx.cursor()
-#
-#     query = "SELECT id, url FROM hyip"
-#     cursor.execute(query)
-#
-#     for n in cursor:
-#         self.__hyip_url(n[0], n[1])
-#
-#
-# def get_url(self, url):
-#     try:
-#         if url.lower().find("www.") != -1:
-#             a = url.rsplit("//")
-#             b = a[1].rsplit("/")
-#             c = b[0].rsplit(".")
-#             url = a[0] + "//" + c[1] + "." + c[2]
-#         else:
-#             a = url.rsplit("//")
-#             b = a[1].rsplit("/")
-#             url = a[0] + "//" + b[0]
-#     except Exception:
-#         url = "xxx"
-#         pass
-#
-#     return url
-#
-#
-# def __store_hyip(self, monitor, hyip, url, status, ttm):
-#     hyip_data = []
-#     for i in range(len(hyip)):
-#         h = (monitor, hyip[i], url[i], status[i], ttm[i])
-#         hyip_data.append(h)
-#
-#     cnx = mysql.connector.connect(host='localhost', user='root', passwd=None, database='tihuy')
-#     cursor = cnx.cursor()
-#     add_hyip = "INSERT INTO hyip (monitor, hyip, url, status, ttm) VALUES (%s, %s, %s, %s, %s)"
-#     cursor.executemany(add_hyip, hyip_data)
-#     emp_no = cursor.lastrowid
-#     cnx.commit()
-#     cursor.close()
-#     cnx.close()
-#
-#
-# def quick(self, monitor):
-#     bs = self.__source(monitor, "quick")
-#     hyips = bs.find_all("div", {"class": "da"})
-#
-#     for n in hyips:
-#         # hyip = n.find("div").get_text().strip().capitalize()
-#         monitor = "huy"
-#         hyip = n.text
-#         url = "url"
-#         status = 1
-#         # url = n.find("a").attrs['href']
-#         # s = n.find("div", {"class": "status_vote"}).find("span").get_text()
-#         # status = self.__get_status(s)
-#         self.__store_hyip(monitor, hyip, url, status)
-#
-#
-def graspgold():
-    bs = self.__source(monitor, 'https://graspgold.com/')
-    hyips = bs.find_all('div', class_='details')
 
-    for n in hyips:
-        hyip = n.find('a').get_text().strip().capitalize()
-        url = n.find('a').attrs['href']
-        s = n.find('div', class_='status_vote').find('span').get_text()
-        status = self.__get_status(s)
-        self.__store_hyip(monitor, hyip, url, status)
+def urls(url):
+    source = None
+    try:
+        source = requests.get(url, headers=headers, timeout=None)
+    except Exception as e:
+        print(e)
+        pass
+
+    if source is not None:
+        url = source.url
+        huy1 = urlparse(url).scheme
+        huy2 = urlparse(url).netloc
+        return huy1 + '://' + huy2
+
+    return ''
+
+
+def graspgold_com():
+    monitor = 'https://graspgold.com'
+    soup = soups(monitor)
+    data = []
+    for n in soup.find_all('div', class_='details'):
+        status = n.find('div', class_='status_vote').find('span').get_text().strip()
+        pay_status = __get_status(status)
+
+        if pay_status == 1:
+            url = urls(n.find('a').get('href'))
+            if url is not None and url != '':
+                name = n.find('a').get_text().strip().capitalize()
+                data.append((monitor, name, url, pay_status))
+
+    addhyip(data)
+
+
+def eurohyips_net():
+    monitor = 'https://eurohyips.net'
+    soup = soups(monitor)
+    data = []
+    for n in soup.find_all("div", class_='projects_listing'):
+        pay_status = n.find('div', class_='project_status').find('span').get_text().strip()
+        pay_status = __get_status(pay_status)
+
+        if pay_status == 1:
+            url = urls(n.find('a').get('href'))
+            if url is not None and url != '':
+                name = n.find('a').get_text().strip().capitalize()
+                data.append((monitor, name, url, pay_status))
+
+    addhyip(data)
+
+
+def hyiphome_net():
+    monitor = 'https://www.hyiphome.net'
+    soup = soups(monitor)
+    data = []
+    for n in soup.find_all("div", class_='main-col'):
+        pay_status = n.find('div', class_='b-status').get_text().strip()
+        pay_status = __get_status(pay_status)
+
+        if pay_status == 1:
+            url = urls(n.find('a').get('href'))
+            if url is not None and url != '':
+                name = n.find('a').get_text().strip().capitalize()
+                data.append((monitor, name, url, pay_status))
+
+    addhyip(data)
+
+
+# def graspgold1():
+#     kak = None
 
 
 #
@@ -483,10 +317,12 @@ def graspgold():
 #
 
 if __name__ == "__main__":
-    # for i in range(10):
-    # while True:
-    graspgold()
-    # renew_tor_ip()
-    # time.sleep(5)
-    # print(datetime.today().strftime('%Y-%m-%d %H:%M:%S'))
-huy = None
+    cnx = mysql.connector.connect(host='localhost', user='al', passwd='Zaichik1.&', database='hyip')
+    cursor = cnx.cursor(prepared=True)
+    headers = {"user-agent": 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36'}
+    graspgold_com()
+    eurohyips_net()
+    hyiphome_net()
+    cursor.close()
+    cnx.close()
+    huy = None

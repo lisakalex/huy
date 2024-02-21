@@ -10,17 +10,14 @@ import time
 
 
 def get_current_ip():
-    with Controller.from_port(port=9051) as controller:
-        controller.authenticate(password="")
-        controller.signal(Signal.NEWNYM)
-
-    ua = UserAgent()
-    userAgent = ua.random
+    # with Controller.from_port(port=9051) as controller:
+    #     controller.authenticate(password="")
+    #     controller.signal(Signal.NEWNYM)
+    #
+    # ua = UserAgent()
+    # userAgent = ua.random
     buffer = BytesIO()
     c = pycurl.Curl()
-    c.setopt(pycurl.PROXY, "127.0.0.1")
-    c.setopt(pycurl.PROXYPORT, 9050)
-    c.setopt(pycurl.PROXYTYPE, pycurl.PROXYTYPE_SOCKS5)
     # c.setopt(c.URL, 'http://da.com/')
     # c.setopt(c.URL, '82.165.5.243')
     c.setopt(c.URL, 'https://www.amkamdam.com/?kggggggggggggggggggg')
@@ -28,7 +25,7 @@ def get_current_ip():
     # c.setopt(c.URL, 'https://www.amkamdam.com/test/click-iframe/a.html')
     c.setopt(c.WRITEDATA, buffer)
     c.setopt(c.CAINFO, certifi.where())
-    c.setopt(pycurl.USERAGENT, userAgent)
+    # c.setopt(pycurl.USERAGENT, userAgent)
     # print(c.getinfo(pycurl.IPRESOLVE))
     # print(c.getinfo(pycurl.PRIMARY_IP))
     c.perform()
