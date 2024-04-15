@@ -5,3 +5,42 @@ Site Key
 
 Secret Key
 0x4AAAAAAAIsOm0GWgza-zWsAZq2yQtuXuc
+
+# for n in detailsList:
+#     url.append(n.find("a").attrs['href'])
+#     name.append(n.find("a").get_text())
+#     status.append(n.find("div", {"class": "status_vote"}).get_text())
+
+http://hyipgain.com/
+http://rcbinfo.com
+https://rcbinfo.com/
+https://www.besthyips.org/
+http://www.besthyips.org/
+
+20218500
+
+~~~
+under question
+bestemoneys.com
+
+<a href="program-RotorFinance.html" class="hyip" target="_blank">Rotor Finance</a>
+
+https://invest-tracing.com/program-RotorFinance.html
+
+<label class="label label-success"><i class="icon-ok"></i> Paying </label>
+
+https://www.hyiphome.net/ 4
+https://graspgold.com/ 8
+https://eurohyips.net/ 14
+https://invest-tracing.com/ 57
+Один из самых высокодоходных способов пополнить свой бюджет онлайн – HYIP-проекты. Как заработать на хайпах интересует многих. На нашем мониторинге exclusive-profit.com представлена вся полезная и актуальная информация для начинающих и опытных инвесторов. Вы узнаете: в какие HYIP проекты инвестировать, какие hyip проекты платят или ушли в scam, можно ли заработать на хайпах, как правильно инвестировать и остаться в плюсе, как самостоятельно выбрать перспективный HYIP, виды инвестиционных стратегий и конечно же мы познакомим Вас с терминологией хайп индустрии, а так
+73
+[['Rotor finance', 'https://rotor.finance'], ['Lapaido', 'https://lapaido.com'], ['Mutualpot', 'https://MutualPot.com'], ['After ai ltd', 'https://afteral.com'], ['Neural reserve', 'https://neuralreserve.net'], ['Berstake', 'https://berstake.com'], ['Formulaearn', 'https://formulaearn.com'], ['Bullera', 'https://bullera.io'], ['Solaraims.ltd', 'https://solaraims.us'], ['Arbimex.io', 'https://arbimex.io'], ['Netmi limited', 'https://netmi.org'], ['Safeassets', 'https://safeassets.com'], ['Bitcobid limited', 'https://www.bitcobid.com'], ['Planetaryasset', 'http://planetaryasset.io'], ['Mixli.biz', 'https://mixli.biz'], ['Bitcoin earning city', 'https://bitcoinearningcity.net'], ['Foxpayinc', 'https://www.foxpayinc.com'], ['Newbond', 'https://newbond.io'], ['Dogelon', 'https://thedogelon.com'], ['Gold city app', 'https://goldcity.app'], ['Cosmex', 'https://cosmex.cc'], ['Goldenprice', 'https://goldenprice.biz'], ['Trust-inv', 'https://trust-inv.org'], ['Tradexo.cc', 'https://tradexo.cc'], ['Luxioprofit', 'https://luxioprofit.com'], ['Swaiafx', 'https://swaiafx.com'], ['Dividendgrowth.online', 'https://www.dividendgrowth.online'], ['Conspro', 'https://conspro.biz'], ['Axera', 'https://axera.io'], ['Usdt-bot', 'https://usdt-bot.com'], ['Asignat fund', 'https://asignat.com'], ['Capitalized5', 'https://capitalized5.biz'], ['Multicopytrade.top', 'https://multicopytrade.top'], ['Atm2024', 'https://atm2024.org'], ['Bitmie.pro', 'https://bitmie.pro'], ['Online corporate limited', 'https://ocl.limited'], ['Insured.limited', 'https://insured.limited'], ['Investments.legal', 'https://lil.limited'], ['Pay genting ltc', 'https://paygenting.com'], ['Trust-fx', 'http://trust-fx.com'], ['Bitcoin wealth', 'https://bitcoinwealth.biz'], ['Bit pro', 'https://bitpro.ac'], ['Glooon', 'https://glooon.com'], ['Lion cloud', 'https://lioncloud.pro'], ['Cizmining', 'https://cizmining.com'], ['Bemarg', 'https://bemarg.com'], ['Aliaope', 'https://aliaope.com'], ['Elixbit finances', 'https://elixbit.ltd'], ['Baozem', 'https://baozem.com'], ['Efadep', 'https://efadep.com'], ['Globalampara', 'https://globalampara.com'], ['Allmoneymania', 'https://allmoneymania.com'], ['Cfg liberty', 'https://cfgliberty.com'], ['Damlepam', 'https://damlepam.com'], ['Plarod', 'https://plarod.com'], ['Crypto-smart limited', 'https://crypto-smart.cc']]
+
+https://exclusive-profit.com/details/lid/20788/
+https://asignat.com/?p=G7WBE8
+
+ Not Paying
+'not paying'
+not paying
+

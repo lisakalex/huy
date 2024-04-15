@@ -20,7 +20,7 @@ $data = [];
 //    $changep = mysqli_real_escape_string($link, $_GET ['changep']);
 //}
 
-$sql = "SELECT hyip, url FROM graph WHERE ttime like '$ttime' ORDER BY perf DESC limit 10";
+$sql = "SELECT hyip, url FROM graph WHERE ttime like '$ttime' ORDER BY rate DESC limit 10";
 //$sql = "SELECT hyip, perf, ttime FROM graph";
 //$sql = "SELECT htime, perf FROM graph";
 $stmt = mysqli_stmt_init($link);
@@ -38,7 +38,7 @@ $datetime = new DateTime('today');
 $ttime = $datetime->format('Y-m-d');
 //$url = "http://activefunds7.com";
 //$sql = "SELECT ttime, perf FROM graph4 WHERE perf > 0 AND ttime < now() - INTERVAL 1 DAY ORDER BY ttime";
-$sql = "SELECT hyip, perf, ttime, url FROM graph WHERE ttime < '$ttime'";
+$sql = "SELECT hyip, rate, ttime, url FROM graph WHERE ttime < '$ttime'";
 //$sql = "SELECT hyip, perf, ttime FROM graph";
 //$sql = "SELECT htime, perf FROM graph";
 $stmt = mysqli_stmt_init($link);

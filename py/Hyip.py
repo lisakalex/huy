@@ -263,7 +263,7 @@ class Hyip:
             # status = self.__get_status(s)
             self.__store_hyip(monitor, hyip, url, status)
 
-    def graspgold(self, monitor):
+    def graspgold(self, monitor):  #da
         bs = self.__source(monitor, 'graspgold')
         hyips = bs.find_all('div', class_='details')
 
@@ -274,7 +274,7 @@ class Hyip:
             status = self.__get_status(s)
             self.__store_hyip(monitor, hyip, url, status)
 
-    def hyiphome(self, monitor):
+    def hyiphome(self, monitor):  #da
         bs = self.__source(monitor, 'hyiphome')
         hyips = bs.find_all('div', class_='main-col')
 
@@ -285,7 +285,7 @@ class Hyip:
             status = self.__get_status(s)
             self.__store_hyip(monitor, hyip, url, status)
 
-    def investtracing(self, monitor):
+    def investtracing(self, monitor):  #da
         bs = self.__source(monitor, "investtracing")
         hyips = bs.find_all("div", {"class": "listcontainer"})
 
@@ -296,7 +296,7 @@ class Hyip:
             status = self.__get_status(s)
             self.__store_hyip(monitor, hyip, url, status)
 
-    def instantmonitor(self, monitor):
+    def instantmonitor(self, monitor):  #da
         bs = self.__source(monitor, 'instantmonitor')
         hyips = bs.find_all("div", {"class": "listcontainer"})
 
@@ -307,7 +307,7 @@ class Hyip:
             status = self.__get_status(s)
             self.__store_hyip(monitor, hyip, url, status)
 
-    def goldlister(self, monitor):
+    def goldlister(self, monitor):  #gone
         bs = self.__source(monitor, 'goldlister')
         hyips = bs.find_all("table", {"class": "summary"})
 
@@ -318,7 +318,7 @@ class Hyip:
             status = self.__get_status(s[0])
             self.__store_hyip(monitor, hyip, url, status)
 
-    def eurohyips(self, monitor):
+    def eurohyips(self, monitor):  #da
         bs = self.__source(monitor, 'eurohyips')
         hyips = bs.find_all("div", {"class": "projects_listing"})
 
@@ -329,7 +329,7 @@ class Hyip:
             status = self.__get_status(s)
             self.__store_hyip(monitor, hyip, url, status)
 
-    def exclusiveprofit(self, monitor):
+    def exclusiveprofit(self, monitor):  #da
         bs = self.__source(monitor, "exclusiveprofit")
         hyips = bs.find_all("div", {"class": "c-project-preview-top-row"})
 
@@ -340,7 +340,7 @@ class Hyip:
             status = self.__get_status(s)
             self.__store_hyip(monitor, hyip, url, status)
 
-    def fairmonitor(self, monitor):
+    def fairmonitor(self, monitor):  #da
         hyip, url, status, hyip_data, ttm = [], [], [], [], []
         bs = self.__source(monitor)
         hyips = bs.find_all("table", {"class": "detn_stat1_block"})
@@ -354,7 +354,7 @@ class Hyip:
 
         self.__store_hyip(monitor, hyip, url, status, ttm)
 
-    def hyipclub(self, monitor):
+    def hyipclub(self, monitor):  #da
         hyip, url, status, hyip_data, ttm = [], [], [], [], []
         bs = self.__source(monitor)
         hyips = bs.find_all("div", {"class": "khunglon"})

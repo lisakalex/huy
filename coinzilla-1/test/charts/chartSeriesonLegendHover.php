@@ -19,7 +19,7 @@ if (isset ($_GET ['u'])) {
 $url = "http://activefunds7.com";
 //$sql = "SELECT ttime, perf FROM graph4 WHERE perf > 0 AND ttime < NOW() - INTERVAL 1 DAY ORDER BY ttime";
 //$sql = "SELECT hyip, perf, ttime FROM graph WHERE ttime < '$ttime' AND perf > 0 ORDER BY perf DESC LIMIT 10";
-$sql = "SELECT hyip, perf, ttime FROM graph";
+$sql = "SELECT hyip, rate, ttime FROM graph";
 //$sql = "SELECT htime, perf FROM graph";
 $stmt = mysqli_stmt_init($link);
 if (mysqli_stmt_prepare($stmt, $sql)) {

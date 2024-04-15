@@ -39,6 +39,7 @@ if ($hyip_id) {
         p - paying monitors quantity (percentage)
         n - not paying monitors quantity
         R = ((t + p - n)/2)*0.999*0.987
+        /2)*0.999*0.987 - this is to get the number around 100 and make all numbers different
         */
         $total = substr_count($contents['contents'], "<div class=\"mtd\">");
         if ($total > 0) {

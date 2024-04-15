@@ -16,7 +16,7 @@ $ttime = $datetime->format('Y-m-d');
 //}
 
 //$sql = "SELECT ttime, perf FROM graph4 WHERE perf > 0 AND ttime < NOW() - INTERVAL 1 DAY ORDER BY ttime";
-$sql = "SELECT ttime, perf FROM graph WHERE perf > 0 AND ttime < '$ttime' ORDER BY ttime";
+$sql = "SELECT ttime, rate FROM graph WHERE rate > 0 AND ttime < '$ttime' ORDER BY ttime";
 //$sql = "SELECT htime, perf FROM graph";
 $stmt = mysqli_stmt_init($link);
 if (mysqli_stmt_prepare($stmt, $sql)) {
@@ -45,7 +45,7 @@ foreach ($dates as $date) {
 $hyip_rgaph = json_encode($data);
 
 
-$sql = "SELECT hyip, perf FROM graph WHERE ttime like '2022-09-06%' AND perf > 0 ORDER BY perf  LIMIT 10";
+$sql = "SELECT hyip, rate FROM graph WHERE ttime like '2022-09-06%' AND rate > 0 ORDER BY rate  LIMIT 10";
 //$sql = "SELECT hyip, url, perf FROM graph WHERE ttime like '" . $ttime . "' AND perf > 0";
 
 $stmt = mysqli_stmt_init($link);
@@ -74,7 +74,7 @@ $data = [];
 //    $changep = mysqli_real_escape_string($link, $_GET ['changep']);
 //}
 
-$sql = "SELECT hyip, url FROM graph WHERE ttime like '$ttime' ORDER BY perf DESC limit 10";
+$sql = "SELECT hyip, url FROM graph WHERE ttime like '$ttime' ORDER BY rate DESC limit 10";
 //$sql = "SELECT hyip, perf, ttime FROM graph";
 //$sql = "SELECT htime, perf FROM graph";
 $stmt = mysqli_stmt_init($link);
@@ -92,7 +92,7 @@ $datetime = new DateTime('today');
 $ttime = $datetime->format('Y-m-d');
 //$url = "http://activefunds7.com";
 //$sql = "SELECT ttime, perf FROM graph4 WHERE perf > 0 AND ttime < now() - INTERVAL 1 DAY ORDER BY ttime";
-$sql = "SELECT hyip, perf, ttime, url FROM graph WHERE ttime < '$ttime'";
+$sql = "SELECT hyip, rate, ttime, url FROM graph WHERE ttime < '$ttime'";
 //$sql = "SELECT hyip, perf, ttime FROM graph";
 //$sql = "SELECT htime, perf FROM graph";
 $stmt = mysqli_stmt_init($link);

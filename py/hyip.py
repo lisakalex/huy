@@ -2,12 +2,48 @@ from bs4 import BeautifulSoup
 import mysql.connector
 import requests
 from urllib.parse import urlparse
-
+import random
 
 # https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+
+hyips = []
+
+
+def rate():
+    # hyips = [['Hourlysoo ltd', 'https://hourlysoo.com'],
+    #         ['Bitpro.acc', 'https://bitpro.ac'],
+    #         ['Bitpro.ac', 'https://bitpro.ac'],
+    #         ['Gainpay', 'https://gainpay.club'],
+    #         ['Cfg liberty', 'https://cfgliberty.com'],
+    #         ['Hourlysoo ltd', 'https://hourlysoo.com'],
+    #         ['Hourlysoo ltd', 'https://hourlysoo.com'],
+    #         ['Hourlysoo ltd', 'https://hourlysoo.com']]
+
+    unique_hyips = []
+
+    for h in hyips:
+        unique_hyips.append(h[1])
+
+    unique_hyips = set(unique_hyips)
+    unique_hyips = (list(unique_hyips))
+
+    graph_data = []
+
+    for h in unique_hyips:
+        ratehuy = sum(x.count(h) for x in hyips)
+        graph = [x for x in hyips if h in x][0]
+        r = random.random()
+        graph_data.append([graph[0], graph[1], ratehuy + r])
+
+    query = "INSERT INTO graph (hyip, url, rate) VALUES (%s, %s, %s)"
+    cursor.executemany(query, graph_data)
+    cnx.commit()
+    sa = None
+
+
 def __get_status(status):
     s = 0
-    if status.lower().find("paying") != -1 and status.lower().find("not paying") == -1:
+    if status.lower() == "paying" or status.lower() == "pays" or status.lower() == "платит":
         s = 1
     return s
 
@@ -21,24 +57,39 @@ def soups(monitor):
         pass
 
     if source is not None:
-        source = requests.get(monitor, headers=headers, timeout=None)
         elapsed = source.elapsed.total_seconds()
         res_code = source.status_code
 
         query = "UPDATE monitor SET res_code = %s, elapsed = %s WHERE monitor = %s"
-        data = (res_code, elapsed, monitor)
-        cursor.execute(query, data)
+        cursor.execute(query, (res_code, elapsed, monitor))
         cnx.commit()
 
         return BeautifulSoup(source.text, features='html.parser')
 
-    return BeautifulSoup('<!DOCTYPE html><html lang="en"><head></head><body></body></html>', features='html.parser')
+    return BeautifulSoup('<!DOCTYPE html><html lang="en"><head></head><body>huy</body></html>', features='html.parser')
 
 
-def addhyip(data):
-    query = "INSERT INTO hyip_py (monitor, hyip, url, pay_status) VALUES (%s, %s, %s, %s)"
-    cursor.executemany(query, data)
-    cnx.commit()
+# def soups(monitor):
+#     source = None
+#     try:
+#         # source = requests.get(monitor, headers=headers, timeout=None)
+#         with open('b.html', 'r') as file:
+#             source = file.read()
+#     except Exception as e:
+#         print(e)
+#         pass
+#
+#     if source is not None:
+#         # elapsed = source.elapsed.total_seconds()
+#         # res_code = source.status_code
+#
+#         # query = "UPDATE monitor SET res_code = %s, elapsed = %s WHERE monitor = %s"
+#         # cursor.execute(query, (res_code, elapsed, monitor))
+#         # cnx.commit()
+#
+#         return BeautifulSoup(source, features='html.parser')
+#
+#     return BeautifulSoup('<!DOCTYPE html><html lang="en"><head></head><body></body></html>', features='html.parser')
 
 
 def urls(url):
@@ -59,262 +110,172 @@ def urls(url):
 
 
 def graspgold_com():
-    monitor = 'https://graspgold.com'
-    soup = soups(monitor)
-    data = []
+    soup = soups('https://graspgold.com')
     for n in soup.find_all('div', class_='details'):
-        status = n.find('div', class_='status_vote').find('span').get_text().strip()
-        pay_status = __get_status(status)
-
-        if pay_status == 1:
-            url = urls(n.find('a').get('href'))
-            if url is not None and url != '':
-                name = n.find('a').get_text().strip().capitalize()
-                data.append((monitor, name, url, pay_status))
-
-    addhyip(data)
+        try:
+            if __get_status(n.find('div', class_='status_vote').find('span').get_text().strip()) == 1:
+                url = urls(n.find('a').get('href'))
+                if url is not None and url != '':
+                    hyip = n.find('a').get_text().strip().capitalize()
+                    if hyip is not None and hyip != '':
+                        hyips.append([hyip, url])
+        except Exception as e:
+            print(e)
+            pass
 
 
 def eurohyips_net():
-    monitor = 'https://eurohyips.net'
-    soup = soups(monitor)
-    data = []
+    soup = soups('https://eurohyips.net')
     for n in soup.find_all("div", class_='projects_listing'):
-        pay_status = n.find('div', class_='project_status').find('span').get_text().strip()
-        pay_status = __get_status(pay_status)
-
-        if pay_status == 1:
-            url = urls(n.find('a').get('href'))
-            if url is not None and url != '':
-                name = n.find('a').get_text().strip().capitalize()
-                data.append((monitor, name, url, pay_status))
-
-    addhyip(data)
+        try:
+            if __get_status(n.find('div', class_='project_status').find('span').get_text().strip()) == 1:
+                url = urls(n.find('a').get('href'))
+                if url is not None and url != '':
+                    hyip = n.find('a').get_text().strip().capitalize()
+                    if hyip is not None and hyip != '':
+                        hyips.append([hyip, url])
+        except Exception as e:
+            print(e)
+            pass
 
 
 def hyiphome_net():
-    monitor = 'https://www.hyiphome.net'
-    soup = soups(monitor)
-    data = []
+    soup = soups('https://www.hyiphome.net')
     for n in soup.find_all("div", class_='main-col'):
-        pay_status = n.find('div', class_='b-status').get_text().strip()
-        pay_status = __get_status(pay_status)
-
-        if pay_status == 1:
-            url = urls(n.find('a').get('href'))
-            if url is not None and url != '':
-                name = n.find('a').get_text().strip().capitalize()
-                data.append((monitor, name, url, pay_status))
-
-    addhyip(data)
-
-
-# def graspgold1():
-#     kak = None
+        try:
+            if __get_status(n.find('div', class_='b-status').get_text().strip()) == 1:
+                url = urls(n.find('a').get('href'))
+                if url is not None and url != '':
+                    hyip = n.find('a').get_text().strip().capitalize()
+                    if hyip is not None and hyip != '':
+                        hyips.append([hyip, url])
+        except Exception as e:
+            print(e)
+            pass
 
 
-#
-#
-# def hyiphome(self, monitor):
-#     bs = self.__source(monitor, 'hyiphome')
-#     hyips = bs.find_all('div', class_='main-col')
-#
-#     for n in hyips:
-#         hyip = n.find('a').get_text().strip().capitalize()
-#         url = n.find('a').attrs['href']
-#         s = n.find('div', class_='b-status').get_text()
-#         status = self.__get_status(s)
-#         self.__store_hyip(monitor, hyip, url, status)
-#
-#
-# def investtracing(self, monitor):
-#     bs = self.__source(monitor, "investtracing")
-#     hyips = bs.find_all("div", {"class": "listcontainer"})
-#
-#     for n in hyips:
-#         hyip = n.find("a", {"class": "hyip"}).get_text().strip().capitalize()
-#         url = "https://invest-tracing.com/" + n.find("a", {"class": "hyip"}).attrs['href']
-#         s = n.find("label", {"class": "label"}).get_text()
-#         status = self.__get_status(s)
-#         self.__store_hyip(monitor, hyip, url, status)
-#
-#
-# def instantmonitor(self, monitor):
-#     bs = self.__source(monitor, 'instantmonitor')
-#     hyips = bs.find_all("div", {"class": "listcontainer"})
-#
-#     for n in hyips:
-#         hyip = n.find("a").get_text().strip().capitalize()
-#         url = "https://instant-monitor.com" + n.find("a").attrs['href']
-#         s = n.find("span").get_text()
-#         status = self.__get_status(s)
-#         self.__store_hyip(monitor, hyip, url, status)
-#
-#
-# def goldlister(self, monitor):
-#     bs = self.__source(monitor, 'goldlister')
-#     hyips = bs.find_all("table", {"class": "summary"})
-#
-#     for n in hyips:
-#         hyip = n.find("a").get_text().strip().capitalize()
-#         url = "https://gold-lister.com/" + n.find("a").attrs['href']
-#         s = n.find("div", {"id": "statussite"}).attrs['class']
-#         status = self.__get_status(s[0])
-#         self.__store_hyip(monitor, hyip, url, status)
-#
-#
-# def eurohyips(self, monitor):
-#     bs = self.__source(monitor, 'eurohyips')
-#     hyips = bs.find_all("div", {"class": "projects_listing"})
-#
-#     for n in hyips:
-#         hyip = n.find("a").get_text().strip().capitalize()
-#         url = n.find("a").attrs['href']
-#         s = n.find("div", {"class": "project_status"}).find("span").get_text()
-#         status = self.__get_status(s)
-#         self.__store_hyip(monitor, hyip, url, status)
-#
-#
-# def exclusiveprofit(self, monitor):
-#     bs = self.__source(monitor, "exclusiveprofit")
-#     hyips = bs.find_all("div", {"class": "c-project-preview-top-row"})
-#
-#     for n in hyips:
-#         hyip = n.find("a").get_text().strip().capitalize()
-#         url = n.find("a").attrs['href']
-#         s = n.find("span").get_text()
-#         status = self.__get_status(s)
-#         self.__store_hyip(monitor, hyip, url, status)
-#
-#
-# def fairmonitor(self, monitor):
-#     hyip, url, status, hyip_data, ttm = [], [], [], [], []
-#     bs = self.__source(monitor)
-#     hyips = bs.find_all("table", {"class": "detn_stat1_block"})
-#
-#     for n in hyips:
-#         st = time.time()
-#         hyip.append(n.find("a").get_text().strip().capitalize())
-#         url.append(self.__hyip_url(n.find("a").attrs['href']))
-#         status.append(self.__get_status(n.find("span").get_text()))
-#         ttm.append(time.time() - st)
-#
-#     self.__store_hyip(monitor, hyip, url, status, ttm)
-#
-#
-# def hyipclub(self, monitor):
-#     hyip, url, status, hyip_data, ttm = [], [], [], [], []
-#     bs = self.__source(monitor)
-#     hyips = bs.find_all("div", {"class": "khunglon"})
-#
-#     for n in hyips:
-#         st = time.time()
-#         hyip.append(n.find("a").get_text().strip().capitalize())
-#         url.append(self.__hyip_url(n.find("a").attrs['href']))
-#         status.append(self.__get_status(n.find("div", {"class": "k-status"}).get_text()))
-#         ttm.append(time.time() - st)
-#
-#     self.__store_hyip(monitor, hyip, url, status, ttm)
-#
-#
-# def keyhyip(self, monitor):
-#     hyip, url, status, hyip_data, ttm = [], [], [], [], []
-#     bs = self.__source(monitor)
-#     hyips = bs.find_all("div", {"class": "program"})
-#
-#     for n in hyips:
-#         st = time.time()
-#         ss = 0
-#         hyip.append(n.find("a").get_text().strip().capitalize())
-#         url.append(self.__hyip_url(n.find("a").attrs['href']))
-#         s = n.find("div", {"class": "status"}).attrs['class']
-#         if s[1] == "status1":
-#             ss = 1
-#         status.append(ss)
-#         ttm.append(time.time() - st)
-#
-#     self.__store_hyip(monitor, hyip, url, status, ttm)
-#
-#
-# def hyips(self, monitor):
-#     hyip, url, status, hyip_data, ttm = [], [], [], [], []
-#     bs = self.__source(monitor)
-#     hyips = bs.find_all("div", {"class": "listcontainer"})
-#
-#     for n in hyips:
-#         st = time.time()
-#         hyip.append(n.find("a", {"class": "hyip"}).get_text().strip().capitalize())
-#         url.append(self.__hyip_url(n.find("a").attrs['href']))
-#         status.append(self.__get_status(n.find("label", {"class": "label"}).get_text()))
-#         ttm.append(time.time() - st)
-#
-#     self.__store_hyip(monitor, hyip, url, status, ttm)
-#
-#
-# def hyipexplorer(self, monitor):
-#     hyip, url, status, hyip_data, ttm = [], [], [], [], []
-#     bs = self.__source(monitor)
-#
-#     for n in bs("font", color="red"):
-#         hyip.append(n.find_parent("b").text.strip().capitalize())
-#
-#     for n in bs("a", string="Vote!"):
-#         st = time.time()
-#         u = n.attrs['href']
-#         u = int(''.join(filter(str.isdigit, u)))
-#         url.append(self.__hyip_url("https://www.hyipexplorer.com/visit.php?lid=" + str(u)))
-#         ttm.append(time.time() - st)
-#
-#     for n in bs("span", class_="bl"):
-#         status.append(self.__get_status(n.find_parent().text))
-#
-#     self.__store_hyip(monitor, hyip, url, status, ttm)
-#
-#
-# def asianhyip(self, monitor):
-#     hyip, url, status, hyip_data, ttm = [], [], [], [], []
-#     bs = self.__source(monitor)
-#
-#     for n in bs("div", class_="program"):
-#         st = time.time()
-#         k = n.find("div", class_="title2")
-#         hyip.append(k.text.strip().capitalize())
-#         url.append(self.__hyip_url(k.a.attrs['href']))
-#         status.append(self.__get_status(k.next_sibling.next_sibling.text))
-#         ttm.append(time.time() - st)
-#
-#     self.__store_hyip(monitor, hyip, url, status, ttm)
-#
-#
-# def makemoneyventure(self, monitor):
-#     hyip, url, status, hyip_data, ttm = [], [], [], [], []
-#     bs = self.__source(monitor)
-#     hyips = bs("div", class_="program")
-#
-#     for n in hyips:
-#         st = time.time()
-#         hyip.append(n.find("div", class_="nameprogram").text.strip().strip().capitalize())
-#         url.append(self.__hyip_url(n.a.attrs['href']))
-#         status.append(self.__get_status(n.find("div", class_="m-status").text))
-#         ttm.append(time.time() - st)
-#
-#     self.__store_hyip(monitor, hyip, url, status, ttm)
-#
-#
-# def hyipbusket(self, monitor):
-#     hyip, url, status, hyip_data, ttm = [], [], [], [], []
-#     bs = self.__source(monitor)
-#     hyips = bs("div", class_="btmbdylftbx")
-#
-#     for n in hyips:
-#         st = time.time()
-#         hyip.append(n.find("a").text.strip().strip().capitalize())
-#         url.append(self.__hyip_url(n.find("a").attrs['href']))
-#         status.append(self.__get_status(n.find("b").text))
-#         ttm.append(time.time() - st)
-#
-#     self.__store_hyip(monitor, hyip, url, status, ttm)
-#
+def invest_tracing_com():
+    soup = soups('https://invest-tracing.com')
+    for n in soup.find_all("div", class_='listcontainer'):
+        try:
+            if __get_status(n.find('label', class_='label').get_text().strip()) == 1:
+                url = urls("https://invest-tracing.com/" + n.find('a', class_='hyip').get('href'))
+                if url is not None and url != '':
+                    hyip = n.find('a', class_='hyip').get_text().strip().capitalize()
+                    if hyip is not None and hyip != '':
+                        hyips.append([hyip, url])
+        except Exception as e:
+            print(e)
+            pass
+
+
+def instant_monitor_com():
+    soup = soups('https://instant-monitor.com')
+    for n in soup.find_all("div", class_='listcontainer'):
+        try:
+            if __get_status(n.find("span").get_text().strip()) == 1:
+                url = urls("https://instant-monitor.com" + n.find("a").get('href'))
+                if url is not None and url != '':
+                    hyip = n.find("a").get_text().strip().capitalize()
+                    if hyip is not None and hyip != '':
+                        hyips.append([hyip, url])
+        except Exception as e:
+            print(e)
+            pass
+
+
+def exclusive_profit_com():
+    soup = soups('https://exclusive-profit.com')
+    for n in soup.find_all("div", class_='c-project-preview-i'):
+        try:
+            if __get_status(n.find("span").get_text().strip()) == 1:
+                url = n.find("table").find_all("a")
+                url = urls(url[1].get('href'))
+                if url is not None and url != '':
+                    hyip = n.find_all("a")
+                    hyip = hyip[2].get_text().strip().capitalize()
+                    if hyip is not None and hyip != '':
+                        hyips.append([hyip, url])
+        except Exception as e:
+            print(e)
+            pass
+
+
+def fairmonitor_com():
+    soup = soups('https://fairmonitor.com/?lang=fr')
+    for n in soup.find_all("table", class_='detn_stat1_block'):
+        try:
+            if __get_status(n.find("span").get_text().strip()) == 1:
+                url = urls(n.find("a").get('href'))
+                if url is not None and url != '':
+                    hyip = n.find("a").get_text().strip().capitalize()
+                    if hyip is not None and hyip != '':
+                        hyips.append([hyip, url])
+        except Exception as e:
+            print(e)
+            pass
+
+
+def hyipclub_club():
+    soup = soups('https://hyipclub.club')
+    for n in soup.find_all("div", class_='khunglon'):
+        try:
+            if __get_status(n.find("div", class_='k-status').get_text().strip()) == 1:
+                url = urls(n.find("a").get('href'))
+                if url is not None and url != '':
+                    hyip = n.find("a").get_text().strip().capitalize()
+                    if hyip is not None and hyip != '':
+                        hyips.append([hyip, url])
+        except Exception as e:
+            print(e)
+            pass
+
+
+def keyhyip_com():
+    soup = soups('https://keyhyip.com')
+    for n in soup.find_all("div", class_='program'):
+        try:
+            s = n.find("div", class_='status').attrs['class']
+            if s[1] == "status1":
+                url = urls(n.find("a").get('href'))
+                if url is not None and url != '':
+                    hyip = n.find("a").get_text().strip().capitalize()
+                    if hyip is not None and hyip != '':
+                        hyips.append([hyip, url])
+        except Exception as e:
+            print(e)
+            pass
+
+
+def hyips_bz():
+    soup = soups('https://hyips.bz')
+    for n in soup.find_all("div", class_='listcontainer'):
+        try:
+            if __get_status(n.find('label', class_='label').get_text().strip()) == 1:
+                url = urls(n.find("a").get('href'))
+                if url is not None and url != '':
+                    hyip = n.find('a', class_='hyip').get_text().strip().capitalize()
+                    if hyip is not None and hyip != '':
+                        hyips.append([hyip, url])
+        except Exception as e:
+            print(e)
+            pass
+
+
+def hyipexplorer_com():
+    soup = soups('https://www.hyipexplorer.com')
+    for n in soup.find_all('table', class_='hyip'):
+        try:
+            if __get_status(n.find('div', class_='status').get_text().strip()) == 1:
+                url = urls('https://www.hyipexplorer.com/' + n.find("a").get('href'))
+                if url is not None and url != '':
+                    hyip = n.find('a').get_text().strip().capitalize()
+                    if hyip is not None and hyip != '':
+                        hyips.append([hyip, url])
+        except Exception as e:
+            print(e)
+            pass
+
 
 if __name__ == "__main__":
     cnx = mysql.connector.connect(host='localhost', user='al', passwd='Zaichik1.&', database='hyip')
@@ -323,6 +284,15 @@ if __name__ == "__main__":
     graspgold_com()
     eurohyips_net()
     hyiphome_net()
+    invest_tracing_com()
+    instant_monitor_com()
+    exclusive_profit_com()
+    fairmonitor_com()
+    hyipclub_club()
+    keyhyip_com()
+    hyips_bz()
+    hyipexplorer_com()
+    rate()
     cursor.close()
     cnx.close()
     huy = None

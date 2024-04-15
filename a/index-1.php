@@ -7,7 +7,7 @@ $today = array();
 //$htime = $datetime->format('Y-m-d');
 $htime = "2021-06-05";
 $link = get_link();
-$sql = "SELECT hyip, url, perf FROM graph WHERE htime=? AND perf > 0";
+$sql = "SELECT hyip, url, rate FROM graph WHERE htime=? AND rate > 0";
 $stmt = mysqli_stmt_init($link);
 if (mysqli_stmt_prepare($stmt, $sql)) {
     mysqli_stmt_bind_param($stmt, "s", $htime);
@@ -21,7 +21,7 @@ if (mysqli_stmt_prepare($stmt, $sql)) {
 }
 
 $link = get_link();
-$sql = "SELECT SUM(perf) FROM graph WHERE htime=? AND perf > 0";
+$sql = "SELECT SUM(rate) FROM graph WHERE htime=? AND rate > 0";
 $stmt = mysqli_stmt_init($link);
 if (mysqli_stmt_prepare($stmt, $sql)) {
     mysqli_stmt_bind_param($stmt, "s", $htime);
@@ -36,7 +36,7 @@ if (mysqli_stmt_prepare($stmt, $sql)) {
 //$htime = $datetime->format('Y-m-d');
 $htime = "2021-06-06";
 $link = get_link();
-$sql = "SELECT url, perf FROM graph WHERE htime=? AND perf > 0";
+$sql = "SELECT url, rate FROM graph WHERE htime=? AND rate > 0";
 $stmt = mysqli_stmt_init($link);
 if (mysqli_stmt_prepare($stmt, $sql)) {
     mysqli_stmt_bind_param($stmt, "s", $htime);
@@ -49,7 +49,7 @@ if (mysqli_stmt_prepare($stmt, $sql)) {
 }
 
 $link = get_link();
-$sql = "SELECT SUM(perf) FROM graph WHERE htime=? AND perf > 0";
+$sql = "SELECT SUM(rate) FROM graph WHERE htime=? AND rate > 0";
 $stmt = mysqli_stmt_init($link);
 if (mysqli_stmt_prepare($stmt, $sql)) {
     mysqli_stmt_bind_param($stmt, "s", $htime);

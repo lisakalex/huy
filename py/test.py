@@ -13,33 +13,24 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
-
 import numpy as np
-a = np.array([1, 2, 3])
 
-# import Exception
+ku = ['paying', 'pays', 'платит', 'not paying']
 
-#
-#
-# hyip = Hyip()
-#
-#
-# def fairmonitor(monitor):
-#     hyip, url, status, hyip_data, ttm = [], [], [], [], []
-#     bs = hyip.source(monitor)
-#     hyips = bs.find_all("table", {"class": "detn_stat1_block"})
-#
-#     for n in hyips:
-#         st = time.time()
-#         hyip.append(n.find("a").get_text().strip().capitalize())
-#         url.append(hyip.__hyip_url(n.find("a").attrs['href']))
-#         status.append(hyip.__get_status(n.find("span").get_text()))
-#         ttm.append(time.time() - st)
-#
-#     hyip.__store_hyip(monitor, hyip, url, status, ttm)
-#
-#
-#
-# kak = hyip.fairmonitor("https://fairmonitor.com/?lang=fr")
-# kak = hyip.fairmonitor("https://bitwealth.company")
+
+def __get_status(status):
+    s = 0
+    # if status.lower().find("paying") != -1:
+    #     if status.lower().find("pays") != -1:
+    #         if status.lower().find("платит") != -1:
+    #             if status.lower().find("not paying") == -1:
+
+    if status.lower() == "paying" or status.lower() == "pays" or status.lower() == "платит":
+        s = 1
+    return s
+
+
+for k in ku:
+    __get_status(k)
+
 d = None

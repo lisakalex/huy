@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+    <!--    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">-->
+<!--        <link rel="preconnect" href="https://fonts.googleapis.com">-->
+<!--        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+<!--        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Josefin+Sans:wght@300;400&family=Nanum+Gothic+Coding&family=Rajdhani&family=Rubik:wght@300&display=swap" rel="stylesheet">-->
+
+    <!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+<!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">-->
+
+<!--    <style>-->
+<!--        @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap')-->
+<!--    </style>-->
+    <style>
+        body {
+            font-family: "Montserrat", "Gotham ssm 4r", "Gotham ssm a", "Gotham ssm b", Arial, sans-serif;
+            font-size: 3em;
+            color: #666666;
+        }
+
+        /*body {*/
+            /*font-family: "Titillium Web", sans-serif;*/
+            /*font-weight: 400;*/
+            /*font-style: normal;*/
+        /*    font-size: 3em;*/
+        /*    color: #666666;*/
+        /*}*/
+
+        .container {
+            width: 3080px;
+            height: 2860px;
+            margin: auto;
+        }
+
+        .day {
+            width: 70px;
+            height: 70px;
+            text-align: center;
+            line-height: 70px;
+            float: left;
+            margin: 15px;
+        }
+
+        .month {
+            width: 700px;
+            height: 800px;
+            float: left;
+            margin: 35px;
+        }
+
+        .month-title {
+            width: 670px;
+            height: 70px;
+            text-align: center;
+            line-height: 70px;
+            margin: 15px;
+            font-size: 1.3em;
+        }
+
+        .year {
+            width: 3080px;
+            height: 150px;
+            text-align: center;
+            line-height: 150px;
+            margin: 100px 15px 0 15px;
+            font-size: 2em;
+        }
+
+        .pink {
+            color: #ffffff;
+            background-color: #ff33cc;
+            border-radius: 50%;
+        }
+
+        .blue {
+            color: #ffffff;
+            background-color: #6666ff;
+            border-radius: 50%;
+        }
+
+        .pale {
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="day year">2025</div>
+<div class="month">
+    <div class="day month-title">January</div>
+    <div class="day xxxx">M</div>
+    <div class="day xxxx">T</div>
+    <div class="day xxxx">W</div>
+    <div class="day xxxx">T</div>
+    <div class="day xxxx">F</div>
+    <div class="day xxxx">S</div>
+    <div class="day xxxx">S</div>
+    <div class="day xxxx">01</div>
+    <div class="day xxxx">02</div>
+    <div class="day pink">03</div>
+    <div class="day pink">04</div>
+    <div class="day blue">05</div>
+    <div class="day blue">06</div>
+    <div class="day xxxx">07</div>
+    <div class="day xxxx">08</div>
+    <div class="day pink">09</div>
+    <div class="day pink">10</div>
+    <div class="day blue">11</div>
+    <div class="day blue">12</div>
+    <div class="day xxxx">13</div>
+    <div class="day xxxx">14</div>
+    <div class="day pink">15</div>
+    <div class="day pink">16</div>
+    <div class="day blue">17</div>
+    <div class="day blue">18</div>
+    <div class="day xxxx">19</div>
+    <div class="day xxxx">20</div>
+    <div class="day pink">21</div>
+    <div class="day pink">22</div>
+    <div class="day blue">23</div>
+    <div class="day blue">24</div>
+    <div class="day xxxx">25</div>
+    <div class="day xxxx">26</div>
+    <div class="day pink">27</div>
+    <div class="day pink">28</div>
+    <div class="day blue">29</div>
+    <div class="day blue">30</div>
+    <div class="day xxxx">31</div>
+    <div class="day pale">01</div>
+    <div class="day pale">02</div>
+    <div class="day pale">03</div>
+    <div class="day pale">04</div>
+    <div class="day pale">05</div>
+    <div class="day pale">06</div>
+    <div class="day pale">07</div>
+    <div class="day pale">08</div>
+    <div class="day pale">09</div>
+    <div class="day pale">10</div>
+    <div class="day pale">11</div>
+</div>
+<div class="month">
+    <div class="day month-title">February</div>
+    <div class="day xxxx">M</div>
+    <div class="day xxxx">T</div>
+    <div class="day xxxx">W</div>
+    <div class="day xxxx">T</div>
+    <div class="day xxxx">F</div>
+    <div class="day xxxx">S</div>
+    <div class="day xxxx">S</div>
+    <div class="day pale">29</div>
+    <div class="day pale">30</div>
+    <div class="day pale">31</div>
+    <div class="day xxxx">01</div>
+    <div class="day pink">02</div>
+    <div class="day pink">03</div>
+    <div class="day blue">04</div>
+    <div class="day blue">05</div>
+    <div class="day xxxx">06</div>
+    <div class="day xxxx">07</div>
+    <div class="day pink">08</div>
+    <div class="day pink">09</div>
+    <div class="day blue">10</div>
+    <div class="day blue">11</div>
+    <div class="day xxxx">12</div>
+    <div class="day xxxx">13</div>
+    <div class="day pink">14</div>
+    <div class="day pink">15</div>
+    <div class="day blue">16</div>
+    <div class="day blue">17</div>
+    <div class="day xxxx">18</div>
+    <div class="day xxxx">19</div>
+    <div class="day pink">20</div>
+    <div class="day pink">21</div>
+    <div class="day blue">22</div>
+    <div class="day blue">23</div>
+    <div class="day xxxx">24</div>
+    <div class="day xxxx">25</div>
+    <div class="day pink">26</div>
+    <div class="day pink">27</div>
+    <div class="day blue">28</div>
+    <div class="day blue">29</div>
+    <div class="day pale">01</div>
+    <div class="day pale">02</div>
+    <div class="day pale">03</div>
+    <div class="day pale">04</div>
+    <div class="day pale">05</div>
+    <div class="day pale">06</div>
+    <div class="day pale">07</div>
+    <div class="day pale">08</div>
+    <div class="day pale">09</div>
+    <div class="day pale">10</div>
+</div>
+<div class="month">
+    <div class="day month-title">March</div>
+    <div class="day xxxx">M</div>
+    <div class="day xxxx">T</div>
+    <div class="day xxxx">W</div>
+    <div class="day xxxx">T</div>
+    <div class="day xxxx">F</div>
+    <div class="day xxxx">S</div>
+    <div class="day xxxx">S</div>
+    <div class="day pale">26</div>
+    <div class="day pale">27</div>
+    <div class="day pale">28</div>
+    <div class="day pale">29</div>
+    <div class="day xxxx">01</div>
+    <div class="day xxxx">02</div>
+    <div class="day pink">03</div>
+    <div class="day pink">04</div>
+    <div class="day blue">05</div>
+    <div class="day blue">06</div>
+    <div class="day xxxx">07</div>
+    <div class="day xxxx">08</div>
+    <div class="day pink">09</div>
+    <div class="day pink">10</div>
+    <div class="day blue">11</div>
+    <div class="day blue">12</div>
+    <div class="day xxxx">13</div>
+    <div class="day xxxx">14</div>
+    <div class="day pink">15</div>
+    <div class="day pink">16</div>
+    <div class="day blue">17</div>
+    <div class="day blue">18</div>
+    <div class="day xxxx">19</div>
+    <div class="day xxxx">20</div>
+    <div class="day pink">21</div>
+    <div class="day pink">22</div>
+    <div class="day blue">23</div>
+    <div class="day blue">24</div>
+    <div class="day xxxx">25</div>
+    <div class="day xxxx">26</div>
+    <div class="day pink">27</div>
+    <div class="day pink">28</div>
+    <div class="day blue">29</div>
+    <div class="day blue">30</div>
+    <div class="day xxxx">31</div>
+    <div class="day pale">01</div>
+    <div class="day pale">02</div>
+    <div class="day pale">03</div>
+    <div class="day pale">04</div>
+    <div class="day pale">05</div>
+    <div class="day pale">06</div>
+    <div class="day pale">07</div>
+</div>
+<div class="month">
+    <div class="day month-title">April</div>
+    <div class="day xxxx">M</div>
+    <div class="day xxxx">T</div>
+    <div class="day xxxx">W</div>
+    <div class="day xxxx">T</div>
+    <div class="day xxxx">F</div>
+    <div class="day xxxx">S</div>
+    <div class="day xxxx">S</div>
+    <div class="day xxxx">01</div>
+    <div class="day pink">02</div>
+    <div class="day pink">03</div>
+    <div class="day blue">04</div>
+    <div class="day blue">05</div>
+    <div class="day xxxx">06</div>
+    <div class="day xxxx">07</div>
+    <div class="day pink">08</div>
+    <div class="day pink">09</div>
+    <div class="day blue">10</div>
+    <div class="day blue">11</div>
+    <div class="day xxxx">12</div>
+    <div class="day xxxx">13</div>
+    <div class="day pink">14</div>
+    <div class="day pink">15</div>
+    <div class="day blue">16</div>
+    <div class="day blue">17</div>
+    <div class="day xxxx">18</div>
+    <div class="day xxxx">19</div>
+    <div class="day pink">20</div>
+    <div class="day pink">21</div>
+    <div class="day blue">22</div>
+    <div class="day blue">23</div>
+    <div class="day xxxx">24</div>
+    <div class="day xxxx">25</div>
+    <div class="day pink">26</div>
+    <div class="day pink">27</div>
+    <div class="day blue">28</div>
+    <div class="day blue">29</div>
+    <div class="day xxxx">30</div>
+    <div class="day pale">01</div>
+    <div class="day pale">02</div>
+    <div class="day pale">03</div>
+    <div class="day pale">04</div>
+    <div class="day pale">05</div>
+    <div class="day pale">06</div>
+    <div class="day pale">07</div>
+    <div class="day pale">08</div>
+    <div class="day pale">09</div>
+    <div class="day pale">10</div>
+    <div class="day pale">11</div>
+    <div class="day pale">12</div>
+</div>
+<div class="month">
+    <div class="day month-title">May</div>
+    <div class="day xxxx">M</div>
+    <div class="day xxxx">T</div>
+    <div class="day xxxx">W</div>
+    <div class="day xxxx">T</div>
+    <div class="day xxxx">F</div>
+    <div class="day xxxx">S</div>
+    <div class="day xxxx">S</div>
+    <div class="day pale">29</div>
+    <div class="day pale">30</div>
+    <div class="day xxxx">01</div>
+    <div class="day pink">02</div>
+    <div class="day pink">03</div>
+    <div class="day blue">04</div>
+    <div class="day blue">05</div>
+    <div class="day xxxx">06</div>
+    <div class="day xxxx">07</div>
+    <div class="day pink">08</div>
+    <div class="day pink">09</div>
+    <div class="day blue">10</div>
+    <div class="day blue">11</div>
+    <div class="day xxxx">12</div>
+    <div class="day xxxx">13</div>
+    <div class="day pink">14</div>
+    <div class="day pink">15</div>
+    <div class="day blue">16</div>
+    <div class="day blue">17</div>
+    <div class="day xxxx">18</div>
+    <div class="day xxxx">19</div>
+    <div class="day pink">20</div>
+    <div class="day pink">21</div>
+    <div class="day blue">22</div>
+    <div class="day blue">23</div>
+    <div class="day xxxx">24</div>
+    <div class="day xxxx">25</div>
+    <div class="day pink">26</div>
+    <div class="day pink">27</div>
+    <div class="day blue">28</div>
+    <div class="day blue">29</div>
+    <div class="day xxxx">30</div>
+    <div class="day xxxx">31</div>
+    <div class="day pale">01</div>
+    <div class="day pale">02</div>
+    <div class="day pale">03</div>
+    <div class="day pale">04</div>
+    <div class="day pale">05</div>
+    <div class="day pale">06</div>
+    <div class="day pale">07</div>
+    <div class="day pale">08</div>
+    <div class="day pale">09</div>
+</div>
+<div class="month">
+    <div class="day month-title">June</div>
+    <div class="day xxxx">M</div>
+    <div class="day xxxx">T</div>
+    <div class="day xxxx">W</div>
+    <div class="day xxxx">T</div>
+    <div class="day xxxx">F</div>
+    <div class="day xxxx">S</div>
+    <div class="day xxxx">S</div>
+    <div class="day pale">27</div>
+    <div class="day pale">28</div>
+    <div class="day pale">29</div>
+    <div class="day pale">30</div>
+    <div class="day pale">31</div>
+    <div class="day pink">01</div>
+    <div class="day pink">02</div>
+    <div class="day blue">03</div>
+    <div class="day blue">04</div>
+    <div class="day xxxx">05</div>
+    <div class="day xxxx">06</div>
+    <div class="day pink">07</div>
+    <div class="day pink">08</div>
+    <div class="day blue">09</div>
+    <div class="day blue">10</div>
+    <div class="day xxxx">11</div>
+    <div class="day xxxx">12</div>
+    <div class="day pink">13</div>
+    <div class="day pink">14</div>
+    <div class="day blue">15</div>
+    <div class="day blue">16</div>
+    <div class="day xxxx">17</div>
+    <div class="day xxxx">18</div>
+    <div class="day pink">19</div>
+    <div class="day pink">20</div>
+    <div class="day blue">21</div>
+    <div class="day blue">22</div>
+    <div class="day xxxx">23</div>
+    <div class="day xxxx">24</div>
+    <div class="day pink">25</div>
+    <div class="day pink">26</div>
+    <div class="day blue">27</div>
+    <div class="day blue">28</div>
+    <div class="day xxxx">29</div>
+    <div class="day xxxx">30</div>
+    <div class="day pale">01</div>
+    <div class="day pale">02</div>
+    <div class="day pale">03</div>
+    <div class="day pale">04</div>
+    <div class="day pale">05</div>
+    <div class="day pale">06</div>
+    <div class="day pale">07</div>
+</div>
+<div class="month">
+    <div class="day month-title">July</div>
+    <div class="day xxxx">M</div>
+    <div class="day xxxx">T</div>
+    <div class="day xxxx">W</div>
+    <div class="day xxxx">T</div>
+    <div class="day xxxx">F</div>
+    <div class="day xxxx">S</div>
+    <div class="day xxxx">S</div>
+    <div class="day pink">01</div>
+    <div class="day pink">02</div>
+    <div class="day blue">03</div>
+    <div class="day blue">04</div>
+    <div class="day xxxx">05</div>
+    <div class="day xxxx">06</div>
+    <div class="day pink">07</div>
+    <div class="day pink">08</div>
+    <div class="day blue">09</div>
+    <div class="day blue">10</div>
+    <div class="day xxxx">11</div>
+    <div class="day xxxx">12</div>
+    <div class="day pink">13</div>
+    <div class="day pink">14</div>
+    <div class="day blue">15</div>
+    <div class="day blue">16</div>
+    <div class="day xxxx">17</div>
+    <div class="day xxxx">18</div>
+    <div class="day pink">19</div>
+    <div class="day pink">20</div>
+    <div class="day blue">21</div>
+    <div class="day blue">22</div>
+    <div class="day xxxx">23</div>
+    <div class="day xxxx">24</div>
+    <div class="day pink">25</div>
+    <div class="day pink">26</div>
+    <div class="day blue">27</div>
+    <div class="day blue">28</div>
+    <div class="day xxxx">29</div>
+    <div class="day xxxx">30</div>
+    <div class="day pink">31</div>
+    <div class="day pale">01</div>
+    <div class="day pale">02</div>
+    <div class="day pale">03</div>
+    <div class="day pale">04</div>
+    <div class="day pale">05</div>
+    <div class="day pale">06</div>
+    <div class="day pale">07</div>
+    <div class="day pale">08</div>
+    <div class="day pale">09</div>
+    <div class="day pale">10</div>
+    <div class="day pale">11</div>
+</div>
+<div class="month">
+    <div class="day month-title">Augut</div>
+    <div class="day xxxx">M</div>
+    <div class="day xxxx">T</div>
+    <div class="day xxxx">W</div>
+    <div class="day xxxx">T</div>
+    <div class="day xxxx">F</div>
+    <div class="day xxxx">S</div>
+    <div class="day xxxx">S</div>
+    <div class="day pale">29</div>
+    <div class="day pale">30</div>
+    <div class="day pale">31</div>
+    <div class="day pink">01</div>
+    <div class="day blue">02</div>
+    <div class="day blue">03</div>
+    <div class="day xxxx">04</div>
+    <div class="day xxxx">05</div>
+    <div class="day pink">06</div>
+    <div class="day pink">07</div>
+    <div class="day blue">08</div>
+    <div class="day blue">09</div>
+    <div class="day xxxx">10</div>
+    <div class="day xxxx">11</div>
+    <div class="day pink">12</div>
+    <div class="day pink">13</div>
+    <div class="day blue">14</div>
+    <div class="day blue">15</div>
+    <div class="day xxxx">16</div>
+    <div class="day xxxx">17</div>
+    <div class="day pink">18</div>
+    <div class="day pink">19</div>
+    <div class="day blue">20</div>
+    <div class="day blue">21</div>
+    <div class="day xxxx">22</div>
+    <div class="day xxxx">23</div>
+    <div class="day pink">24</div>
+    <div class="day pink">25</div>
+    <div class="day blue">26</div>
+    <div class="day blue">27</div>
+    <div class="day xxxx">28</div>
+    <div class="day xxxx">29</div>
+    <div class="day pink">30</div>
+    <div class="day pink">31</div>
+    <div class="day pale">01</div>
+    <div class="day pale">02</div>
+    <div class="day pale">03</div>
+    <div class="day pale">04</div>
+    <div class="day pale">05</div>
+    <div class="day pale">06</div>
+    <div class="day pale">07</div>
+    <div class="day pale">08</div>
+</div>
+<div class="month">
+    <div class="day month-title">September</div>
+    <div class="day xxxx">M</div>
+    <div class="day xxxx">T</div>
+    <div class="day xxxx">W</div>
+    <div class="day xxxx">T</div>
+    <div class="day xxxx">F</div>
+    <div class="day xxxx">S</div>
+    <div class="day xxxx">S</div>
+    <div class="day pale">26</div>
+    <div class="day pale">27</div>
+    <div class="day pale">28</div>
+    <div class="day pale">29</div>
+    <div class="day pale">30</div>
+    <div class="day pale">31</div>
+    <div class="day blue">01</div>
+    <div class="day blue">02</div>
+    <div class="day xxxx">03</div>
+    <div class="day xxxx">04</div>
+    <div class="day pink">05</div>
+    <div class="day pink">06</div>
+    <div class="day blue">07</div>
+    <div class="day blue">08</div>
+    <div class="day xxxx">09</div>
+    <div class="day xxxx">10</div>
+    <div class="day pink">11</div>
+    <div class="day pink">12</div>
+    <div class="day blue">13</div>
+    <div class="day blue">14</div>
+    <div class="day xxxx">15</div>
+    <div class="day xxxx">16</div>
+    <div class="day pink">17</div>
+    <div class="day pink">18</div>
+    <div class="day blue">19</div>
+    <div class="day blue">20</div>
+    <div class="day xxxx">21</div>
+    <div class="day xxxx">22</div>
+    <div class="day pink">23</div>
+    <div class="day pink">24</div>
+    <div class="day blue">25</div>
+    <div class="day blue">26</div>
+    <div class="day xxxx">27</div>
+    <div class="day xxxx">28</div>
+    <div class="day pink">29</div>
+    <div class="day pink">30</div>
+    <div class="day pale">01</div>
+    <div class="day pale">02</div>
+    <div class="day pale">03</div>
+    <div class="day pale">04</div>
+    <div class="day pale">05</div>
+    <div class="day pale">06</div>
+</div>
+<div class="month">
+    <div class="day month-title">October</div>
+    <div class="day xxxx">M</div>
+    <div class="day xxxx">T</div>
+    <div class="day xxxx">W</div>
+    <div class="day xxxx">T</div>
+    <div class="day xxxx">F</div>
+    <div class="day xxxx">S</div>
+    <div class="day xxxx">S</div>
+    <div class="day pale">30</div>
+    <div class="day blue">01</div>
+    <div class="day blue">02</div>
+    <div class="day xxxx">03</div>
+    <div class="day xxxx">04</div>
+    <div class="day pink">05</div>
+    <div class="day pink">06</div>
+    <div class="day blue">07</div>
+    <div class="day blue">08</div>
+    <div class="day xxxx">09</div>
+    <div class="day xxxx">10</div>
+    <div class="day pink">11</div>
+    <div class="day pink">12</div>
+    <div class="day blue">13</div>
+    <div class="day blue">14</div>
+    <div class="day xxxx">15</div>
+    <div class="day xxxx">16</div>
+    <div class="day pink">17</div>
+    <div class="day pink">18</div>
+    <div class="day blue">19</div>
+    <div class="day blue">20</div>
+    <div class="day xxxx">21</div>
+    <div class="day xxxx">22</div>
+    <div class="day pink">23</div>
+    <div class="day pink">24</div>
+    <div class="day blue">25</div>
+    <div class="day blue">26</div>
+    <div class="day xxxx">27</div>
+    <div class="day xxxx">28</div>
+    <div class="day pink">29</div>
+    <div class="day pink">30</div>
+    <div class="day blue">31</div>
+    <div class="day pale">01</div>
+    <div class="day pale">02</div>
+    <div class="day pale">03</div>
+    <div class="day pale">04</div>
+    <div class="day pale">05</div>
+    <div class="day pale">06</div>
+    <div class="day pale">07</div>
+    <div class="day pale">08</div>
+    <div class="day pale">09</div>
+    <div class="day pale">10</div>
+</div>
+<div class="month">
+    <div class="day month-title">November</div>
+    <div class="day xxxx">M</div>
+    <div class="day xxxx">T</div>
+    <div class="day xxxx">W</div>
+    <div class="day xxxx">T</div>
+    <div class="day xxxx">F</div>
+    <div class="day xxxx">S</div>
+    <div class="day xxxx">S</div>
+    <div class="day pale">28</div>
+    <div class="day pale">29</div>
+    <div class="day pale">30</div>
+    <div class="day pale">31</div>
+    <div class="day blue">01</div>
+    <div class="day xxxx">02</div>
+    <div class="day xxxx">03</div>
+    <div class="day pink">04</div>
+    <div class="day pink">05</div>
+    <div class="day blue">06</div>
+    <div class="day blue">07</div>
+    <div class="day xxxx">08</div>
+    <div class="day xxxx">09</div>
+    <div class="day pink">10</div>
+    <div class="day pink">11</div>
+    <div class="day blue">12</div>
+    <div class="day blue">13</div>
+    <div class="day xxxx">14</div>
+    <div class="day xxxx">15</div>
+    <div class="day pink">16</div>
+    <div class="day pink">17</div>
+    <div class="day blue">18</div>
+    <div class="day blue">19</div>
+    <div class="day xxxx">20</div>
+    <div class="day xxxx">21</div>
+    <div class="day pink">22</div>
+    <div class="day pink">23</div>
+    <div class="day blue">24</div>
+    <div class="day blue">25</div>
+    <div class="day xxxx">26</div>
+    <div class="day xxxx">27</div>
+    <div class="day pink">28</div>
+    <div class="day pink">29</div>
+    <div class="day blue">30</div>
+    <div class="day pale">01</div>
+    <div class="day pale">02</div>
+    <div class="day pale">03</div>
+    <div class="day pale">04</div>
+    <div class="day pale">05</div>
+    <div class="day pale">06</div>
+    <div class="day pale">07</div>
+    <div class="day pale">08</div>
+</div>
+<div class="month">
+    <div class="day month-title">December</div>
+    <div class="day xxxx">M</div>
+    <div class="day xxxx">T</div>
+    <div class="day xxxx">W</div>
+    <div class="day xxxx">T</div>
+    <div class="day xxxx">F</div>
+    <div class="day xxxx">S</div>
+    <div class="day xxxx">S</div>
+    <div class="day pale">25</div>
+    <div class="day pale">26</div>
+    <div class="day pale">27</div>
+    <div class="day pale">28</div>
+    <div class="day pale">29</div>
+    <div class="day pale">30</div>
+    <div class="day blue">01</div>
+    <div class="day xxxx">02</div>
+    <div class="day xxxx">03</div>
+    <div class="day pink">04</div>
+    <div class="day pink">05</div>
+    <div class="day blue">06</div>
+    <div class="day blue">07</div>
+    <div class="day xxxx">08</div>
+    <div class="day xxxx">09</div>
+    <div class="day pink">10</div>
+    <div class="day pink">11</div>
+    <div class="day blue">12</div>
+    <div class="day blue">13</div>
+    <div class="day xxxx">14</div>
+    <div class="day xxxx">15</div>
+    <div class="day pink">16</div>
+    <div class="day pink">17</div>
+    <div class="day blue">18</div>
+    <div class="day blue">19</div>
+    <div class="day xxxx">20</div>
+    <div class="day xxxx">21</div>
+    <div class="day pink">22</div>
+    <div class="day pink">23</div>
+    <div class="day blue">24</div>
+    <div class="day blue">25</div>
+    <div class="day xxxx">26</div>
+    <div class="day xxxx">27</div>
+    <div class="day pink">28</div>
+    <div class="day pink">29</div>
+    <div class="day blue">30</div>
+    <div class="day blue">31</div>
+    <div class="day pale">01</div>
+    <div class="day pale">02</div>
+    <div class="day pale">03</div>
+    <div class="day pale">04</div>
+    <div class="day pale">05</div>
+</div>
+</div>
+</body>
+</html>

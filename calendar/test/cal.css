@@ -1,0 +1,93 @@
+body {
+    font-family: "Montserrat", "Gotham ssm 4r", "Gotham ssm a", "Gotham ssm b", Arial, sans-serif;
+    /*font-family: "Ubuntu Mono", monospace;*/
+    /*font-weight: 400;*/
+    /*font-style: normal;*/
+    /*font-size: 3em;*/
+    color: #666666;
+}
+
+th {
+    font-family: "Montserrat", "Gotham ssm 4r", "Gotham ssm a", "Gotham ssm b", Arial, sans-serif;
+    /*font-family: "Ubuntu Mono", monospace;*/
+    font-weight: 400;
+    /*font-style: normal;*/
+    /*font-size: 3em;*/
+    color: #666666;
+}
+
+.container {
+    width: 700px;
+    margin: auto;
+}
+
+.day {
+    /*width: 20px;*/
+    /*height: 20px;*/
+    text-align: center;
+    /*line-height: 20;*/
+    /*float: left;*/
+    margin: 15px;
+    padding: 5px;
+    border-width: 3px;
+    border-radius: 50%;
+
+}
+
+.month {
+    /*width: 140px;*/
+    /*height: 140px;*/
+    /*text-align: center;*/
+    /*line-height: 70px;*/
+    margin: 15px;
+    /*padding: 70px 0 0 0;*/
+    font-size: 1.3em;
+}
+
+.year {
+    /*width: 670px;*/
+    /*height: 200px;*/
+    /*text-align: center;*/
+    /*line-height: 70px;*/
+    /*margin: 15px;*/
+    /*padding: 70px 0 0 0;*/
+    /*font-size: 1.3em;*/
+}
+
+.month-title {
+    width: 670px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    margin: 15px;
+    padding: 70px 0 0 0;
+    font-size: 1.3em;
+}
+
+/*.year {*/
+/*    width: 670px;*/
+/*    height: 150px;*/
+/*    text-align: center;*/
+/*    line-height: 150px;*/
+/*    margin: 100px 15px 0 15px;*/
+/*    font-size: 2em;*/
+/*}*/
+
+.pink {
+    /*color: #ffffff;*/
+    color: #ff33cc;
+    /*background-color: #ff33cc;*/
+    /*border-radius: 50%;*/
+    /*border: 3px;*/
+}
+
+.blue {
+    /*color: #ffffff;*/
+    color: #6666ff;
+    /*background-color: #6666ff;*/
+    /*border-radius: 50%;*/
+}
+
+.pale {
+    color: #ccc;
+}

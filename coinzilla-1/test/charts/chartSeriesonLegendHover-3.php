@@ -18,7 +18,7 @@ $ttime = $datetime->format('Y-m-d');
 
 //$url = "http://activefunds7.com";
 //$sql = "SELECT ttime, perf FROM graph4 WHERE perf > 0 AND ttime < NOW() - INTERVAL 1 DAY ORDER BY ttime";
-$sql = "SELECT hyip, perf, ttime, url FROM graph WHERE ttime < '$ttime' ORDER BY perf DESC";
+$sql = "SELECT hyip, rate, ttime, url FROM graph WHERE ttime < '$ttime' ORDER BY rate DESC";
 //$sql = "SELECT hyip, perf, ttime FROM graph";
 //$sql = "SELECT htime, perf FROM graph";
 $stmt = mysqli_stmt_init($link);

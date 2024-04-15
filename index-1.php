@@ -7,7 +7,7 @@ $datetime->modify('-1 days');
 $ttime = $datetime->format('Y-m-d') . "%";
 
 $link = get_link();
-$sql = "SELECT hyip, url, perf FROM graph WHERE ttime like '2022-09-06%' AND perf > 0";
+$sql = "SELECT hyip, url, rate FROM graph WHERE ttime like '2022-09-06%' AND rate > 0";
 //$sql = "SELECT hyip, url, perf FROM graph WHERE ttime like '" . $ttime . "' AND perf > 0";
 
 $stmt = mysqli_stmt_init($link);
@@ -27,7 +27,7 @@ $datetime->modify('-2 days');
 $ttime = $datetime->format('Y-m-d') . "%";
 
 $link = get_link();
-$sql = "SELECT url, perf FROM graph WHERE ttime like '2022-09-05%' AND perf > 0";
+$sql = "SELECT url, rate FROM graph WHERE ttime like '2022-09-05%' AND rate > 0";
 //$sql = "SELECT url, perf FROM graph WHERE ttime like '" . $ttime . "' AND perf > 0";
 $stmt = mysqli_stmt_init($link);
 if (mysqli_stmt_prepare($stmt, $sql)) {

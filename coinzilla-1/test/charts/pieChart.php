@@ -16,7 +16,7 @@ if (isset ($_GET ['u'])) {
     $changep = mysqli_real_escape_string($link, $_GET ['changep']);
 }
 
-$sql = "SELECT hyip, perf FROM graph WHERE ttime like '2022-09-06%' AND perf > 0 ORDER BY perf LIMIT 10";
+$sql = "SELECT hyip, rate FROM graph WHERE ttime like '2022-09-06%' AND rate > 0 ORDER BY rate LIMIT 10";
 //$sql = "SELECT hyip, url, perf FROM graph WHERE ttime like '" . $ttime . "' AND perf > 0";
 
 $stmt = mysqli_stmt_init($link);

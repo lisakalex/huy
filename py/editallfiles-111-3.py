@@ -40,16 +40,16 @@ def download_html(htmls):
 download_html(htmls)
 
 # download json files for paged directory
-# for filepath in glob2.iglob('./**/*.html', recursive=True):
-#     with open(filepath) as file:
-#         sa = file.read()
-#         soup = BeautifulSoup(sa, features="html.parser")
-#         su = soup.find_all("a")
-#         for link in su:
-#             loadmoretype_1 = link.get('loadmoretype')
-#             if loadmoretype_1:
-#                 get_loadmoretype(loadmoretype_1 + '-1.json')
-#
+for filepath in glob2.iglob('./**/*.html', recursive=True):
+    with open(filepath) as file:
+        sa = file.read()
+        soup = BeautifulSoup(sa, features="html.parser")
+        su = soup.find_all("a")
+        for link in su:
+            loadmoretype_1 = link.get('loadmoretype')
+            if loadmoretype_1:
+                get_loadmoretype(loadmoretype_1 + '-1.json')
+
 # # find and replace
 # countreplace = 0
 # for filepath in glob2.iglob('./**/*.htm', recursive=True):

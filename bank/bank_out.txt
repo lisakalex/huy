@@ -1,24 +1,26 @@
-Tue, 2 Jan 24~Asda Stores~~39.35~3,220.92
-Tue, 2 Jan 24~Iceland~~8.50~3,212.42
-Tue, 2 Jan 24~Lidl Gb Crawley~~96.31~3,116.11
-Tue, 2 Jan 24~Crawley Borough Co~~187.00~2,929.11
-Tue, 2 Jan 24~Santander Mortgage~~863.16~2,065.95
-Tue, 2 Jan 24~B/Card Plat Visa~~154.24~1,911.71
-Tue, 2 Jan 24~E.On Next~~94.60~1,817.11
-Thu, 4 Jan 24~Southern Water~~13.40~1,803.71
-Mon, 8 Jan 24~Lidl Gb Crawley~~58.19~1,745.52
-Thu, 11 Jan 24~Virgin Money~~398.15~1,347.37
-Thu, 11 Jan 24~Asda Stores~~17.15~1,330.22
-Mon, 15 Jan 24~Western Union~~105.34~1,224.88
-Mon, 15 Jan 24~Lidl Gb Crawley~~72.28~1,152.60
-Tue, 16 Jan 24~Virgin Media Pymts~~26.50~1,126.10
-Tue, 16 Jan 24~Western Union~~31.68~1,094.42
-Tue, 16 Jan 24~Sainsbury'S S/Mkt~~74.35~1,020.07
-Thu, 18 Jan 24~Thames Water~~13.00~1,007.07
-Mon, 22 Jan 24~Lidl Gb Crawley~~55.32~951.75
-Tue, 23 Jan 24~202397 23Jan 12.55~~50.00~901.75
-Wed, 24 Jan 24~Asda Stores~~17.60~884.15
-Thu, 25 Jan 24~Total Gas & Power~3,709.38~~4,593.53
-Fri, 26 Jan 24~Western Union~~12.78~4,580.75
-Fri, 26 Jan 24~Lidl Gb Crawley~~41.78~4,538.97
-Mon, 29 Jan 24~B/Card Plat Visa~~150.46~4,388.51
+Fri, 1 Mar 24~B/Card Plat Visa~~73.83~6,323.54
+Fri, 1 Mar 24~E.On Next~~94.60~6,228.94
+Fri, 1 Mar 24~Southern Water~~13.40~6,215.54
+Fri, 1 Mar 24~Santander Mortgage~~863.16~5,352.38
+Mon, 4 Mar 24~Lidl Gb Crawley~~61.67~5,290.71
+Tue, 5 Mar 24~Asda Stores~~3.00~5,287.71
+Wed, 6 Mar 24~Sainsburys S/Mkts~~1.89~5,285.82
+Fri, 8 Mar 24~Bupa Payments~398.00~~5,683.82
+Fri, 8 Mar 24~Western Union~~41.73~5,642.09
+Fri, 8 Mar 24~Asda Stores~~42.29~5,599.80
+Mon, 11 Mar 24~Western Union~~14.57~5,585.23
+Mon, 11 Mar 24~Lisak N~802.00~~6,387.23
+Mon, 11 Mar 24~Western Union~~10.36~6,376.87
+Mon, 11 Mar 24~Squires Garden Cen~~34.99~6,341.88
+Wed, 13 Mar 24~Virgin Money~~461.94~5,879.94
+Wed, 13 Mar 24~Baltic Crawley Ltd~~5.78~5,874.16
+Thu, 14 Mar 24~Asda Stores~~6.43~5,867.73
+Thu, 14 Mar 24~T K Maxx~~61.65~5,806.08
+Mon, 18 Mar 24~Lidl Gb Crawley~~69.89~5,736.19
+Mon, 18 Mar 24~Thames Water~~13.00~5,723.19
+Mon, 18 Mar 24~Virgin Media Pymts~~26.50~5,696.69
+Wed, 20 Mar 24~Asda Stores~~36.34~5,660.35
+Fri, 22 Mar 24~Western Union~~40.92~5,619.43
+Fri, 22 Mar 24~Western Union~~47.06~5,572.37
+Mon, 25 Mar 24~Totalenergies Gas~2,345.40~~7,917.77
+Mon, 25 Mar 24~Asda Stores~4.00~~7,921.77

@@ -23,7 +23,7 @@ $yearlyVisitors = trim($html->find('h3.no-margins', 2)->plaintext);
 
 $hyip_rgaph = null;
 //$sql = "SELECT ttime, perf FROM graph WHERE url=? AND perf > 0 AND ttime < NOW() - INTERVAL 1 DAY ORDER BY ttime";
-$sql = "SELECT ttime, perf, details FROM graph WHERE url=? AND perf > 0 AND ttime < '$tt' ORDER BY ttime";
+$sql = "SELECT ttime, rate, details FROM graph WHERE url=? AND rate > 0 AND ttime < '$tt' ORDER BY ttime";
 $stmt = mysqli_stmt_init($link);
 if (mysqli_stmt_prepare($stmt, $sql)) {
     mysqli_stmt_bind_param($stmt, "s", $url);
@@ -37,7 +37,7 @@ if (mysqli_stmt_prepare($stmt, $sql)) {
 $hyip_rgaph = json_encode($hyip_rgaph);
 $monitor_images = json_decode($monitor_images);
 
-$sql = "SELECT hyip, perf FROM graph WHERE ttime like '2022-09-06%' AND perf > 0 ORDER BY perf  LIMIT 10";
+$sql = "SELECT hyip, rate FROM graph WHERE ttime like '2022-09-06%' AND rate > 0 ORDER BY rate  LIMIT 10";
 //$sql = "SELECT hyip, url, perf FROM graph WHERE ttime like '" . $ttime . "' AND perf > 0";
 
 $stmt = mysqli_stmt_init($link);
