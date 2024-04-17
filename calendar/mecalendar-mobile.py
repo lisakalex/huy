@@ -22,7 +22,6 @@ for d in c.yeardayscalendar(year, 1):
     if i == 10: month = 'October'
     if i == 11: month = 'November'
     if i == 12: month = 'December'
-    days.append('<div class="month">')
     days.append('<div class="day month-title">' + month + '</div>')
     days.append('<div class="day xxxx">M</div>')
     days.append('<div class="day xxxx">T</div>')
@@ -50,7 +49,6 @@ for d in c.yeardayscalendar(year, 1):
         else:
             days.append('<div class="day pale">&bullet;</div>')
 
-    days.append('</div>')
     i = i + 1
 
 body1 = """<!DOCTYPE html>
@@ -69,8 +67,7 @@ body1 = """<!DOCTYPE html>
         }
 
         .container {
-            width: 3080px;
-            height: 2860px;
+            width: 700px;
             margin: auto;
         }
 
@@ -83,24 +80,18 @@ body1 = """<!DOCTYPE html>
             margin: 15px;
         }
 
-        .month {
-            width: 700px;
-            height: 800px;
-            float: left;
-            margin: 35px;
-        }
-
         .month-title {
             width: 670px;
             height: 70px;
             text-align: center;
             line-height: 70px;
             margin: 15px;
+            padding: 70px 0 0 0;
             font-size: 1.3em;
         }
 
         .year {
-            width: 3080px;
+            width: 670px;
             height: 150px;
             text-align: center;
             line-height: 150px;
@@ -124,6 +115,7 @@ body1 = """<!DOCTYPE html>
             color: #ccc;
             font-size: 2em;
         }
+
     </style>
 </head>
 <body>
@@ -135,7 +127,7 @@ body2 = """<div class="day pale"></div>
 </body>
 </html>"""
 
-with open('calendar-' + str(year) + '.html', "w") as file:
+with open('mecalendar-mobile-' + str(year) + '.html', "w") as file:
     file.write(body1)
     for d in days:
         file.write(d)

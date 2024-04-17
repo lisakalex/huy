@@ -14,15 +14,15 @@ driver = webdriver.Chrome(service=service, options=options)
 
 try:
     # driver.set_window_size(850, 10800)  # for calendar-mobile.html
-    driver.set_window_size(850, 9800)  # for calendar-mobile.html
-    # driver.set_window_size(3480, 3010)  # for calendar.html
+    # driver.set_window_size(850, 9800)  # for calendar-mobile.html
+    driver.set_window_size(3480, 3010)  # for calendar.html
     driver.maximize_window()
     driver.set_script_timeout(30)
     # driver.get("http://localhost/calendar/calendar-mobile-2024.html")
-    driver.get("http://hindex-local.uk/calendar-2024.html")
+    driver.get("http://hindex-local.uk/calendar-2025.html")
     source = driver.page_source
     # driver.save_screenshot("/var/www/html/calendar/images/calendar-mobile-2024.png")
-    driver.save_screenshot("calendar-2024.png")
+    driver.save_screenshot("calendar-2025.png")
 except TimeoutException:
     source = "xxx"
 pass
