@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="61daccc8-7297-4143-a1d6-3c10e276a17d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/bank/a.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/b.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/.buildpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/consolidate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/css/grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/css/images/ui-icons_444444_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/css/images/ui-icons_555555_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/css/jquery-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/css/text.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/dashboard/config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/dashboard/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/dashboard/phpdox.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/environments.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/huy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/includes/errorCodes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/includes/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/includes/header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/js/jquery-1.12.4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/js/jquery-ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/json.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/lib/class_DB.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/lib/class_consolidate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/lib/class_environments.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/lib/class_genGridTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/lib/class_genTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/lib/class_input.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/lib/class_logger.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/lib/class_query.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/lib/class_querySummary.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/lib/class_reporting.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/lib/class_submit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/lib/class_summary.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/lib/class_updateSummary.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/pi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/query.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/reporting.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/sass/.sass-cache/c81f4fe4893515bacf031acc971237cf20071562/grid.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/sass/.sass-cache/c81f4fe4893515bacf031acc971237cf20071562/styles.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/sass/.sass-cache/c81f4fe4893515bacf031acc971237cf20071562/text.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/sass/.sass-cache/c81f4fe4893515bacf031acc971237cf20071562/variables.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/sass/gen_css.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/sass/grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/sass/grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/sass/grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/sass/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/sass/styles.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/sass/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/sass/text.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/sass/text.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/sass/text.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/sass/variables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/sass/variables.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/sass/variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/sql/mydatabase_dump.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/submit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/a/summary.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/index1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/a.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/compare/compare.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/compare/demo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/compare/demo.details" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/compare/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/compare/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/compare/demo.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/compare/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/lazy-loading.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/lazy-loading/aapl-historical-1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/lazy-loading/aapl-historical.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/lazy-loading/demo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/lazy-loading/demo.details" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/lazy-loading/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/lazy-loading/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/lazy-loading/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/pie-chart/demo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/pie-chart/demo.details" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/pie-chart/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/pie-chart/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/pie-chart/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/pie-chart/template-example.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/plot1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/spline-plot-bands.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/spline-plot-bands/demo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/spline-plot-bands/demo.details" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/spline-plot-bands/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/spline-plot-bands/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/plots/spline-plot-bands/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/py/plot1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/huy.com.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/huy.com.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/bank.py" beforeDir="false" afterPath="$PROJECT_DIR$/bank/bank.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/bank.txt" beforeDir="false" afterPath="$PROJECT_DIR$/bank/bank.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/bank_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/bank/bank_out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/plots/basic-line/aapl-c.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/plots/basic-line/basic-line.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/plots/basic-line/aapl-c.json" beforeDir="false" afterPath="$PROJECT_DIR$/html/plots/basic-line/demo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/plots/template-example.htm" beforeDir="false" afterPath="$PROJECT_DIR$/html/plots/template-example.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note.txt" beforeDir="false" afterPath="$PROJECT_DIR$/note.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2gKftWypASqRSmeisA5c7pBGXfb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/html" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.30450782" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/html" />
+      <recent name="$PROJECT_DIR$/bank" />
+      <recent name="$PROJECT_DIR$/html/plots" />
+      <recent name="$PROJECT_DIR$/html/plots/basic-line" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="bank" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="huy.com" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bank" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bank/bank.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.bank" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="61daccc8-7297-4143-a1d6-3c10e276a17d" name="Default Changelist" comment="" />
+      <created>1715451404963</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715451404963</updated>
+      <workItem from="1715451406409" duration="869000" />
+      <workItem from="1715456697578" duration="3323000" />
+      <workItem from="1715856748253" duration="599000" />
+      <workItem from="1716553283552" duration="599000" />
+      <workItem from="1717011582029" duration="1318000" />
+      <workItem from="1717531489062" duration="2029000" />
+      <workItem from="1723758155257" duration="489000" />
+      <workItem from="1727949012519" duration="151000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="819" y="468" width="1203" height="935" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1727949164865">
+      <screen x="70" y="38" width="2490" height="1562" />
+    </state>
+    <state x="819" y="468" width="1203" height="935" key="#com.intellij.execution.impl.EditConfigurationsDialog/70.38.2490.1562@70.38.2490.1562" timestamp="1727949164865" />
+    <state x="542" y="192" width="1536" height="1261" key="SettingsEditor" timestamp="1723758604273">
+      <screen x="70" y="38" width="2490" height="1562" />
+    </state>
+    <state x="542" y="192" width="1536" height="1261" key="SettingsEditor/70.38.2490.1562@70.38.2490.1562" timestamp="1723758604273" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/huy_com$bank.coverage" NAME="bank Coverage Results" MODIFIED="1715755248167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bank" />
+  </component>
+</project>

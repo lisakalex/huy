@@ -1,0 +1,378 @@
+/* 
+    Created on : 24-Apr-2020, 16:03:26
+    Author     : mark
+*/
+@media (min-width: 900px) {
+    .dashboard-container {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 5% repeat(9, 10%) 5%;
+        grid-template-rows: 1fr;
+    }
+    .dashboard-container form {
+        grid-column-start: 2;
+        grid-column-end: 11;
+        grid-row-start: 2;
+        display: inline-grid;
+    }
+    .dashboard-container div.grid-table {
+        display: inline-grid;
+        grid-template-columns: 15% 40% repeat(3,10%) 15%;
+        grid-column-start: 2;
+        grid-column-end: 11;
+        grid-row-start: auto;
+    }
+    .dashboard-container div.grid-apps-table {
+        display: inline-grid;
+        grid-template-columns: 15% 45% 20% 20%;
+        grid-column-start: 2;
+        grid-column-end: 11;
+        grid-row-start: auto;
+    }
+    .dashboard-container div.grid-comp-table {
+        display: inline-grid;
+        grid-template-columns: 50% 20% 30%;
+        grid-column-start: 2;
+        grid-column-end: 11;
+        grid-row-start: auto;
+    }
+    .dashboard-title {
+        grid-column-start: 2;
+        grid-column-end: 11;
+        grid-row-start: 1;
+    }
+    .dashboard-select-left {
+        grid-column-start: 1;
+        grid-column-end: span 4;
+        grid-row-start: 2;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .dashboard-select-right {
+        grid-column-start: 5;
+        grid-column-end: span 4;
+        grid-row-start: 2;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .dashboard-report-left {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .dashboard-report-right {
+        grid-column-start: 5;
+        grid-column-end: span 4;
+        grid-row-start: 2;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .dashboard-input {
+        grid-column-start: auto;
+        grid-column-end: span 2;
+        grid-row-start: 3;
+        text-align: center;
+    }
+    .dashboard-button {
+        grid-column-start: span 4;
+        grid-row-start: 4;
+        text-align: center;
+    }
+    .dashboard-footer {
+        grid-row-start: auto;
+        grid-column-start: 2;
+        grid-column-end: span 8;
+    }
+    
+    /* 
+     * components by name table 
+     */
+    .grid-table span {
+        text-align: center;
+        color: #231a5c;
+        line-height: 2em;
+        background: #eee;
+    }
+    .grid-table span.odd {
+        background: #ddd;
+    }
+    .grid-table span.table-title {
+        grid-column-start: 1;
+        grid-column-end: span 6;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.25em;
+        line-height: 2.5em;
+        background: #216f9f;
+        color: #f0ffff;
+    }
+    .grid-table span.table-header {
+        background: #a4edf7;
+        font-weight: 600;
+    }
+    .grid-table span.left {
+        text-align: left;
+    }
+    
+    /* 
+     * all apps table 
+     */
+    .grid-apps-table span {
+        text-align: center;
+        color: #231a5c;
+        line-height: 2em;
+        background: #eee;
+    }
+    .grid-apps-table span.odd {
+        background: #ddd;
+    }
+    .grid-apps-table span.table-title {
+        grid-column-start: 1;
+        grid-column-end: span 4;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.25em;
+        line-height: 2.5em;
+        background: #216f9f;
+        color: #f0ffff;
+    }
+    .grid-apps-table span.table-header {
+        background: #a4edf7;
+        font-weight: 600;
+    }
+    .grid-apps-table span.left {
+        text-align: left;
+    }
+    /* 
+     * all components table
+     */
+    .grid-comp-table span {
+        text-align: center;
+        color: #231a5c;
+        line-height: 2em;
+        background: #eee;
+    }
+    .grid-comp-table span.odd {
+        background: #ddd;
+    }
+    .grid-comp-table span.table-title {
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.25em;
+        line-height: 2.5em;
+        background: #216f9f;
+        color: #f0ffff;
+    }
+    .grid-comp-table span.table-header {
+        background: #a4edf7;
+        font-weight: 600;
+    }
+    .grid-comp-table span.left {
+        text-align: left;
+        padding-left: 2px;
+    }
+    /* dashboard grid */
+    .dashboard-container p {
+        grid-row-start: auto;
+        grid-column-start: 2;
+        grid-column-end: span 9;
+        margin-top: 1em;
+    }
+    .dashboard-container p.link {
+        color: #555555;
+    }
+    .dashboard-container p.info {
+        color: #31708f;
+        background: #d9edf7;
+        padding: 5px 2px;
+    }
+    .dashboard-container p.danger {
+        color: #a94442;
+        background: #f2dede;
+        padding: 5px 2px;
+    }
+}
+
+@media (max-width: 910px) {
+    .dashboard-container {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 5% repeat(9, 10%) 5%;
+        grid-template-rows: 1fr;
+    }
+    .dashboard-container div.grid-table {
+        display: inline-grid;
+        grid-template-columns: 10% 45% repeat(3,10%) 15%;
+        grid-column-start: 2;
+        grid-column-end: 11;
+        grid-row-start: auto;
+    }
+    .dashboard-container div.grid-apps-table {
+        display: inline-grid;
+        grid-template-columns: 15% 45% 20% 20%;
+        grid-column-start: 2;
+        grid-column-end: 11;
+        grid-row-start: auto;
+    }
+    .dashboard-container div.grid-comp-table {
+        display: inline-grid;
+        grid-template-columns: 50% 20% 30%;
+        grid-column-start: 2;
+        grid-column-end: 11;
+        grid-row-start: auto;
+    }
+    .dashboard-container form {
+        grid-column-start: 2;
+        grid-column-end: 11;
+        grid-row-start: 2;
+        display: inline-grid;
+    }
+    .dashboard-title {
+        grid-column-start: 2;
+        grid-column-end: 11;
+        grid-row-start: 1;
+    }
+    .dashboard-select-left {
+        grid-column-start: 1;
+        grid-column-end: span 4;
+        grid-row-start: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .dashboard-select-right {
+        grid-column-start: 5;
+        grid-column-end: span 4;
+        grid-row-start: auto;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .dashboard-input {
+        grid-column-start: auto;
+        grid-column-end: span 4;
+        grid-row-start: auto;
+        text-align: center;
+    }
+    .dashboard-button {
+        grid-column-start: span 4;
+        grid-row-start: 4;
+        text-align: center;
+    }
+    .dashboard-footer {
+        grid-row-start: auto;
+        grid-column-start: 2;
+        grid-column-end: span 8;
+    }
+    /* 
+     * components by name table 
+     */
+    .grid-table span {
+        text-align: center;
+        color: #231a5c;
+        line-height: 2em;
+        background: #eee;
+    }
+    .grid-table span.odd {
+        background: #ddd;
+    }
+    .grid-table span.table-title {
+        grid-column-start: 1;
+        grid-column-end: span 6;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.25em;
+        line-height: 2.5em;
+        background: #216f9f;
+        color: #f0ffff;
+    }
+    .grid-table span.table-header {
+        background: #a4edf7;
+        font-weight: 600;
+    }
+    .grid-table span.left {
+        text-align: left;
+    }
+    
+    /* 
+     * all apps table 
+     */
+    .grid-apps-table span {
+        text-align: center;
+        color: #231a5c;
+        line-height: 2em;
+        background: #eee;
+    }
+    .grid-apps-table span.odd {
+        background: #ddd;
+    }
+    .grid-apps-table span.table-title {
+        grid-column-start: 1;
+        grid-column-end: span 4;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.25em;
+        line-height: 2.5em;
+        background: #216f9f;
+        color: #f0ffff;
+    }
+    .grid-apps-table span.table-header {
+        background: #a4edf7;
+        font-weight: 600;
+    }
+    .grid-apps-table span.left {
+        text-align: left;
+    }
+    /* 
+     * all components table
+     */
+    .grid-comp-table span {
+        text-align: center;
+        color: #231a5c;
+        line-height: 2em;
+        background: #eee;
+    }
+    .grid-comp-table span.odd {
+        background: #ddd;
+    }
+    .grid-comp-table span.table-title {
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.25em;
+        line-height: 2.5em;
+        background: #216f9f;
+        color: #f0ffff;
+    }
+    .grid-comp-table span.table-header {
+        background: #a4edf7;
+        font-weight: 600;
+    }
+    .grid-comp-table span.left {
+        text-align: left;
+        padding-left: 2px;
+    }
+    /* dashboard grid */
+    .dashboard-container p {
+        grid-row-start: auto;
+        grid-column-start: 2;
+        grid-column-end: span 9;
+        margin-top: 1em;
+    }
+    .dashboard-container p.link {
+        color: #555555;
+    }
+    .dashboard-container p.info {
+        color: #31708f;
+        background: #d9edf7;
+        padding: 5px 2px;
+    }
+    .dashboard-container p.danger {
+        color: #a94442;
+        background: #f2dede;
+        padding: 5px 2px;
+    }
+}

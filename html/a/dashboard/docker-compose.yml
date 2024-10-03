@@ -1,0 +1,49 @@
+###############################################################################
+#                          Generated on phpdocker.io                          #
+###############################################################################
+version: '3.1'
+services:
+  dashdb8:
+    image: 'mysql:8.0'
+    container_name: dashdb8
+    environment:
+      - MYSQL_ROOT_PASSWORD=5tgb6yhn
+      - MYSQL_DATABASE=dashboard
+      - MYSQL_USER=jenkins
+      - MYSQL_PASSWORD=nlzuo3kQmE5R
+    restart: always
+
+    # create the volumes to persist the database.
+    volumes:
+      - /docker/dashboard8/mysql/dbbackup:/docker-entrypoint-initdb.d
+      - dash8mysqletc:/etc/mysql
+      - dash8mysqlhome:/var/lib/mysql
+
+  dashweb8:
+    image: 'nginx:alpine'
+    container_name: dashweb8
+    working_dir: /application
+    volumes:
+      # mount current directory as /application in the web server
+      # - '/docker/dashboard:/application'
+      - '.:/application'
+      # nginx configuration states all web code in /application/public so ./public mounted within /application
+      - './phpdocker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf'
+    ports:
+      - "8888:80"
+    restart: always
+
+  dashphp8:
+    #build: phpdocker/php-fpm
+    image: dashboard8_php-fpm:latest
+    container_name: dashphp8
+    working_dir: /application
+    volumes:
+      - './bin:/usr/local/bin'
+      - '.:/application'
+      - './phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/8.2/fpm/conf.d/99-overrides.ini'
+    restart: always
+
+volumes:
+  dash8mysqletc:
+  dash8mysqlhome:

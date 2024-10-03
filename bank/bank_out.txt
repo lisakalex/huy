@@ -1,26 +1,37 @@
-Fri, 1 Mar 24~B/Card Plat Visa~~73.83~6,323.54
-Fri, 1 Mar 24~E.On Next~~94.60~6,228.94
-Fri, 1 Mar 24~Southern Water~~13.40~6,215.54
-Fri, 1 Mar 24~Santander Mortgage~~863.16~5,352.38
-Mon, 4 Mar 24~Lidl Gb Crawley~~61.67~5,290.71
-Tue, 5 Mar 24~Asda Stores~~3.00~5,287.71
-Wed, 6 Mar 24~Sainsburys S/Mkts~~1.89~5,285.82
-Fri, 8 Mar 24~Bupa Payments~398.00~~5,683.82
-Fri, 8 Mar 24~Western Union~~41.73~5,642.09
-Fri, 8 Mar 24~Asda Stores~~42.29~5,599.80
-Mon, 11 Mar 24~Western Union~~14.57~5,585.23
-Mon, 11 Mar 24~Lisak N~802.00~~6,387.23
-Mon, 11 Mar 24~Western Union~~10.36~6,376.87
-Mon, 11 Mar 24~Squires Garden Cen~~34.99~6,341.88
-Wed, 13 Mar 24~Virgin Money~~461.94~5,879.94
-Wed, 13 Mar 24~Baltic Crawley Ltd~~5.78~5,874.16
-Thu, 14 Mar 24~Asda Stores~~6.43~5,867.73
-Thu, 14 Mar 24~T K Maxx~~61.65~5,806.08
-Mon, 18 Mar 24~Lidl Gb Crawley~~69.89~5,736.19
-Mon, 18 Mar 24~Thames Water~~13.00~5,723.19
-Mon, 18 Mar 24~Virgin Media Pymts~~26.50~5,696.69
-Wed, 20 Mar 24~Asda Stores~~36.34~5,660.35
-Fri, 22 Mar 24~Western Union~~40.92~5,619.43
-Fri, 22 Mar 24~Western Union~~47.06~5,572.37
-Mon, 25 Mar 24~Totalenergies Gas~2,345.40~~7,917.77
-Mon, 25 Mar 24~Asda Stores~4.00~~7,921.77
+Tue, 2 Apr 24~Asda Stores~~7.14~7,914.63
+Tue, 2 Apr 24~T K Maxx~~31.95~7,882.68
+Tue, 2 Apr 24~Parking Services~~1.70~7,880.98
+Tue, 2 Apr 24~Squires Garden Cen~~25.98~7,855.00
+Tue, 2 Apr 24~T K Maxx~~232.90~7,622.10
+Tue, 2 Apr 24~Lidl Gb Crawley~~103.27~7,518.83
+Tue, 2 Apr 24~Western Union~~12.39~7,506.44
+Tue, 2 Apr 24~Santander Mortgage~~863.17~6,643.27
+Tue, 2 Apr 24~B/Card Plat Visa~~141.13~6,502.14
+Tue, 2 Apr 24~Southern Water~~13.40~6,488.74
+Tue, 2 Apr 24~E.On Next Ltd~~94.60~6,394.14
+Tue, 2 Apr 24~Crawley Borough Co~~191.51~6,202.63
+Thu, 4 Apr 24~Baltic Crawley Ltd~~5.18~6,197.45
+Mon, 8 Apr 24~B & Q 1155~~54.95~6,142.50
+Mon, 8 Apr 24~Lidl Gb Crawley~~55.81~6,086.69
+Mon, 8 Apr 24~Lisak N~731.00~~6,817.69
+Wed, 10 Apr 24~Sainsburys Bank~~50.00~6,767.69
+Thu, 11 Apr 24~Virgin Money~~1,103.09~5,664.60
+Fri, 12 Apr 24~Baltic Crawley Ltd~~4.38~5,660.22
+Tue, 16 Apr 24~Virgin Media Pymts~~26.50~5,633.72
+Tue, 16 Apr 24~Tk Maxx~69.99~~5,703.71
+Thu, 18 Apr 24~Thames Water~~13.00~5,690.71
+Thu, 18 Apr 24~Western Union~~12.40~5,678.31
+Thu, 18 Apr 24~Rushtranslate~~41.43~5,636.88
+Fri, 19 Apr 24~Asda Stores~~54.25~5,582.63
+Mon, 22 Apr 24~The Range~~17.97~5,564.66
+Mon, 22 Apr 24~B & Q 1155~~30.50~5,534.16
+Mon, 22 Apr 24~Lidl Gb Crawley~~48.14~5,486.02
+Mon, 22 Apr 24~Western Union~~41.13~5,444.89
+Mon, 22 Apr 24~B & Q 1155~~35.00~5,409.89
+Wed, 24 Apr 24~Western Union~~24.83~5,385.06
+Wed, 24 Apr 24~Western Union~~62.14~5,322.92
+Thu, 25 Apr 24~Totalenergies Gas~2,279.45~~7,602.37
+Mon, 29 Apr 24~Lidl Gb Crawley~~91.56~7,510.81
+Mon, 29 Apr 24~The Range~~51.86~7,458.95
+Mon, 29 Apr 24~B/Card Plat Visa~~148.86~7,310.09
+~~

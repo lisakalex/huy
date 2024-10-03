@@ -1,0 +1,369 @@
+@import "variables.scss";
+
+/* mixins */
+
+@mixin dashboard-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 5% repeat(9, 10%) 5%;
+  grid-template-rows: 1fr;
+}
+@mixin dashboard-col-basic($col-start: 2, $col-span: 9) {
+  grid-column-start: $col-start;
+  grid-column-end: span $col-span;
+}
+@mixin dashboard-basic($row-start: auto) {
+  @include dashboard-col-basic();
+  grid-row-start: $row-start;
+}
+@mixin dashboard-columns($row-start: auto) {
+  @include dashboard-basic($row-start);
+  display: inline-grid;
+}
+@mixin dashboard-input($col-start: auto, $col-span: 2, $row-start: 3) {
+  @include dashboard-col-basic($col-start, $col-span);
+  grid-row-start: $row-start;
+}
+@mixin dashboard-select($col-start, $col-span: 4, $row-start: 2) {
+  @include dashboard-input($col-start, $col-span, $row-start);
+  margin-right: auto;
+  margin-left: auto;
+}
+@mixin dashboard-span($colour, $height, $background) {
+  text-align: center;
+  color: $colour;
+  line-height: $height;
+  background: $background;
+}
+@mixin table-header {
+  background: $azure;
+  font-weight: $weight
+}
+@mixin table-title($col-start: 2, $col-span: 9) {
+  @include dashboard-span($vpale-grey, 2.5em, $blue);
+  @include dashboard-col-basic($col-start, $col-span);
+  font-weight: $weight;
+  font-size: 1.25em;
+  line-height: 2em;
+}
+@mixin table-span($col-start: 2, $col-span: 9) {
+  text-align: center;
+  line-height: 2em;
+  vertical-align: middle;
+  &.odd {background: $light-grey;}
+  &.table-header {
+    @include table-header;
+  }
+  &.table-title {
+    @include table-title($col-start, $col-span);
+  }
+  &.left {
+    text-align: left;
+    padding-left: 5px;
+  }
+}
+
+/* main */
+@media (min-width: $full-screen) {
+  .dashboard-container {
+    @include dashboard-grid;
+    nav {
+      &.menu {
+        grid-row-start: 1;
+        grid-column-start: 7;
+        grid-column-end: span 4;
+        margin: 70px 0 0 0;
+      }
+      ul {
+        &.menu {
+          display: inline-grid;
+          float: right;
+          grid-template-columns: repeat(4, 100px);
+          list-style: none;
+          li {
+            margin: 0 auto;
+            &.selected {
+              font-weight: $sweight;
+            }
+          }
+        }
+      }
+    }
+    form {
+      @include dashboard-columns(2);
+      &.summary {
+        grid-template-columns: minmax(200px, 15%) $separator minmax(150px, 10%) $separator minmax(150px, 10%) $separator minmax(150px, 10%) $separator minmax(200px, 15%);
+      }
+    }
+    div {
+      &.col1 {
+        grid-column-start: 1 !important;
+      }
+      &.col2 {
+        grid-column-start: 2 !important;
+      }
+      &.col3 {
+        grid-column-start: 3 !important;
+      }
+      &.col4 {
+        grid-column-start: 4 !important;
+      }
+      &.col5 {
+        grid-column-start: 5 !important;
+      }
+      &.col6 {
+        grid-column-start: 6 !important;
+      }
+      &.col7 {
+        grid-column-start: 7 !important;
+      }
+      &.col8 {
+        grid-column-start: 8 !important;
+      }
+      &.col9 {
+        grid-column-start: 9 !important;
+      }
+      &.logo {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        max-height: 76px;
+        width: 135px;
+        margin: 20px;
+      }
+      &.row-2 {
+        grid-row-start: 2 !important;
+      }
+      &.row-3 {
+        grid-row-start: 3 !important;
+      }
+      &.dashboard-report-left {
+          grid-column-start: 1;
+          grid-column-end: span 3;
+      }
+      &.dashboard-report-right {
+          grid-column-start: 4;
+          grid-column-end: span 3;
+      }
+      &.summary-input {
+        grid-column-start: auto;
+        grid-column-end: span 1;
+        grid-row-start: 1;
+      }
+      &.summary-select {
+        grid-column: span 1;
+        grid-column-start: auto;
+        margin: auto;
+      }
+      &.grid-summary-table {
+        @include dashboard-columns();
+        grid-template-columns: 15% 8% 9% 9% 8% 11% repeat(5, 8%);
+        span {
+          @include table-span(1, 11);
+        }
+      }
+      &.grid-table {
+        @include dashboard-columns();
+        grid-template-columns: 20% 35% repeat(3,10%) 15%;
+      }
+      &.grid-apps-table {
+        @include dashboard-columns();
+        grid-template-columns: 15% 45% 20% 20%;
+      }
+      &.grid-environments-table {
+        @include dashboard-columns();
+        grid-template-columns: 30% repeat(10, 7%);
+      }
+      &.grid-comp-table {
+        @include dashboard-columns();
+        grid-template-columns: 50% 20% 30%;
+      }
+      &.grid-report-table {
+          @include dashboard-columns();
+          grid-template-columns: 40% repeat(4, 15%);
+      }
+    }
+    p {
+      @include dashboard-input(2, 9, auto);
+      &.link {
+        color: $mid-grey;
+      }
+      &.info {
+        color: $bright-blue;
+        background: $pale-blue;
+        padding: 5px 2px;
+      }
+      &.danger {
+        color: $danger-red;
+        background: $pale-pink;
+        padding: 5px 2px;
+      }
+    }
+  }
+  .dashboard-title {
+    @include dashboard-basic(1);
+    grid-column-start: 3;
+    grid-column-end: span 8;
+    border-bottom: #66666655 solid 1px;
+    margin-bottom: 20px;
+  }
+  .dashboard-select-left {
+    @include dashboard-select(1);
+  }
+  .dashboard-select-right {
+    @include dashboard-select(5);
+  }
+  .dashboard-input {
+    @include dashboard-input();
+    text-align: center;
+  }
+  .reset-button, .search-button, .env-search-button, .report-reset-button, .report-search-button {
+    grid-row-start: 4;
+    text-align: center;
+  }
+  .reset-button {
+    grid-column-start: 2;
+  }
+  .env-search-button {
+    grid-column-start: 5;
+  }
+  .search-button {
+    grid-column-start: 7;
+  }
+  .report-reset-button {
+    grid-column-start: 2;
+  }
+  .report-search-button {
+    grid-column-start: 5;
+  }
+  .dashboard-footer {
+    @include dashboard-input(2, 8, auto);
+  }
+
+  .grid-report-table {
+      span {
+          @include table-span(1, 5);
+      }
+  }
+  .grid-table {
+    span {
+      @include table-span(1,6);
+    }
+  }
+  .grid-apps-table {
+    span {
+      @include table-span(1, 4);
+    }
+  }
+  .grid-environments-table {
+    span {
+      @include table-span(1, 11);
+      em {
+        font-size: 0.75em;
+      }
+    }
+  }
+  .grid-comp-table {
+    span {
+      @include table-span(1, 3);
+    }
+  }
+}
+
+@media (max-width: $max-screen) {
+  .dashboard-container {
+    @include dashboard-grid;
+
+    form {
+      @include dashboard-columns(2);
+    }
+
+    div {
+      &.grid-report-table {
+          @include dashboard-columns();
+          grid-template-columns: 40% repeat(4, 15%);
+      }
+      &.grid-table {
+        @include dashboard-columns();
+        grid-template-columns: 20% 35% repeat(3,10%) 15%;
+      }
+      &.grid-apps-table {
+        @include dashboard-columns();
+        grid-template-columns: 15% 45% 20% 20%;
+      }
+      &.grid-environments-table {
+        @include dashboard-columns();
+        grid-template-columns: 20% repeat(10, 8%);
+      }
+      &.grid-comp-table {
+        @include dashboard-columns();
+        grid-template-columns: 50% 20% 30%;
+      }
+    }
+    p {
+      @include dashboard-input(2, 9, auto);
+      margin-top: 1em;
+      &.link {
+        color: $mid-grey;
+      }
+      &.info {
+        color: $bright-blue;
+        background: $pale-blue;
+        padding: 5px 2px;
+      }
+      &.danger {
+        color: $danger-red;
+        background: $pale-pink;
+        padding: 5px 2px;
+      }
+    }
+  }
+  .dashboard-title {
+    @include dashboard-basic(1);
+  }
+  .dashboard-select-left {
+    @include dashboard-select(1, 4, auto);
+  }
+  .dashboard-select-right {
+    @include dashboard-select(5, 4, auto);
+  }
+  .dashboard-input {
+    @include dashboard-input(auto, 4, auto);
+    text-align: center;
+  }
+  .dashboard-button {
+    grid-column-start: 4;
+    grid-row-start: 4;
+    text-align: center;
+  }
+  .dashboard-footer {
+    @include dashboard-input(2, 8, auto);
+  }
+  .grid-report-table {
+      span {
+          @include table-span(1, 5);
+      }
+  }
+  .grid-table {
+    span {
+      @include table-span(1, 6);
+    }
+  }
+  .grid-apps-table {
+    span {
+      @include table-span(1, 4);
+    }
+  }
+  .grid-environments-table {
+    span {
+      @include table-span(1, 11);
+      em {
+        font-size: 0.75em;
+      }
+    }
+  }
+  .grid-comp-table {
+    span {
+      @include table-span(1, 3);
+    }
+  }
+}

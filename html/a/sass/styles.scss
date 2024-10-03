@@ -1,0 +1,32 @@
+@import "variables.scss";
+html {
+  font-family: $fonts;
+  font-size: $font-size;
+}
+h1 {
+  text-align: center;
+  color: $dark-blue;
+  margin-top: 20px;
+  font-weight: $weight;
+  line-height: $line-height;
+}
+table {
+  background-color: $pale-grey;
+}
+tr {
+  &.heading {
+    background-color: $blue;
+    color: $vpale-grey;
+  }
+  &.title {
+    font-size: $font-size;
+    padding: 0.333em;
+    text-align: center;
+  }
+  td {
+    &.center {text-align: center;}
+    &.right {text-align: right;}
+    &.left {text-align: left;}
+    &.odd {background-color: $light-grey}
+  }
+}

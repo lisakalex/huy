@@ -44,4 +44,11 @@ https://asignat.com/?p=G7WBE8
 'not paying'
 not paying
 
-huy
+~~~
+python3 -m venv /var/www/huy.com/venv
+source /var/www/huy.com/venv/bin/activate
+
+~~~
+
+
+

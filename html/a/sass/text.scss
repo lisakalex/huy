@@ -1,0 +1,90 @@
+@import "variables.scss";
+body {font: $font-body;}
+a {
+  &:focus{outline: 1px dotted invert;}
+}
+hr {
+  border-color: $light-grey;
+  border-style: solid;
+  border-width: 1px 0 0;
+  clear: both;
+  height: 0;
+}
+h1 {font-size: $h1-size;}
+h2 {font-size: $h1-size - 2;}
+h3 {font-size: $h1-size - 4;}
+h4 {font-size: $h1-size - 6;}
+h5 {font-size: $h1-size - 8;}
+h6 {
+  font-size: 1em;
+  margin: 10px;
+  font-family: inherit;
+  line-height: $line-height;
+  color: inherit;
+}
+ol {list-style: decimal;}
+ul {list-style: square;}
+li {margin-left: 30px;}
+.nav {
+  &.nav-tabs {
+    li {margin-left: 0;}
+  }
+  >li>a{padding: 10px 12px;}
+}
+p,
+dl,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+pre,
+table,
+address,
+fieldset {
+  margin-bottom: 20px;
+}
+p {
+  &.radio {
+    margin-bottom: 0;
+    margin-top: 0.01em;
+  }
+}
+strong {
+  font-weight: $sweight;
+}
+.grid_2 {
+  &.radio {margin: 0.2em 0 0 0.8em;}
+}
+a {
+  color: $bright-blue;
+  text-decoration: none;
+}
+h6, p {
+  &.center {
+    text-align: center;
+  }
+  margin-bottom: 25px;
+}
+h6 {
+  margin-top: 1px;
+  margin-bottom: 4px;
+}
+input {
+  line-height: 1em;
+}
+.dashboard-title {
+  h1 {
+    background: linear-gradient(142deg,#ed0000 0, #ff6e00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #ed0000;
+    font-size: 48px;
+    margin: 50px 0 -7px 0;
+    text-align: left;
+  }
+}
