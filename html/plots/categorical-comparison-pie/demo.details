@@ -1,6 +1,0 @@
----
- name: Highcharts Demo Chart Chooser Pie Chart
- authors:
-   - Mustapha Mekhatria
- js_wrap: b
-...
